@@ -13,7 +13,7 @@ namespace CapaDatos
     {
         DB_MiscelaneaConnyEntities modelBaseDato = new DB_MiscelaneaConnyEntities();
 
-        //metodos para guardar o actualizar un dato CAT_BODEGA
+          //metodos para guardar o actualizar un dato CAT_BODEGA
         public bool metodoGuardar(CAT_CIUDAD datos) // exijidamente true false        //string bool number void
         {               //   null  -  nombre
             try
