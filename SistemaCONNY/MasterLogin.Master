@@ -1,0 +1,72 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterLogin.master.cs" Inherits="SistemaCONNY.MasterLogin" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+
+    <link href="<%=ResolveClientUrl("~/Login/bootstrap.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveClientUrl("~/Login/components.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveClientUrl("~/Login/core.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveClientUrl("~/Login/icons.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveClientUrl("~/Login/menu.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveClientUrl("~/Login/pages.css")%>" rel="stylesheet" />
+    <link href="<%=ResolveClientUrl("~/Login/responsive.css")%>" rel="stylesheet" />
+    
+    
+
+</head>
+<body>
+    <form id="form1" runat="server">
+        <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+        <div class="wrapper-page">
+            <div class="panel panel-color panel-primary panel-pages">
+                <div class="panel-heading bg-img">
+                    <div class="bg-overlay">
+                        <div class="col-md-12">
+                            <%--<div class="col-md-4">
+                                <img class="img-responsive" src="../../Recursos/imagen/logo144.png" />
+                            </div>--%>
+                            <div class="col-lg-12">
+                                <h3 style="padding-top: 15px;" class="text-center m-t-10 text-white"><strong>Sistema</strong> </h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <div class="form-horizontal m-t-20">
+
+                        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                        </asp:ContentPlaceHolder>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var resizefunc = [];
+        </script>
+
+        <!-- Main  -->
+        <script src="<%=ResolveClientUrl("~/Login/jquery.min.js")%>"></script>
+        <script src="<%=ResolveClientUrl("~/Login/bootstrap.min.js")%>"></script>
+        <script src="<%=ResolveClientUrl("~/Login/detect.js")%>"></script>
+        <script src="<%=ResolveClientUrl("~/Login/fastclick.js")%>"></script>
+        <script src="<%=ResolveClientUrl("~/Login/jquery.slimscroll.js")%>"></script>
+        <script src="<%=ResolveClientUrl("~/Login/jquery.blockUI.js")%>"></script>
+        <script src="<%=ResolveClientUrl("~/Login/waves.js")%>"></script>
+        <script src="<%=ResolveClientUrl("~/Login/wow.min.js")%>"></script>
+        <script src="<%=ResolveClientUrl("~/Login/jquery.nicescroll.js")%>"></script>
+        <script src="<%=ResolveClientUrl("~/Login/jquery.scrollTo.min.js")%>"></script>
+        <script src="<%=ResolveClientUrl("~/Login/jquery.app.js")%>"></script>
+    </form>
+</body>
+</html>

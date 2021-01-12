@@ -1,0 +1,15 @@
+.vs
+Web.config
+Web.Debug.config
+Web.Release.config
+
+App.Config
+
+SistemaCONNY/bin
+SistemaCONNY/obj
+
+CapaDatos/bin
+CapaDatos/obj
+
+CapaNegocio/bin
+CapaNegocio/obj
