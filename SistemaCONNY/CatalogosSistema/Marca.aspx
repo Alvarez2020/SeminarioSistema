@@ -19,7 +19,7 @@
                                 <thead>
                                     <tr>
                                         <th style="width: 15%">Id</th>
-                                         <th>Marca</th>
+                                         <th>Marca111</th>
                                         <th style="width: 15%; text-align: center">Opciones</th>
                                     </tr>
                                 </thead>
