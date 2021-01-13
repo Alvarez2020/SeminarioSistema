@@ -22,6 +22,9 @@ namespace CapaDatos.ModeloEntity
         public int ID_COMPRA { get; set; }
         public Nullable<System.DateTime> FECHA_COMPRA { get; set; }
         public Nullable<int> ID_USUARIO { get; set; }
+        public Nullable<decimal> TOTAL { get; set; }
+        public Nullable<decimal> CANTIDAD_PAGO { get; set; }
+        public Nullable<decimal> CAMBIO { get; set; }
     
         public virtual ICollection<TBL_DETALLE_COMPRA> TBL_DETALLE_COMPRA { get; set; }
     }

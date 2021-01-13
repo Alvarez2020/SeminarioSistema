@@ -23,7 +23,7 @@ namespace CapaDatos
                                  CANTIDAD_PRODUCTO = variableAlmacenado.CANTIDAD_PRODUCTOS,
                                  PRECIO_COMPRA = variableAlmacenado.PRECIO_COMPRA,
                                  PRECIO_VENTA = variableAlmacenado.PRECIO_VENTA,
-                                 TOTAL = variableAlmacenado.TOTAL,
+                                 TOTAL = variableAlmacenado.SUBTOTAL,
                                  ID_UNIDAD_MEDIDA  = variableAlmacenado.ID_UNIDAD_MEDIDA,
                                  UM_DESCRIPCION = variableAlmacenado.CAT_UNIDAD_MEDIDA.UM_DESCRIPCION,
                                  UNIDADES = variableAlmacenado.CAT_UNIDAD_MEDIDA.UNIDADES,

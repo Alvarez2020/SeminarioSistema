@@ -106,10 +106,11 @@ namespace SistemaCONNY.Transaccion
         [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
         public static string GuardarListaDetalleCompra(ObjetoCompra temp)
         {
+            decimal total = 0;
             NegocioCatUnidadMedida metodosNegocio = new NegocioCatUnidadMedida();
             int? cod = temp.ID_UNIDAD_MEDIDA;
             var datos = metodosNegocio.metodoSeleccion1(cod);
-            temp.TOTAL = (decimal)((temp.CANTIDAD_PRODUCTOS * datos.Unidades) * temp.PRECIO_COMPRA);
+            temp.SUBTOTAL = (decimal)((temp.CANTIDAD_PRODUCTOS * datos.Unidades) * temp.PRECIO_COMPRA);
             ListaDetalle.Add(new ObjetoCompra
             {
                 ID =  Guid.NewGuid(),
@@ -128,13 +129,17 @@ namespace SistemaCONNY.Transaccion
                 PRECIO_COMPRA = temp.PRECIO_COMPRA,
                 PRECIO_VENTA = temp.PRECIO_VENTA,
                 ID_USUARIO = 1,
-                TOTAL = temp.TOTAL,
+                SUBTOTAL = temp.SUBTOTAL,
                 FECHA_ELABORACION_PRODUCTO = temp.FECHA_ELABORACION_PRODUCTO,
                 FECHA_VENCIMIENTO_PRODUCTO = temp.FECHA_VENCIMIENTO_PRODUCTO,
                 CANTIDAD_EXISTENCIA = 0,
                 CANTIDAD_DEVOLUCION = 0,
                 ID_BODEGA = temp.ID_BODEGA
             });
+            foreach (var item in ListaDetalle)
+            {
+                total = (decimal)(total + item.SUBTOTAL);
+            }
             var resp = "correcto";
             return new JavaScriptSerializer().Serialize(resp);
         }
@@ -156,7 +161,9 @@ namespace SistemaCONNY.Transaccion
         {
             ObjetoCompra variable = new ObjetoCompra();
             variable.FECHA_COMPRA = Convert.ToDateTime(DateTime.Now.ToShortDateString());
-
+            variable.CANTIDAD_PAGO = Convert.ToDecimal(txtCantidadPago.Text);
+            variable.TOTAL = Convert.ToDecimal(txtTotal.Text);
+            variable.CAMBIO = Convert.ToDecimal(txtCambio.Text);
             NegocioTransaccionCompra metodoNeogico = new NegocioTransaccionCompra();
             var result = metodoNeogico.FinalizaTransaccion(variable, ListaDetalle);
             Application["CodFac"] = result;

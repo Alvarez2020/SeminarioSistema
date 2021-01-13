@@ -122,7 +122,7 @@ namespace SistemaCONNY.Reporte
                                                                        FECHA_COMPRA = t1.FECHA_COMPRA,
                                                                        CANTIDAD_PRODUCTOS = t2.CANTIDAD_PRODUCTOS,
                                                                        PRECIO_COMPRA = t2.PRECIO_COMPRA,
-                                                                       TOTAL = t2.TOTAL
+                                                                       TOTAL = t2.SUBTOTAL
                                                                    }));
                     break;
                 case 4: // exisitencias

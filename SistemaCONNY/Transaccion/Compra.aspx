@@ -585,7 +585,7 @@
                 PRECIO_COMPRA: $('#<%=txtPrecioCompra.ClientID %>').val(),
                 PRECIO_VENTA: $('#<%=txtPrecioVenta.ClientID %>').val(),
                 ID_USUARIO: 1,
-                TOTAL: 0,//arseFloat( cant * precio ),
+                SUBTOTAL: 0,//arseFloat( cant * precio ),
                 FECHA_ELABORACION_PRODUCTO: $('#<%=txtFechaElaboracion.ClientID %>').val(),
                 FECHA_VENCIMIENTO_PRODUCTO: $('#<%=txtFechaVencimiento.ClientID %>').val(),
                 CANTIDAD_EXISTENCIA: 0,
@@ -654,7 +654,7 @@
                         dataServer = JSON.parse(item);
                         $.each(dataServer, function (j, items) {
 
-                            subData = items["TOTAL"];
+                            subData = items["SUBTOTAL"];
 
                             SubtotalGeneral = SubtotalGeneral + subData;
                         });
@@ -678,7 +678,7 @@
                             { "data": 'FECHA_VENCIMIENTO_PRODUCTO' },
                             { "data": 'PRECIO_COMPRA' },
                             { "data": 'PRECIO_VENTA' },
-                            { "data": 'TOTAL' },
+                            { "data": 'SUBTOTAL' },
                             { "data": 'opcion' }
 
                         ],

@@ -41,12 +41,15 @@ namespace SistemaCONNY.Reporte
                                                                {
                                                                    ID_COMPRA = t1.ID_COMPRA,
                                                                    FECHA_COMPRA = t1.FECHA_COMPRA,
-                                                                   
+                                                                   NOMBRE_MARCA = t2.TBL_PRODUCTO.TblMarca.NOMBRE_MARCA,
                                                                    Producto = t2.TBL_PRODUCTO.NOMBRE_PRODUCTO,
                                                                    CANTIDAD_PRODUCTOS = t2.CANTIDAD_PRODUCTOS,
                                                                    PRECIO_VENTA = t2.PRECIO_VENTA,
                                                                    PRECIO_COMPRA = t2.PRECIO_COMPRA,
-                                                                   TOTAL = t2.TOTAL,
+                                                                   TOTALF = t1.TOTAL,
+                                                                   CANTIDAD_PAGO = t1.CANTIDAD_PAGO,
+                                                                   CAMBIO = t1.CAMBIO,
+                                                                   TOTAL = t2.SUBTOTAL,
                                                                    UM_DESCRIPCION = t2.CAT_UNIDAD_MEDIDA.UM_DESCRIPCION,
                                                                    UNIDADES = t2.CAT_UNIDAD_MEDIDA.UNIDADES,
                                                                    DESCRIPCION_ENVASE_UNIDAD = t2.CAT_UNIDADMEDIDA_ENVASE.DESCRIPCION_ENVASE_UNIDAD

@@ -28,6 +28,9 @@ namespace CapaDatos
                     {
                         ID_COMPRA = 0,
                         FECHA_COMPRA = obj.FECHA_COMPRA,
+                        TOTAL = obj.TOTAL,
+                        CANTIDAD_PAGO = obj.CANTIDAD_PAGO,
+                        CAMBIO = obj.CAMBIO,
                         ID_USUARIO = 1
                     };
                     //Paso 2 - guardar en  tabla compra
@@ -47,7 +50,7 @@ namespace CapaDatos
                             CANTIDAD_PRODUCTOS = item.CANTIDAD_PRODUCTOS,
                             PRECIO_COMPRA = item.PRECIO_COMPRA,
                             PRECIO_VENTA = item.PRECIO_VENTA,
-                            TOTAL = item.TOTAL,
+                            SUBTOTAL = item.SUBTOTAL,
                             ID_UNIDAD_MEDIDA = (int)item.ID_UNIDAD_MEDIDA,
                             ID_UNIDAD_ENVASE = item.ID_UNIDAD_ENVASE
                         };
@@ -138,7 +141,10 @@ namespace CapaDatos
         public string ENCARGADO { get; set; }
         public System.DateTime? FECHA_COMPRA { get; set; }
         public int? ID_USUARIO { get; set; }
-
+        public decimal? TOTAL { get; set; }
+        public Nullable<decimal> CANTIDAD_PAGO { get; set; }
+        public Nullable<decimal> CAMBIO { get; set; }
+        public decimal? SUBTOTAL { get; set; }
         //propiedades Detalle Compra
         //public int ID_COMPRA { get; set; } no necesaria campo ya en clase base
         public int ID_PRODUCTO { get; set; }
@@ -160,7 +166,7 @@ namespace CapaDatos
         //propiedad para bodega bodega 
         public Nullable<int> ID_BODEGA { get; set; }
 
-        public decimal? TOTAL { get; set; }
+      
 
 
 

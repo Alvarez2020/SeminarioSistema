@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="__MigrationHistory">
           <Key>
             <PropertyRef Name="MigrationId" />
@@ -190,6 +190,9 @@
           <Property Name="ID_COMPRA" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="FECHA_COMPRA" Type="date" />
           <Property Name="ID_USUARIO" Type="int" />
+          <Property Name="TOTAL" Type="money" />
+          <Property Name="CANTIDAD_PAGO" Type="money" />
+          <Property Name="CAMBIO" Type="money" />
         </EntityType>
         <EntityType Name="TBL_DETALLE_COMPRA">
           <Key>
@@ -200,7 +203,7 @@
           <Property Name="CANTIDAD_PRODUCTOS" Type="int" />
           <Property Name="PRECIO_COMPRA" Type="money" />
           <Property Name="PRECIO_VENTA" Type="money" />
-          <Property Name="TOTAL" Type="money" />
+          <Property Name="SUBTOTAL" Type="money" />
           <Property Name="ID_UNIDAD_MEDIDA" Type="int" Nullable="false" />
           <Property Name="ID_UNIDAD_ENVASE" Type="int" />
           <Property Name="idDetalleCompra" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
@@ -815,8 +818,7 @@
             <End Role="USUARIO" EntitySet="USUARIO" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -1029,6 +1031,9 @@
           <Property Name="FECHA_COMPRA" Type="DateTime" Precision="0" />
           <Property Name="ID_USUARIO" Type="Int32" />
           <NavigationProperty Name="TBL_DETALLE_COMPRA" Relationship="Self.FK_TBL_DETALLE_COMPRA_TBL_COMPRA" FromRole="TBL_COMPRA" ToRole="TBL_DETALLE_COMPRA" />
+          <Property Name="TOTAL" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="CANTIDAD_PAGO" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="CAMBIO" Type="Decimal" Precision="19" Scale="4" />
         </EntityType>
         <EntityType Name="TBL_DETALLE_COMPRA">
           <Key>
@@ -1039,7 +1044,6 @@
           <Property Name="CANTIDAD_PRODUCTOS" Type="Int32" />
           <Property Name="PRECIO_COMPRA" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="PRECIO_VENTA" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="TOTAL" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="ID_UNIDAD_MEDIDA" Type="Int32" Nullable="false" />
           <Property Name="ID_UNIDAD_ENVASE" Type="Int32" />
           <Property Name="idDetalleCompra" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
@@ -1047,6 +1051,7 @@
           <NavigationProperty Name="CAT_UNIDADMEDIDA_ENVASE" Relationship="Self.FK_TBL_DETALLE_COMPRA_CAT_UNIDADMEDIDA_ENVASE" FromRole="TBL_DETALLE_COMPRA" ToRole="CAT_UNIDADMEDIDA_ENVASE" />
           <NavigationProperty Name="TBL_COMPRA" Relationship="Self.FK_TBL_DETALLE_COMPRA_TBL_COMPRA" FromRole="TBL_DETALLE_COMPRA" ToRole="TBL_COMPRA" />
           <NavigationProperty Name="TBL_PRODUCTO" Relationship="Self.FK_TBL_DETALLE_COMPRA_PRODUCTO" FromRole="TBL_DETALLE_COMPRA" ToRole="TBL_PRODUCTO" />
+          <Property Name="SUBTOTAL" Type="Decimal" Precision="19" Scale="4" />
         </EntityType>
         <EntityType Name="TBL_DETALLE_FACT">
           <Key>
@@ -1846,6 +1851,9 @@
           <EntitySetMapping Name="TBL_COMPRA">
             <EntityTypeMapping TypeName="Model.TBL_COMPRA">
               <MappingFragment StoreEntitySet="TBL_COMPRA">
+                <ScalarProperty Name="CAMBIO" ColumnName="CAMBIO" />
+                <ScalarProperty Name="CANTIDAD_PAGO" ColumnName="CANTIDAD_PAGO" />
+                <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
                 <ScalarProperty Name="ID_COMPRA" ColumnName="ID_COMPRA" />
                 <ScalarProperty Name="FECHA_COMPRA" ColumnName="FECHA_COMPRA" />
                 <ScalarProperty Name="ID_USUARIO" ColumnName="ID_USUARIO" />
@@ -1855,12 +1863,12 @@
           <EntitySetMapping Name="TBL_DETALLE_COMPRA">
             <EntityTypeMapping TypeName="Model.TBL_DETALLE_COMPRA">
               <MappingFragment StoreEntitySet="TBL_DETALLE_COMPRA">
+                <ScalarProperty Name="SUBTOTAL" ColumnName="SUBTOTAL" />
                 <ScalarProperty Name="ID_COMPRA" ColumnName="ID_COMPRA" />
                 <ScalarProperty Name="ID_PRODUCTO" ColumnName="ID_PRODUCTO" />
                 <ScalarProperty Name="CANTIDAD_PRODUCTOS" ColumnName="CANTIDAD_PRODUCTOS" />
                 <ScalarProperty Name="PRECIO_COMPRA" ColumnName="PRECIO_COMPRA" />
                 <ScalarProperty Name="PRECIO_VENTA" ColumnName="PRECIO_VENTA" />
-                <ScalarProperty Name="TOTAL" ColumnName="TOTAL" />
                 <ScalarProperty Name="ID_UNIDAD_MEDIDA" ColumnName="ID_UNIDAD_MEDIDA" />
                 <ScalarProperty Name="ID_UNIDAD_ENVASE" ColumnName="ID_UNIDAD_ENVASE" />
                 <ScalarProperty Name="idDetalleCompra" ColumnName="idDetalleCompra" />
