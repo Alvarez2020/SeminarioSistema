@@ -13,15 +13,9 @@
     </asp:PlaceHolder>
     <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-    <%-- estilos de plantilla --%>
-    <%-- estilos de plantilla --%>
-  <%--<link href="~/ElementosPlantilla/css/bootstrap.min.css" rel="stylesheet" media="screen">--%>
- <%-- <link href="~/ElementosPlantilla/css/main.css" rel="stylesheet">
-<link href="~/ElementosPlantilla/css/main1.css" rel="stylesheet" id="themeSwitcher">
-<link href="~/ElementosPlantilla/css/icomoon.css" rel="stylesheet">
+    <%-- 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-<link rel="stylesheet" href="~/ElementosPlantilla/css/datepicker.css">
-<link href="~/ElementosPlantilla/css/c3.css" rel="stylesheet">--%>
+--%>
     <!-- plugins:css -->
      <link rel="stylesheet" href="~/fontawesome/css/all.min.css">
     
@@ -62,49 +56,7 @@
             </Scripts>
         </asp:ScriptManager>
 
-        <%-- diseño mi plantilla --%>
         
-        <%--                        <asp:LoginView runat="server" ViewStateMode="Disabled">
-                                    <LoggedInTemplate>
-                                        <li class="nav-item nav-profile dropdown">
-                                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-                                                <img src="../../images/faces/face5.jpg" alt="profile" />
-                                                <span class="nav-profile-name">Evan Morales</span>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-                                                <a class="dropdown-item">
-                                                    <i class="mdi mdi-settings text-primary"></i>
-                                                    Editar perfil
-                                                </a>
-                                                <div class="dropdown-divider"></div>
-                                                <a class="dropdown-item">
-                                                    <i class="mdi mdi-logout text-primary"></i>
-                                                    Cambiar contraseña
-                                                </a>
-                                                <a class="dropdown-item">
-                                                    <i class="mdi mdi-settings text-primary"></i>
-                                                    Configurar
-                                                </a>
-                                                <a class="dropdown-item">
-                                                    <i class="mdi mdi-settings text-primary"></i>
-                                                    Cerrar sesion
-                                                </a>
-                                            </div>
-                                        </li>
-                                         <div class="designation"><%: Context.User.Identity.GetUserName()  %></div>
-
-                                    <a href="~/Account/Manage">Edit Profile</a>
-                                    </LoggedInTemplate>
-                                </asp:LoginView>--%>
-        
-                                 
-                                      <%--  <li class="nav-item"><a class="nav-link" href="../CatalogosSistema/Marca">Marca</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="../CatalogosSistema/Tipo_Producto">Tipo Producto</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="../CatalogosSistema/Unidad_Medida">Unidad de Medida</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="../CatalogosSistema/Pais">Pais</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="../CatalogosSistema/Ciudad">Ciudad</a></li>
-                                        <li class="nav-item"><a class="nav-link" href="../CatalogosSistema/Departamento">Departamento</a></li>
-                                    --%>
                         
          <!-- Header start -->
     <header class="header">
@@ -241,7 +193,7 @@
                                 <a class="dropdown-item" Id="UnidadMedida" href="Unidad_Medida"><i class="fas fa-balance-scale-right"></i>Unidad de Medida</a>
                             </li>
                              <li>
-                                <a class="dropdown-item"  href="Unidad_Envase"><i class="fas fa-balance-scale-right"></i>Unidad de Envase</a>
+                                <a class="dropdown-item" Id="UnidadEnvase" href="UnidadEnvase"><i class="fas fa-balance-scale-right"></i>UnidadEnvase</a>
                             </li>
                             <li>
                                 <a class="dropdown-item" Id="Pais" href="Pais"><i class="far fa-flag"></i>Pais</a>
@@ -262,7 +214,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="nav-inv">
                             <li>
-                                <a class="dropdown-item" href="Existencia"><i class="fas fa-database"></i>Existencia</a>
+                                <a class="dropdown-item" id="Existencia" href="Existencia"><i class="fas fa-database"></i>Existencia</a>
                             </li>
                             <li>
                                 <a class="dropdown-item" Id="Productos" href="Productos"><i class="fab fa-product-hunt"></i>Producto</a>
@@ -271,16 +223,16 @@
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="formsDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" id="nav-venta" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <i class="far fa-file-alt nav-icon"></i>
                             Facturación
                         </a>
-                        <ul class="dropdown-menu" aria-labelledby="formsDropdown">
+                        <ul class="dropdown-menu" aria-labelledby="nav-venta">
                             <li>
-                                <a class="dropdown-item" href="HistoricoVenta"><i class="fas fa-history"></i>Historico Venta</a>
+                                <a class="dropdown-item" Id="HistoricoVenta" href="HistoricoVenta"><i class="fas fa-history"></i>Historico Venta</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="Venta"><i class="fas fa-money-check-alt"></i>Vender</a>
+                                <a class="dropdown-item" Id="Venta"  href="Venta"><i class="fas fa-money-check-alt"></i>Vender</a>
                             </li>
                              
                         </ul>
@@ -295,7 +247,7 @@
                                 <a class="dropdown-item" Id="Compra" href="Compra"><i class="fas fa-shopping-bag"></i>Compra</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" Id="" href="HistoricoCompra"><i class="fas fa-history"></i>Historico Compra</a>
+                                <a class="dropdown-item" Id="HistoricoCompra" href="HistoricoCompra"><i class="fas fa-history"></i>HistoricoCompra</a>
                             </li>
                              <li>
                                 <a class="dropdown-item" Id="Bodega"  href="Bodega" ><i class="fab fa-linode"></i>Bodega</a>
@@ -306,9 +258,16 @@
                              
                         </ul>
                     </li>
-                    <li>
-                            <a class="dropdown-item" id="Reportes" href="Reportes"><i class="fas fa-people-carry"></i>Reporte</a>
-              
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="nav-Reportes" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="far fa-money-bill-alt nav-icon"></i>
+                            Reportes
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="nav-Reportes">
+                               <li>
+                            <a class="dropdown-item" id="Reportes" href="Reportes"><i class="fas fa-people-carry"></i>Reportes</a>
+                                </li>
+                             </ul>
                     </li>
 
                  
@@ -362,21 +321,6 @@
 
 
 
-<%--        <li><a href="../CatalogosSistema/Proveedor">Proveedor</a></li>
-        <li><a href="../CatalogosSistema/Producto">Producto</a></li>
-        <li><a href="../CatalogosSistema/Tipo_Producto">Tipo Producto</a></li>
-        <li><a href="../CatalogosSistema/Unidad_Medida">Unidad Medida</a></li>
-        <li><a href="../CatalogosSistema/Marca">Marca</a></li>
-
-        <li><a href="../CatalogosSistema/Bodega.aspx">Bodega</a></li>
-        <li><a href="../CatalogosSistema/Pais.aspx">Pais</a></li>
-        <li><a href="../CatalogosSistema/Ciudad.aspx">Ciudad</a></li>
-        <li><a href="../CatalogosSistema/Departamento.aspx">Departamento</a></li>--%>
-
-
-     
-<%--
-        <footer class="footer">Copyright Sistema Conny <span>2020</span>.</footer>--%>
 
         <%-- fin de diseño --%>
     </form>
@@ -414,25 +358,6 @@
      <asp:ContentPlaceHolder ID="ContentPlaceHolderScript" runat="server">
                         </asp:ContentPlaceHolder>
 
-    <%-- <script src="~/ElementosPlantilla/js/jquery.js"></script>
-    <script src="~/ElementosPlantilla/js/bootstrap.min.js"></script>
-    <script src="~/ElementosPlantilla/js/jquery-ui.min.js"></script>
-    <script src="~/ElementosPlantilla/js/scrollup.min.js"></script>
-    <script src="~/ElementosPlantilla/js/jquery.flot.min.js"></script>
-    <script src="~/ElementosPlantilla/js/jquery.flot.tooltip.min.js"></script>
-    <script src="~/ElementosPlantilla/js/jquery.flot.time.min.js"></script>
-    <script src="~/ElementosPlantilla/js/jquery.flot.resize.min.js"></script>
-    <script src="~/ElementosPlantilla/js/multi-bar-chart.js"></script>
-    <script src="~/ElementosPlantilla/js/profile-area.js"></script>
-    <script src="~/ElementosPlantilla/js/jquery-jvectormap-2.0.3.min.js"></script>
-    <script src="~/ElementosPlantilla/js/gdp-data.js"></script>
-    <script src="~/ElementosPlantilla/js/usa.js"></script>
-    <script src="~/ElementosPlantilla/js/usa-profile.js"></script>
-    <script src="~/ElementosPlantilla/js/d3.min.js"></script>
-    <script src="~/ElementosPlantilla/js/c3.min.js"></script>
-    <script src="~/ElementosPlantilla/js/c3.custom.js"></script>
-    <script src="~/ElementosPlantilla/js/themeSwitcher.js"></script>
-    <script src="~/ElementosPlantilla/js/common.js"></script>--%>
    
 </body>
 </html>

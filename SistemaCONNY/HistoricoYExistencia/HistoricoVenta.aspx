@@ -411,76 +411,8 @@
         });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-       <%-- $(document).ready(function () {
-
-            //funcion que permite seleccionar datos de la tabla
-            $('#gridData').on('click', 'tr', function () {
-                globalDataEdicion = tablePro.row(this).data();
-                // console.log(globalDataEdicion);
-                var id = globalDataEdicion.IdBodega;
-                // console.log(id);
-              <%--  $('#<%=idBodega.ClientID%>').val(id);
-                 $('#<%=txtNombre.ClientID%>').val(globalDataEdicion.NombreBodega);
-                 $('#<%=dropCiudad.ClientID%>').val(globalDataEdicion.IdCiudad);--%>
-                <%-- $('#<%=txtCodArticulo.ClientID%>').val(idArticulo);   TextBox1
-                  $('#<%=txtArticulo.ClientID%>').val(articulo);--%>
-             //});--%>
-             //$('#gridData').on('click', '#btnEliminar', function (e) {
-             //    var data_form = tablePro.row($(this).parents("tr")).data();
-             //    var id = data_form.IdBodega;
-             //    var isConfirm;
-             //    //this.preventDefault();
-             //    e.preventDefault();
-             //    swal({
-             //        title: "Desea eliminar el elemento?",
-             //        text: "Selecciona una accion",
-             //        type: "warning",
-             //        showCancelButton: true,
-             //        confirmButtonClass: "btn-danger",
-             //        confirmButtonText: "Confirmar",
-             //        cancelButtonText: "Cancelar",
-             //        closeOnConfirm: false,
-             //        closeOnCancel: false
-             //    },
-                    <%-- function (isConfirm) {
-                         if (isConfirm) {
-                             $.ajax({
-                                 type: "POST",
-                                 data: '{codigo:' + id + '}',
-                                 url: "<%= ResolveUrl("Historico.aspx/suprData") %>",
-                                   contentType: "application/json; charset=utf-8",
-                                   dataType: "json",
-                                   success: function (response) {
-                                       LoadTemp();
-                                      <%-- $('#<%=idBodega.ClientID%>').val('');
-                                       $('#<%=txtNombre.ClientID%>').val('');
-                                       $('#<%=dropCiudad.ClientID%>').val('');--%>
-                     //                swal("Deleted!", "Your item deleted.", "success");
-                     //            },
-                     //            failure: function (response) {
-                     //                swal("Error!", "Dependencia de datos.", "warning");
-                     //            }
-                     //        });
-                     //    } else {
-                     //        swal("Cancelado", "Operacion cancelada", "error");
-                     //    }
-                     //});
-         //    });
-         //});--%>
-
+        quitarClases();
+        document.getElementById("HistoricoVenta").classList.add("active-page");
+        document.getElementById("nav-venta").classList.add("active-page");
     </script>
 </asp:Content>

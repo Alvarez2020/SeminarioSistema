@@ -11,7 +11,7 @@
             <div class="card">
                 <div class="card-body">
                     <%--<h3 class="text-center">Compra<i class="far fa-file-alt nav-icon"></i></h3>--%>
-                    <h3>Realice una Compra <i class="fas fa-cart-arrow-down"></i></h3>
+                  
                     <p class="card-description">
                         <%-- Add class <code>.table</code>--%>
                     </p>
@@ -23,9 +23,10 @@
 
                             <div class="row">
                                 <div class="col col-md-4">
+                                      <h3>Realice una Compra <i class="fas fa-cart-arrow-down"></i></h3>
                                     <%--Primera columna--%>
                                     <div class="form-group">
-                                        <asp:Label Text="Fecha" runat="server" />
+                                        <asp:Label Text="Fecha"  foreColor="#006600" runat="server" />
                                         <i class="fas fa-calendar-alt"></i>
                                         <asp:TextBox Width="100%" ID="txtFecha" runat="server" class="form-control" type="date" placeholder="00/00/0000 "></asp:TextBox>
                                     </div>
@@ -43,14 +44,14 @@
                                         </div>
                                     </div>
                                     <div class="form-group">
-                                        <asp:Label Text="Ingrese Cantidad" runat="server" />
+                                        <asp:Label Text="Ingrese Cantidad"  foreColor="#006600" runat="server" />
                                      ;
                                         <asp:TextBox ID="txtCantidad" runat="server" class="form-control" type="number" placeholder="Cantidad" Width="100%"></asp:TextBox>
                                     </div>
 
 
                                     <div class="form-group">
-                                        <asp:Label Text="Precio Compra" runat="server" />
+                                        <asp:Label Text="Precio Compra"  foreColor="#006600" runat="server" />
                                         <i class="fas fa-money-check-alt"></i>
                                         <asp:TextBox ID="txtPrecioCompra" runat="server" class="form-control " type="number" placeholder="C$" Width="100%"></asp:TextBox>
                                     </div>
@@ -61,14 +62,14 @@
                                 <div class=" col col-md-3 mx-5">
                                     <%--Segunda columna--%>
                                     <div class="form-group">
-                                        <asp:Label Text="Precio Venta" runat="server" />
+                                        <asp:Label Text="Precio Venta"  foreColor="#006600" runat="server" />
                                         <i class="fas fa-money-check-alt"></i>
                                         <asp:TextBox ID="txtPrecioVenta" runat="server" class="form-control" type="number" placeholder="C$" Width="100%"></asp:TextBox>
                                     </div>
                                     <div class="form-group">
                                         <div class="input-group">
                                             <input type="text" hidden style="display: none" id="txtIdProveedor" />
-                                            <asp:Label Text="Seleccione Seleccione Proveedor" runat="server" />
+                                            <asp:Label Text="Seleccione Seleccione Proveedor"  foreColor="#006600" runat="server" />
                                             <i class="fas fa-hand-holding-usd"></i>
                                             <asp:TextBox type="text" Width="70%" Height="40" runat="server" class="form-control"
                                                 disabled="disabled" ID="txtProveedor" placeholder="Producto/proveedor" aria-describedby="btnAgregarArticulo2">
@@ -80,7 +81,7 @@
                                     <div class="form-group">
                                         <div class="input-group"> 
                                             <input type="text" hidden style="display: none" id="txtIdUnidadMedida" />
-                                            <asp:Label Text="Seleccione Unidad-Medida" runat="server" />
+                                            <asp:Label Text="Seleccione Unidad-Medida"  foreColor="#006600" runat="server" />
                                             <i class="fas fa-hand-holding-usd"></i>
                                             <asp:TextBox type="text" Width="70%" Height="40" runat="server" class="form-control"
                                                 disabled="disabled" ID="txtUmDescripcion" placeholder="Unidad/Medida" aria-describedby="btnAgregarArticulo3">
@@ -92,7 +93,7 @@
                                     <div class="form-group">
                                         <div class="input-group">
                                             <input type="text" hidden style="display: none" id="txtIdUnidadEnvase" />
-                                              <asp:Label Text="Seleccione Unidad-Envase" runat="server" />
+                                              <asp:Label Text="Seleccione Unidad-Envase"  foreColor="#006600" runat="server" />
                                             <i class="fas fa-hand-holding-usd"></i>
                                             <asp:TextBox type="text" Width="70%" Height="40" runat="server" class="form-control"
                                                 disabled="disabled" ID="txtDescripcionUnidadEnvase" placeholder="Unidad/Envase" aria-describedby="btnAgregarArticulo4">
@@ -105,17 +106,17 @@
 
                                 <div class=" col col-md-4">
                                     <div class="form-group">
-                                        <asp:Label Text="Fecha Elaboracion" runat="server" />
+                                        <asp:Label Text="Fecha Elaboracion"  foreColor="#006600" runat="server" />
                                         <i class="fas fa-calendar-alt"></i>
                                         <asp:TextBox ID="txtFechaElaboracion" runat="server" class="form-control" type="date" placeholder="00/00/0000" Width="100%"></asp:TextBox>
                                     </div>
                                     <div class="form-group">
-                                        <asp:Label Text="Fecha Vencimiento" runat="server" />
+                                        <asp:Label Text="Fecha Vencimiento"   foreColor="#006600" runat="server" />
                                         <i class="fas fa-calendar-alt"></i>
                                         <asp:TextBox ID="txtFechaVencimiento" runat="server" class="form-control" type="date" placeholder="00/00/0000" Width="100%"></asp:TextBox>
                                     </div>
                                     <div class="form-group">
-                                        <asp:Label Text="Bodega" runat="server" />
+                                        <asp:Label Text="Bodega"  foreColor="#006600" runat="server" />
                                         <i class="fas fa-box-open"></i>
                                         <asp:DropDownList ID="dropBodega" runat="server"
                                             class="form-control" type="text" Width="80%">
@@ -158,18 +159,18 @@
 
                                     </table>
                                     <div class="form-group">
-                                        <asp:Label Text="total " runat="server" />
-                                        <asp:TextBox ID="txtTotal" runat="server" class="form-control" type="number" placeholder="C$"></asp:TextBox>
+                                        <asp:Label Text="total " foreColor="#006600" runat="server" />
+                                        <asp:TextBox ID="txtTotal" width="15%" runat="server" class="form-control" type="number" placeholder="C$"></asp:TextBox>
                                     </div>
                                     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                                         <ContentTemplate>
                                             <div class="form-group">
-                                                <asp:Label Text="Cantidad Pago" runat="server" />
-                                                <asp:TextBox ID="txtCantidadPago" OnTextChanged="txtCantidadPago_TextChanged" AutoPostBack="true" runat="server" class="form-control txtCantidadPago" type="number" placeholder="C$"></asp:TextBox>
+                                                <asp:Label Text="Cantidad Pago"  foreColor="#006600" runat="server" />
+                                                <asp:TextBox ID="txtCantidadPago" width="15%" OnTextChanged="txtCantidadPago_TextChanged" AutoPostBack="true" runat="server" class="form-control txtCantidadPago" type="number" placeholder="C$"></asp:TextBox>
                                             </div>
                                             <div class="form-group">
-                                                <asp:Label Text="Cambio" runat="server" />
-                                                <asp:TextBox ID="txtCambio" runat="server" class="form-control" type="text" placeholder="Cambio"></asp:TextBox>
+                                                <asp:Label Text="Cambio" foreColor="#006600" runat="server" />
+                                                <asp:TextBox ID="txtCambio" width="15%" runat="server" class="form-control" type="text" placeholder="Cambio"></asp:TextBox>
                                             </div>
                                         </ContentTemplate>
                                     </asp:UpdatePanel>

@@ -8,33 +8,42 @@
         .no-visible{
             opacity:0;
         }
+        
+        @media (min-width: 992px) {
+            .modal-lg {
+                max-width: 1000px !important;
+            }
+        }
+   
     </style>
     <div class="row">
         <div class="col-lg-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h3>Realice una Venta <i class="fas fa-cart-arrow-down"></i></h3>
+
+                  
                     <p class="card-description">
                         <%-- Add class <code>.table</code>--%>
                     </p>
                     <div class="container ">
                         <div class="row">
-                            <div class=" col col-md-6 mx-6">
+                            <div class=" col col-md-5 mx-7">
+                                  <h3>Realice una Venta <i class="fas fa-cart-arrow-down"></i></h3>
                                 <%--Primera columna--%>
                                 <div class="form-group">
-                                    <asp:Label Text="Ingrese su nombre" runat="server" />
+                                    <asp:Label Text="Ingrese su nombre" foreColor="#006600" runat="server" />
                                     <i class="fas fa-hand-holding-usd"></i>
-                                    <asp:TextBox ID="txtCliente" runat="server" class="form-control" type="text" placeholder="NombreCliente"></asp:TextBox>
+                                    <asp:TextBox ID="txtCliente" style="width: 41%" runat="server" class="form-control" type="text" placeholder="NombreCliente"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <asp:Label Text="Ingrese fecha" runat="server" />
+                                    <asp:Label Text="Ingrese fecha" foreColor="#006600" runat="server" />
                                     <i class="fas fa-hand-holding-usd"></i>
-                                    <asp:TextBox ID="txtFecha" runat="server" class="form-control" type="date" placeholder="00/00/0000"></asp:TextBox>
+                                    <asp:TextBox ID="txtFecha" style="width: 41%" runat="server" class="form-control" type="date" placeholder="00/00/0000"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <asp:Label Text="Ingrese Cantidad a Comprar" runat="server" />
+                                    <asp:Label Text="Ingrese Cantidad a Comprar" foreColor="#006600" runat="server" />
                                     <i class="fas fa-hand-holding-usd"></i>
-                                    <asp:TextBox ID="txtCantidad" runat="server" class="form-control" type="number" min="1" placeholder="Cantidad"></asp:TextBox>
+                                    <asp:TextBox style="width: 41%" Height="2%" ID="txtCantidad" runat="server" class="form-control" type="number" min="1" placeholder="Cantidad"></asp:TextBox>
                                     <label class="col-form-label text-danger no-visible" id="validCantidad">CantidadValida</label>
 
                                 </div>
@@ -42,7 +51,7 @@
                             </div>
                             <%--Fin Primera columna--%>
 
-                            <div class=" col col-md-6 mx-6">
+                            <div class=" col col-md-5 mx-6">
                                 <div class="form-group">
                                     <div class="form-inline">
 
@@ -67,12 +76,12 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <asp:Label Text="Existencia" runat="server" />
-                                    <asp:TextBox ID="txtExistencia" runat="server" class="form-control" type="number" placeholder="C$" disabled="disabled"></asp:TextBox>
+                                    <asp:Label Text="Existencia" foreColor="#006600" runat="server" />
+                                    <asp:TextBox ID="txtExistencia" style="width: 41%"  runat="server" class="form-control" type="number" placeholder="C$" disabled="disabled"></asp:TextBox>
                                 </div>
                                 <div class="form-group">
-                                    <asp:Label Text="Precio Venta" runat="server" />
-                                    <asp:TextBox ID="txtPrecioVenta" runat="server" class="form-control" type="number" placeholder="C$" disabled="disabled"></asp:TextBox>
+                                    <asp:Label Text="Precio Venta" foreColor="#006600" runat="server" />
+                                    <asp:TextBox ID="txtPrecioVenta" style="width: 41%"  runat="server" class="form-control" type="number" placeholder="C$" disabled="disabled" ></asp:TextBox>
                                 </div>
                             </div>
 
@@ -94,6 +103,7 @@
                                 <table id="gridData" class="table table-striped table-bordered" style="width: 100%">
                                     <thead>
                                         <tr>
+                                            
                                             <th style="width: 5%">Id</th>
                                             <th>Cliente</th>
                                             <%--       <th>idProducto</th>--%>
@@ -103,24 +113,24 @@
                                             <th>Cantidad</th>
                                             <th>Precio Unit</th>
                                             <th>Importe</th>
-                                            <th style="width: 5%; text-align: center">opciones</th>
+                                          <th style="width: 5%; text-align: center">opciones</th>
                                         </tr>
                                     </thead>
 
                                 </table>
                                 <div class="form-group">
-                                    <asp:Label Text="total" runat="server" />
-                                    <asp:TextBox ID="txtTotal" runat="server" class="form-control" type="number" placeholder="C$"></asp:TextBox>
+                                    <asp:Label Text="Total" foreColor="#006600" runat="server" />
+                                    <asp:TextBox  disabled="disabled" foreColor="#006600" style="width: 15%" Height="2%" ID="txtTotal" runat="server" class="form-control" type="number" placeholder="C$" ></asp:TextBox>
                                 </div>
                                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                                     <ContentTemplate>
                                         <div class="form-group">
-                                            <asp:Label Text="Cantidad Pago" runat="server" />
-                                            <asp:TextBox ID="txtCantidadPago" OnTextChanged="txtCantidadPago_TextChanged" AutoPostBack="true" runat="server" class="form-control txtCantidadPago" type="number" placeholder="C$"></asp:TextBox>
+                                            <asp:Label Text="Cantidad Pago" foreColor="#006600" runat="server" />
+                                            <asp:TextBox  style="width: 15%" Height="2%" ID="txtCantidadPago" OnTextChanged="txtCantidadPago_TextChanged" AutoPostBack="true" runat="server" class="form-control txtCantidadPago" type="number" placeholder="C$"></asp:TextBox>
                                         </div>
                                         <div class="form-group">
-                                            <asp:Label Text="Cambio" runat="server" />
-                                            <asp:TextBox ID="txtCambio" runat="server" class="form-control" type="text" placeholder="Cambio"></asp:TextBox>
+                                            <asp:Label Text="Cambio" foreColor="#006600" runat="server" />
+                                            <asp:TextBox disabled="disabled" style="width: 15%" Height="2%" ID="txtCambio" runat="server" class="form-control" type="text" placeholder="Cambio"></asp:TextBox>
                                         </div>
                                     </ContentTemplate>
                                 </asp:UpdatePanel>
@@ -169,8 +179,8 @@
 
     <%-- modal seleccionar articulos --%>
     <div class="modal fade mbModal" id="myModal" role="dialog" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content" style="width: 800px;">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content w-100">
                 <div class="modal-header">
                     <h5 class="modal-title" id="proveedor">Seleccionar Producto</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -181,6 +191,7 @@
                     <table id="modalproducto" class="display" style="width: 100%">
                         <thead>
                             <tr>
+                                   <th>Seleccionar</th>
                                 <th>IdE</th>
                                 <th>IdP</th>
                                 <th>IdEN</th>
@@ -190,7 +201,7 @@
                                 <th>PrecioVenta</th>
                                 <th style="width: 5%">EnvaseUnidad</th>
                                 <th>Existencia</th>
-                                <th>Seleccionar</th>
+                                
                             </tr>
                         </thead>
                     </table>
@@ -225,6 +236,7 @@
                         "aaData": dataServer1,
                         "responsive": true,
                         "columns": [
+                            { "data": "opcion" },
                             { "data": 'IdExistencia' },
                             { "data": 'ID_PRODUCTO' },
                             { "data": 'ID_UNIDAD_ENVASE' },
@@ -233,22 +245,22 @@
                             { "data": 'NOMBRE_MARCA' },
                             { "data": 'PRECIO_VENTA' },
                             { "data": 'DESCRIPCION_ENVASE_UNIDAD' },
-                            { "data": 'CANTIDAD_EXISTENCIA' },
-                            { "data": "opcion" }
+                            { "data": 'CANTIDAD_EXISTENCIA' }
+                         
                         ],
                         "columnDefs": [
                             {
-                                "targets": [0],
+                                "targets": [1],
                                 "visible": true,
                                 "searchable": false
                             },
                             {
-                                "targets": [1, 2],
+                                "targets": [2, 3],
                                 "visible": false,
                                 "searchable": false
                             },
                             {
-                                "targets": -1,
+                                "targets": -0,
                                 "data": null,
                                 "className": "text-center",
                                 "defaultContent": "<a href='#' class='seleccionar' id='btnseleccionar'><i class='fas fa-edit'></i></a>"
@@ -426,13 +438,14 @@
                         "aaData": dataServer,
                         "responsive": true,
                         "columns": [
+                           
                             { "data": 'ID' },
                             { "data": 'CLIENTE_FACTURA' },
                             { "data": 'NOMBRE_PRODUCTO' },
                             { "data": 'CANTIDAD_PRODUCTOS' },
                             { "data": 'PRECIO_VENTA' },
                             { "data": 'SUBTOTAL' },
-                            { "data": 'opcion' }
+                             { "data": 'opcion' }
 
                         ],
                         "columnDefs": [
@@ -568,10 +581,7 @@
                 $('#myModal').modal('hide');
             });
 
-            //$('#btnAgregarArticulo').on('click', function () {
-            //    console.log("dany dañoo el modal")
-            //    $('.mbModal').modal('show');
-            // });
+         
 
         });
 
@@ -587,11 +597,7 @@
                 $('#myModal2').modal('hide');
             });
 
-            //$('#btnAgregarArticulo').on('click', function () {
-            //    console.log("dany dañoo el modal")
-            //    $('.mbModal').modal('show');
-            // });
-
+          
         });
         quitarClases();
         document.getElementById("Venta").classList.add("active-page");

@@ -26,7 +26,7 @@ namespace SistemaCONNY
                 RouteTable.Routes.MapPageRoute("Proveedor", "Proveedor", "~/CatalogosSistema/Proveedor.aspx");
                 RouteTable.Routes.MapPageRoute("Tipo_Producto", "Tipo_Producto", "~/CatalogosSistema/Tipo_Producto.aspx");
                 RouteTable.Routes.MapPageRoute("Unidad_Medida", "Unidad_Medida", "~/CatalogosSistema/Unidad_Medida.aspx");
-                RouteTable.Routes.MapPageRoute("Unidad_Envase", "Unidad_Envase", "~/CatalogosSistema/UNIDAD_ENVASE.aspx");
+                RouteTable.Routes.MapPageRoute("UnidadEnvase", "UnidadEnvase", "~/CatalogosSistema/UNIDAD_ENVASE.aspx");
                 RouteTable.Routes.MapPageRoute("Compra", "Compra", "~/Transaccion/Compra.aspx");
                 RouteTable.Routes.MapPageRoute("Venta", "Venta", "~/Transaccion/Venta.aspx");
                 RouteTable.Routes.MapPageRoute("HistoricoCompra", "HistoricoCompra", "~/HistoricoYExistencia/HistoricoCompra.aspx");

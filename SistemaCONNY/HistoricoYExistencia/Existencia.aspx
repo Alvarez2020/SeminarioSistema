@@ -262,7 +262,9 @@
               }
           });
     });
-   
+    quitarClases();
+    document.getElementById("Existencia").classList.add("active-page");
+    document.getElementById("nav-inv").classList.add("active-page");
 
 </script>
 </asp:Content>

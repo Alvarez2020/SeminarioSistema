@@ -5,7 +5,13 @@
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
+     <style>
+        @media (min-width: 992px) {
+            .modal-lg {
+                max-width: 1000px !important;
+            }
+        }
+    </style>
     <div class="row">
         <div class="col-sm-12 grid-margin stretch-card">
             <div class="card">
@@ -462,6 +468,8 @@
                      //});
          //    });
          //});--%>
-
+        quitarClases();
+        document.getElementById("HistoricoCompra").classList.add("active-page");
+        document.getElementById("nav-compra").classList.add("active-page");
     </script>
 </asp:Content>

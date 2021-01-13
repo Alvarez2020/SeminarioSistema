@@ -24,11 +24,12 @@
             
         </div>
     </div>
-     <script>  
-          quitarClases();
-         document.getElementById("Reporte").classList.add("active-page");
-         document.getElementById("nav-compra").classList.add("active-page");
-     </script>
+     
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderScript" runat="server">
+    <script>  
+        quitarClases();
+        document.getElementById("Reportes").classList.add("active-page");
+        document.getElementById("nav-Reportes").classList.add("active-page");
+    </script>
 </asp:Content>

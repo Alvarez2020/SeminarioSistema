@@ -207,9 +207,7 @@
               });
          });
 
-         quitarClases();
-         document.getElementById("UnidadEnvase").classList.add("active-page");
-        document.getElementById("nav-mant").classList.add("active-page");
+       
         function err() {
             swal('Advertencia!', 'Dato repetido', 'warning')
         }
@@ -218,5 +216,8 @@
             swal('Excelente!', 'Dato Guardado', 'success')
             LoadTemp();
         }
+        quitarClases();
+        document.getElementById("UnidadEnvase").classList.add("active-page");
+        document.getElementById("nav-mant").classList.add("active-page");
     </script>
 </asp:Content>
