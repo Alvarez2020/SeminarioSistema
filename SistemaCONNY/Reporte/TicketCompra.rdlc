@@ -11,7 +11,22 @@
               <Paragraph>
                 <TextRuns>
                   <TextRun>
-                    <Value>Reporte Factura</Value>
+                    <Value>Reporte Factura Compra</Value>
+                    <Style>
+                      <FontStyle>Normal</FontStyle>
+                      <FontSize>14pt</FontSize>
+                      <FontWeight>Bold</FontWeight>
+                    </Style>
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>  Miscelanea Conny</Value>
                     <Style>
                       <FontStyle>Normal</FontStyle>
                       <FontSize>14pt</FontSize>
@@ -25,9 +40,9 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.25521cm</Top>
-            <Left>7.09129cm</Left>
-            <Height>0.78521cm</Height>
+            <Top>0.21993cm</Top>
+            <Left>8.12316cm</Left>
+            <Height>1.94056cm</Height>
             <Width>5.17229cm</Width>
             <Style>
               <Border>
@@ -56,8 +71,8 @@
                   </Paragraph>
                 </Paragraphs>
                 <rd:DefaultName>Textbox27</rd:DefaultName>
-                <Top>0.10083cm</Top>
-                <Left>1.58969cm</Left>
+                <Top>0.03968cm</Top>
+                <Left>1.39569cm</Left>
                 <Height>0.6cm</Height>
                 <Width>2.5cm</Width>
                 <Style>
@@ -84,8 +99,8 @@
                     <Style />
                   </Paragraph>
                 </Paragraphs>
-                <Top>0.10083cm</Top>
-                <Left>3.89125cm</Left>
+                <Top>0.03968cm</Top>
+                <Left>3.89569cm</Left>
                 <Height>0.6cm</Height>
                 <Width>1.79413cm</Width>
                 <ZIndex>1</ZIndex>
@@ -99,12 +114,72 @@
                   <PaddingBottom>2pt</PaddingBottom>
                 </Style>
               </Textbox>
+              <Textbox Name="Textbox9">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Cliente:</Value>
+                        <Style />
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox9</rd:DefaultName>
+                <Top>0.07496cm</Top>
+                <Left>9.64865cm</Left>
+                <Height>0.6cm</Height>
+                <Width>2.5cm</Width>
+                <ZIndex>2</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
+              <Textbox Name="Textbox10">
+                <CanGrow>true</CanGrow>
+                <KeepTogether>true</KeepTogether>
+                <Paragraphs>
+                  <Paragraph>
+                    <TextRuns>
+                      <TextRun>
+                        <Value>Predeterminado</Value>
+                        <Style />
+                      </TextRun>
+                    </TextRuns>
+                    <Style />
+                  </Paragraph>
+                </Paragraphs>
+                <rd:DefaultName>Textbox9</rd:DefaultName>
+                <Top>0.07056cm</Top>
+                <Left>11.80566cm</Left>
+                <Height>0.6cm</Height>
+                <Width>2.84396cm</Width>
+                <ZIndex>3</ZIndex>
+                <Style>
+                  <Border>
+                    <Style>None</Style>
+                  </Border>
+                  <PaddingLeft>2pt</PaddingLeft>
+                  <PaddingRight>2pt</PaddingRight>
+                  <PaddingTop>2pt</PaddingTop>
+                  <PaddingBottom>2pt</PaddingBottom>
+                </Style>
+              </Textbox>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>1.86035cm</Top>
-            <Left>0.76838cm</Left>
-            <Height>0.83313cm</Height>
-            <Width>19.70232cm</Width>
+            <Top>2.19577cm</Top>
+            <Left>0.58755cm</Left>
+            <Height>0.88814cm</Height>
+            <Width>20.10866cm</Width>
             <ZIndex>1</ZIndex>
             <Style>
               <Border>
@@ -233,10 +308,10 @@
               </Textbox>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>2.97656cm</Top>
-            <Left>0.65309cm</Left>
+            <Top>3.15947cm</Top>
+            <Left>0.58755cm</Left>
             <Height>0.85962cm</Height>
-            <Width>20.10866cm</Width>
+            <Width>20.46524cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -908,9 +983,8 @@
               <Rectangle Name="Rectangle1">
                 <KeepTogether>true</KeepTogether>
                 <Top>4.20632cm</Top>
-                <Left>0.11529cm</Left>
                 <Height>0.14521cm</Height>
-                <Width>18.17183cm</Width>
+                <Width>20.10866cm</Width>
                 <ZIndex>7</ZIndex>
                 <Style>
                   <Border>
@@ -1254,7 +1328,6 @@
                                 <PaddingBottom>2pt</PaddingBottom>
                               </Style>
                             </Textbox>
-                            <rd:Selected>true</rd:Selected>
                           </CellContents>
                         </TablixCell>
                       </TablixCells>
@@ -1290,10 +1363,10 @@
               </Tablix>
             </ReportItems>
             <KeepTogether>true</KeepTogether>
-            <Top>4.50618cm</Top>
-            <Left>0.65309cm</Left>
+            <Top>4.54146cm</Top>
+            <Left>0.58755cm</Left>
             <Height>7.07085cm</Height>
-            <Width>20.10866cm</Width>
+            <Width>20.1742cm</Width>
             <ZIndex>3</ZIndex>
             <Style>
               <Border>
@@ -1303,7 +1376,7 @@
           </Rectangle>
         </ReportItems>
         <KeepTogether>true</KeepTogether>
-        <Height>11.57703cm</Height>
+        <Height>11.61231cm</Height>
         <Width>21.4892cm</Width>
         <Style>
           <Border>
@@ -1311,36 +1384,6 @@
           </Border>
         </Style>
       </Rectangle>
-      <Textbox Name="Textbox3">
-        <CanGrow>true</CanGrow>
-        <KeepTogether>true</KeepTogether>
-        <Paragraphs>
-          <Paragraph>
-            <TextRuns>
-              <TextRun>
-                <Value />
-                <Style />
-              </TextRun>
-            </TextRuns>
-            <Style />
-          </Paragraph>
-        </Paragraphs>
-        <rd:DefaultName>Textbox3</rd:DefaultName>
-        <Top>0.254cm</Top>
-        <Left>0.254cm</Left>
-        <Height>0.6cm</Height>
-        <Width>2.5cm</Width>
-        <ZIndex>1</ZIndex>
-        <Style>
-          <Border>
-            <Style>None</Style>
-          </Border>
-          <PaddingLeft>2pt</PaddingLeft>
-          <PaddingRight>2pt</PaddingRight>
-          <PaddingTop>2pt</PaddingTop>
-          <PaddingBottom>2pt</PaddingBottom>
-        </Style>
-      </Textbox>
     </ReportItems>
     <Height>4.73751in</Height>
     <Style />

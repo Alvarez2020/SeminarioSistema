@@ -120,7 +120,7 @@
                                 </table>
                                 <div class="form-group">
                                     <asp:Label Text="Total" foreColor="#006600" runat="server" />
-                                    <asp:TextBox  disabled="disabled" foreColor="#006600" style="width: 15%" Height="2%" ID="txtTotal" runat="server" class="form-control" type="number" placeholder="C$" ></asp:TextBox>
+                                    <asp:TextBox   foreColor="#006600" style="width: 15%" Height="2%" ID="txtTotal" runat="server" class="form-control" type="number" placeholder="C$" ></asp:TextBox>
                                 </div>
                                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                                     <ContentTemplate>
@@ -130,7 +130,7 @@
                                         </div>
                                         <div class="form-group">
                                             <asp:Label Text="Cambio" foreColor="#006600" runat="server" />
-                                            <asp:TextBox disabled="disabled" style="width: 15%" Height="2%" ID="txtCambio" runat="server" class="form-control" type="text" placeholder="Cambio"></asp:TextBox>
+                                            <asp:TextBox  style="width: 15%" Height="2%" ID="txtCambio" runat="server" class="form-control" type="text" placeholder="Cambio"></asp:TextBox>
                                         </div>
                                     </ContentTemplate>
                                 </asp:UpdatePanel>

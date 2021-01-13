@@ -71,11 +71,11 @@
 
                     <!-- Header actions start -->
                     <ul class="header-actions">
-                        <li class="dropdown d-none d-sm-block">
+                        <%--<li class="dropdown d-none d-sm-block">
                             <a href="Inicio" class="contact">
-                                <i class="icon-phone"></i> 012 345 6789
+                                <%--<i class="icon-phone"></i> 012 345 6789
                             </a>
-                        </li>
+                        </li>--%>
                         <li class="dropdown d-none d-sm-block">
                             <a href="#" id="notifications" data-toggle="dropdown" aria-haspopup="true">
                                 <i class="icon-bell"></i>
@@ -135,13 +135,13 @@
                                 <div class="header-profile-actions">
                                     <div class="header-user-profile">
                                         <div class="header-user">
-                                            <img src="img/user11.png" alt="Royal Hospitals Admin Template" />
+                                            <img src="img/user11.png" alt="Miscelanea Conny" />
                                         </div>
                                         <h5><%: Context.User.Identity.GetUserName()  %></h5>
                                         <p>Admin</p>
                                     </div>
-                                    <a href="~/Account/Manage"><i class="icon-user1"></i> My Profile</a>
-                                    <a href="~/Account/Manage"><i class="icon-settings1"></i> Account Settings</a>
+                                    <a href="../Account/Register.aspx"><i class="icon-user1"></i> Registrar Usuario</a>
+                                    <a href="../Account/Manage.aspx"><i class="icon-settings1"></i> Configuracion</a>
                                       <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Cerrar Sesion" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
                                 </div>
                             </div>
@@ -287,14 +287,14 @@
 
 
             <!-- Page header start -->
-            <div class="page-header">
+           <%-- <div class="page-header">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item active">Hospital Dashboard</li>
                 </ol>
                 <div class="site-award">
                     <img src="img/award.svg" alt="Award"> Best Hospital
                 </div>
-            </div>
+            </div>--%>
             <!-- Page header end -->
 
 
