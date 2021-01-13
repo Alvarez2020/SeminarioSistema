@@ -42,7 +42,7 @@ namespace CapaDatos
                     {
                         
                         
-                        //Paso 1 - convertir valores de obj a tabla del modelo
+                        // convertir valores de obj a tabla del modelo
                         var tblDetalle = new TBL_DETALLE_COMPRA
                         {
                             ID_COMPRA = tblCompra.ID_COMPRA,
