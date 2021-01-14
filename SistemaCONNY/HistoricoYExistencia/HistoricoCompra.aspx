@@ -33,7 +33,7 @@
                                         <div class="form-group">
                                             <input type="text" hidden style="display: none" id="txtIdUnidadMedida" />
                                             <asp:TextBox type="text" Width="300px" Height="40" runat="server" class="form-control"
-                                                disabled="disabled" ID="txtUmDescripcion" placeholder="SeleccioneNumero de Factura">
+                                                disabled="disabled" ID="txtUmDescripcion" placeholder="Registro №Facturas">
                                             </asp:TextBox>
                                         </div>
                                         <button type="button" data-toggle="modal" data-target="#myModal2" id="btnAgregarArticulo3" class="btn btn-primary">...</button>
@@ -41,8 +41,8 @@
                                 </div>
 
                                 <asp:Button type="button" OnClick="btnFactura1_Click" ValidationGroup="valGuardar" ID="btnFactura" runat="server" Text="Factura" CssClass="btn btn-success" />
-                                <asp:TextBox type="text" runat="server" class="form-control"
-                                    ID="txtCod1" placeholder="SeleccioneNumero de Factura"> </asp:TextBox>
+                                 <asp:TextBox type="text" Width="100px" Height="40" runat="server" class="form-control"
+                                    ID="txtCod1" placeholder="№Facturas"> </asp:TextBox>
                                 <asp:RequiredFieldValidator ForeColor="red" ValidationGroup="valGuardar" ControlToValidate="txtCod1" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Campo es necesario" />
                             </div>
 
@@ -53,7 +53,7 @@
                                 <div class="form-group">
                                     <input type="text" hidden style="display: none" id="txtIdProducto" />
                                     <asp:TextBox type="text" Width="300px" Height="40" runat="server" class="form-control"
-                                        disabled="disabled" ID="txtProducto" placeholder="Producto/Marca">
+                                        disabled="disabled" ID="txtProducto" placeholder="Registro Compras">
                                     </asp:TextBox>
                                 </div>
                                 <button type="button" data-toggle="modal" data-target="#myModal" id="btnAgregarArticulo" class="btn btn-primary">...</button>
@@ -97,7 +97,7 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="unidad">Seleccionar Producto</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                   
                     </button>
                     <div class="center">
 
@@ -111,7 +111,7 @@
                         <thead>
                             <tr>
                                 <th style="width: 15%">ID_Compra</th>
-                                <th>CANTIDAD_PRODUCTO</th>
+                                
                                 <th>FechaCompra</th>
 
 
@@ -134,7 +134,7 @@
                 <div class="modal-header">
                     <h5 class="modal-title" id="proveedor">Seleccionar Producto</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
+                
                     </button>
                      <div class="center">
 
@@ -158,7 +158,7 @@
                                  <th>Unidades</th>
                                 <th>Precio Compra</th>
                                  <th>Total</th>
-                                <th>Seleccionar</th>
+                               <%-- <th>Seleccionar</th>--%>
                             </tr>
                         </thead>
                     </table>
@@ -281,7 +281,7 @@
                             //{ "data": 'ID_UNIDAD_MEDIDA' },
                             //{ "data": 'NOMBRE_PRODUCTO' },
                             //{ "data": 'NOMBRE_MARCA' },
-                            { "data": 'CANTIDAD_PRODUCTO' },
+                            //{ "data": 'CANTIDAD_PRODUCTO' },
                             //{ "data": 'UM_DESCRIPCION' },
                             //{ "data": 'UNIDADES' },
                             //{ "data": 'PRECIO_COMPRA' },
@@ -292,7 +292,7 @@
                         "columnDefs": [
 
                             {
-                                "targets": [2], render: function (data) {
+                                "targets": [1], render: function (data) {
                                     return moment(data).format('DD/MM/YYYY');
                                 }
                             },
@@ -343,7 +343,7 @@
                             { "data": 'UNIDADES' },
                             { "data": 'PRECIO_COMPRA' },
                             { "data": 'TOTAL' },
-                            { "data": "opcion" }
+                            //{ "data": "opcion" }
                         ],
                         "columnDefs": [
                             {
@@ -356,12 +356,12 @@
                                 "visible": false,
                                 "searchable": false
                             },
-                            {
-                                "targets": -1,
-                                "data": null,
-                                "className": "text-center",
-                                "defaultContent": "<a href='#' class='seleccionar' id='btnseleccionar'><i class='fas fa-edit'></i></a>"
-                            }
+                            //{
+                            //    "targets": -1,
+                            //    "data": null,
+                            //    "className": "text-center",
+                            //    "defaultContent": "<a href='#' class='seleccionar' id='btnseleccionar'><i class='fas fa-edit'></i></a>"
+                            //}
                         ],
                         "language": languaje
                     });
@@ -381,7 +381,7 @@
                 var p = tablePro3.row(this).data();
                 var idUnidadMedida = p.ID_Compra;
                 var PRE = p.ID_Compra;
-                var unidades = 'UmDescripcion:' + p.UmDescripcion + '  /  ' + 'Unidades:' + p.Unidades;
+                var unidades = ' RegistroFactura '
 
                 $('#txtIdUnidadMedida').val(idUnidadMedida);
                 $('#<%=txtUmDescripcion.ClientID%>').val(unidades);

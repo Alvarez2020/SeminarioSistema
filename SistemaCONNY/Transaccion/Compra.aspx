@@ -167,6 +167,8 @@
                                             <div class="form-group">
                                                 <asp:Label Text="Cantidad Pago"  foreColor="#006600" runat="server" />
                                                 <asp:TextBox ID="txtCantidadPago" width="15%" OnTextChanged="txtCantidadPago_TextChanged" AutoPostBack="true" runat="server" class="form-control txtCantidadPago" type="number" placeholder="C$"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ForeColor="red" ValidationGroup="valGuardar" ControlToValidate="txtCantidadPago" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Campo es necesario" />
+                                            
                                             </div>
                                             <div class="form-group">
                                                 <asp:Label Text="Cambio" foreColor="#006600" runat="server" />
@@ -177,7 +179,7 @@
                                 </div>
                             </div>
 
-                            <asp:Button ID="GuardarTransac" runat="server" class="btn btn-success" Text="GuardarRegistro " OnClick="GuardarTransac_Click" />
+                            <asp:Button ID="GuardarTransac" ValidationGroup="valGuardar" runat="server" class="btn btn-success" Text="GuardarRegistro " OnClick="GuardarTransac_Click" />
 
 
                         </div>

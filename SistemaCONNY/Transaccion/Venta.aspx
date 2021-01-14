@@ -127,6 +127,8 @@
                                         <div class="form-group">
                                             <asp:Label Text="Cantidad Pago" foreColor="#006600" runat="server" />
                                             <asp:TextBox  style="width: 15%" Height="2%" ID="txtCantidadPago" OnTextChanged="txtCantidadPago_TextChanged" AutoPostBack="true" runat="server" class="form-control txtCantidadPago" type="number" placeholder="C$"></asp:TextBox>
+                                    <asp:RequiredFieldValidator ForeColor="red" ValidationGroup="valGuardar" ControlToValidate="txtCantidadPago" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Campo es necesario" />
+                                        
                                         </div>
                                         <div class="form-group">
                                             <asp:Label Text="Cambio" foreColor="#006600" runat="server" />

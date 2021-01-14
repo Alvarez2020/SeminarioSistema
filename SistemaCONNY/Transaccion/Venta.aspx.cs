@@ -146,6 +146,10 @@ namespace SistemaCONNY.Transaccion
 
         protected void GuardarTransac_Click(object sender, EventArgs e)
         {
+            if (txtCantidadPago.Text == "")
+            {
+                return;
+            }
             FinalizarTransaccion();
             limpiar(this);
             ListaDetalle.Clear();

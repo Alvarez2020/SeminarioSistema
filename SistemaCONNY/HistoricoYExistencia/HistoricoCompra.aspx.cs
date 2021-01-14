@@ -227,7 +227,7 @@ namespace SistemaCONNY.Historico
 
                                 ID_Compra = variableAlmacenado.ID_COMPRA,
                                 FECHA_COMPRA = variableAlmacenado.FECHA_COMPRA,
-                                CANTIDAD_PRODUCTO = var.CANTIDAD_PRODUCTOS,
+                                //CANTIDAD_PRODUCTO = var.CANTIDAD_PRODUCTOS,
                                 
                                
                             }).ToList();
