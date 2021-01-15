@@ -26,6 +26,17 @@ namespace CapaDatos.ModeloEntity
         }
     
         public DbSet<C__MigrationHistory> C__MigrationHistory { get; set; }
+        public DbSet<aspnet_Applications> aspnet_Applications { get; set; }
+        public DbSet<aspnet_Membership> aspnet_Membership { get; set; }
+        public DbSet<aspnet_Paths> aspnet_Paths { get; set; }
+        public DbSet<aspnet_PersonalizationAllUsers> aspnet_PersonalizationAllUsers { get; set; }
+        public DbSet<aspnet_PersonalizationPerUser> aspnet_PersonalizationPerUser { get; set; }
+        public DbSet<aspnet_Profile> aspnet_Profile { get; set; }
+        public DbSet<aspnet_Roles> aspnet_Roles { get; set; }
+        public DbSet<aspnet_SchemaVersions> aspnet_SchemaVersions { get; set; }
+        public DbSet<aspnet_Users> aspnet_Users { get; set; }
+        public DbSet<aspnet_UsersInRoles> aspnet_UsersInRoles { get; set; }
+        public DbSet<aspnet_WebEvent_Events> aspnet_WebEvent_Events { get; set; }
         public DbSet<AspNetRoles> AspNetRoles { get; set; }
         public DbSet<AspNetUserClaims> AspNetUserClaims { get; set; }
         public DbSet<AspNetUserLogins> AspNetUserLogins { get; set; }
@@ -44,6 +55,7 @@ namespace CapaDatos.ModeloEntity
         public DbSet<CLIENTE> CLIENTE { get; set; }
         public DbSet<DATOSPERSONA> DATOSPERSONA { get; set; }
         public DbSet<PRODUCTO_PROVEEDOR> PRODUCTO_PROVEEDOR { get; set; }
+        public DbSet<sysdiagrams> sysdiagrams { get; set; }
         public DbSet<TBL_COMPRA> TBL_COMPRA { get; set; }
         public DbSet<TBL_DETALLE_COMPRA> TBL_DETALLE_COMPRA { get; set; }
         public DbSet<TBL_DETALLE_FACT> TBL_DETALLE_FACT { get; set; }

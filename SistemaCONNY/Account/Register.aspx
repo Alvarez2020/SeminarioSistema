@@ -38,6 +38,16 @@
             </div>
         </div>
         <div class="form-group">
+             <asp:Label runat="server" AssociatedControlID="dropRole" 
+                 CssClass="col-md-2 control-label">Asigne un Rol</asp:Label>
+             <div class="col-md-3">
+                  <asp:DropDownList ID="dropRole" CssClass="form-control" 
+                      runat="server"></asp:DropDownList>
+                  <asp:RequiredFieldValidator runat="server" ControlToValidate="dropRole"
+                    CssClass="text-danger" ErrorMessage="El campo de rol es obligatorio." />
+             </div>
+        </div>
+        <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <asp:Button runat="server" OnClick="CreateUser_Click" Text="Registrarse" CssClass="btn btn-default" />
             </div>

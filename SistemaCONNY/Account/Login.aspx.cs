@@ -34,7 +34,7 @@ namespace SistemaCONNY.Account
                 // Esto no cuenta los errores de inicio de sesión hacia el bloqueo de cuenta
                 // Para habilitar los errores de contraseña para desencadenar el bloqueo, cambie a shouldLockout: true
                 var result = signinManager.PasswordSignIn(Email.Text, Password.Text, RememberMe.Checked, shouldLockout: false);
-
+                //var  obtener rol
                 switch (result)
                 {
                     case SignInStatus.Success:

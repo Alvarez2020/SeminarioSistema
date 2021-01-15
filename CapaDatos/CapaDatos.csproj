@@ -91,6 +91,39 @@
     <Compile Include="ModeloEntity\AspNetUsers.cs">
       <DependentUpon>ModelBaseDato.tt</DependentUpon>
     </Compile>
+    <Compile Include="ModeloEntity\aspnet_Applications.cs">
+      <DependentUpon>ModelBaseDato.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModeloEntity\aspnet_Membership.cs">
+      <DependentUpon>ModelBaseDato.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModeloEntity\aspnet_Paths.cs">
+      <DependentUpon>ModelBaseDato.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModeloEntity\aspnet_PersonalizationAllUsers.cs">
+      <DependentUpon>ModelBaseDato.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModeloEntity\aspnet_PersonalizationPerUser.cs">
+      <DependentUpon>ModelBaseDato.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModeloEntity\aspnet_Profile.cs">
+      <DependentUpon>ModelBaseDato.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModeloEntity\aspnet_Roles.cs">
+      <DependentUpon>ModelBaseDato.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModeloEntity\aspnet_SchemaVersions.cs">
+      <DependentUpon>ModelBaseDato.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModeloEntity\aspnet_Users.cs">
+      <DependentUpon>ModelBaseDato.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModeloEntity\aspnet_UsersInRoles.cs">
+      <DependentUpon>ModelBaseDato.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModeloEntity\aspnet_WebEvent_Events.cs">
+      <DependentUpon>ModelBaseDato.tt</DependentUpon>
+    </Compile>
     <Compile Include="ModeloEntity\CAT_BODEGA.cs">
       <DependentUpon>ModelBaseDato.tt</DependentUpon>
     </Compile>
@@ -149,6 +182,9 @@
       <DependentUpon>ModelBaseDato.edmx</DependentUpon>
     </Compile>
     <Compile Include="ModeloEntity\PRODUCTO_PROVEEDOR.cs">
+      <DependentUpon>ModelBaseDato.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ModeloEntity\sysdiagrams.cs">
       <DependentUpon>ModelBaseDato.tt</DependentUpon>
     </Compile>
     <Compile Include="ModeloEntity\TblDevoluciones.cs">

@@ -19,10 +19,10 @@ namespace CapaDatos.ModeloEntity
         public Nullable<int> CANTIDAD_PRODUCTOS { get; set; }
         public Nullable<decimal> PRECIO_COMPRA { get; set; }
         public Nullable<decimal> PRECIO_VENTA { get; set; }
+        public Nullable<decimal> SUBTOTAL { get; set; }
         public int ID_UNIDAD_MEDIDA { get; set; }
         public Nullable<int> ID_UNIDAD_ENVASE { get; set; }
         public int idDetalleCompra { get; set; }
-        public Nullable<decimal> SUBTOTAL { get; set; }
     
         public virtual CAT_UNIDAD_MEDIDA CAT_UNIDAD_MEDIDA { get; set; }
         public virtual CAT_UNIDADMEDIDA_ENVASE CAT_UNIDADMEDIDA_ENVASE { get; set; }
