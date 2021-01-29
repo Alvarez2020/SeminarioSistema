@@ -20,7 +20,28 @@
     <link href="<%=ResolveClientUrl("~/Login/pages.css")%>" rel="stylesheet" />
     <link href="<%=ResolveClientUrl("~/Login/responsive.css")%>" rel="stylesheet" />
     
-    
+    <style>
+        body {
+    background: #0a5a52;
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0;
+    padding-bottom: 65px;
+}
+        html {
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100%;
+    background: #0a5a52;
+}
+        
+ #STYLE{
+    BACKGROUND: #007e71;
+}
+  #STYLE2{
+    BACKGROUND: #007e71;
+}
+ 
+    </style>
 
 </head>
 <body >
@@ -29,13 +50,13 @@
         <div class="wrapper-page">
             <div class="panel panel-color panel-primary panel-pages">
                 <div class="panel-heading bg-img">
-                    <div class="bg-overlay">
+                    <div ID="STYLE2" class="bg-overlay">
                         <div class="col-md-12">
                             <%--<div class="col-md-4">
                                 <img class="img-responsive" src="../../Recursos/imagen/logo144.png" />
                             </div>--%>
-                            <div class="col-lg-12">
-                                <h3 style="padding-top: 15px;" class="text-center m-t-10 text-white"><strong>Sistema</strong> </h3>
+                            <div ID="STYLE" class="col-lg-12">
+                                <h3 style="padding-top: 15px;" class="text-center m-t-10 text-white"><strong>MISCELANEA CONNY <i class="fas fa-warehouse"></i></strong> </h3>
                             </div>
                         </div>
                     </div>
