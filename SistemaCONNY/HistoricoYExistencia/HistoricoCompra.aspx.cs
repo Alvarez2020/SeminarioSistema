@@ -44,7 +44,7 @@ namespace SistemaCONNY.Historico
                         CargarReporteFactura1(cod);
                         break;
                     default:
-                        CargarReporte(100);
+                        //CargarReporte(100);
                         break;
                 }
 
@@ -55,151 +55,158 @@ namespace SistemaCONNY.Historico
         public void CargarReporteFactura1(int codFacC)
         {
 
-            //limpia report viewer
-            ReportViewer1.LocalReport.DataSources.Clear();
+        //    ////limpia report viewer
+        //    //ReportViewer1.LocalReport.DataSources.Clear();
 
-            ReportViewer1.ProcessingMode = ProcessingMode.Local;
-            ReportDataSource datasource = new ReportDataSource();
+        //    //ReportViewer1.ProcessingMode = ProcessingMode.Local;
+        //    //ReportDataSource datasource = new ReportDataSource();
 
-            //carga directorio de reporte
-            ReportViewer1.LocalReport.ReportPath = Server.MapPath("~/Reporte/ReporteCompra.rdlc");
-            //llena el recurso de dato primero consulta linq y despues pasa el parametro al datasource de report
-            datasource = new ReportDataSource("DataSet1", (from t1 in contex.TBL_COMPRA
-                                                           join t2 in contex.TBL_DETALLE_COMPRA on t1.ID_COMPRA equals t2.ID_COMPRA
-                                                           where t1.ID_COMPRA == codFacC
-                                                           select new
-                                                           {
-                                                               ID_COMPRA = t1.ID_COMPRA,
-                                                               FECHA_COMPRA = t1.FECHA_COMPRA,
-                                                               //CLIENTE_FACTURA = t1.CLIENTE_FACTURA,
-                                                               Producto = t2.TBL_PRODUCTO.NOMBRE_PRODUCTO,
-                                                               CANTIDAD_PRODUCTOS = t2.CANTIDAD_PRODUCTOS,
-                                                               PRECIO_VENTA = t2.PRECIO_VENTA,
-                                                               PRECIO_COMPRA = t2.PRECIO_COMPRA,
-                                                               TOTAL = t2.SUBTOTAL,
-                                                               UM_DESCRIPCION = t2.CAT_UNIDAD_MEDIDA.UM_DESCRIPCION,
-                                                               UNIDADES = t2.CAT_UNIDAD_MEDIDA.UNIDADES,
-                                                               DESCRIPCION_ENVASE_UNIDAD = t2.CAT_UNIDADMEDIDA_ENVASE.DESCRIPCION_ENVASE_UNIDAD
-                                                           }));
+        //    ////carga directorio de reporte
+        //    //ReportViewer1.LocalReport.ReportPath = Server.MapPath("~/Reporte/ReporteCompra.rdlc");
+        //    ////llena el recurso de dato primero consulta linq y despues pasa el parametro al datasource de report
+        //    //datasource = new ReportDataSource("DataSet1", (from t1 in contex.TBL_COMPRA
+        //    //                                               join t2 in contex.TBL_DETALLE_COMPRA on t1.ID_COMPRA equals t2.ID_COMPRA
+        //    //                                               where t1.ID_COMPRA == codFacC
+        //    //                                               select new
+        //    //                                               {
+        //    //                                                   ID_COMPRA = t1.ID_COMPRA,
+        //    //                                                   FECHA_COMPRA = t1.FECHA_COMPRA,
+        //    //                                                   //CLIENTE_FACTURA = t1.CLIENTE_FACTURA,
+        //    //                                                   Producto = t2.TBL_PRODUCTO.NOMBRE_PRODUCTO,
+        //    //                                                   CANTIDAD_PRODUCTOS = t2.CANTIDAD_PRODUCTOS,
+        //    //                                                   PRECIO_VENTA = t2.PRECIO_VENTA,
+        //    //                                                   PRECIO_COMPRA = t2.PRECIO_COMPRA,
+        //    //                                                   TOTAL = t2.SUBTOTAL,
+        //    //                                                   UM_DESCRIPCION = t2.CAT_UNIDAD_MEDIDA.UM_DESCRIPCION,
+        //    //                                                   UNIDADES = t2.CAT_UNIDAD_MEDIDA.UNIDADES,
+        //    //                                                   DESCRIPCION_ENVASE_UNIDAD = t2.CAT_UNIDADMEDIDA_ENVASE.DESCRIPCION_ENVASE_UNIDAD
+        //    //                                               }));
 
-            ReportViewer1.LocalReport.DataSources.Add(datasource);
+        //    //ReportViewer1.LocalReport.DataSources.Add(datasource);
 
-            ReportViewer1.LocalReport.Refresh();
+        //    //ReportViewer1.LocalReport.Refresh();
+
+
+        //}
+        //public void CargarReporte(int tipo)
+        //{
+
+        //    //limpia reportviewer
+        //    ReportViewer1.LocalReport.DataSources.Clear();
+
+        //    ReportViewer1.ProcessingMode = ProcessingMode.Local;
+        //    ReportDataSource datasource = new ReportDataSource();
+
+        //    switch (tipo)
+        //    {
+        //        //case 2: //historico de venta
+        //        //    //carga directorio de reporte
+        //        //    ReportViewer1.LocalReport.ReportPath = Server.MapPath("~/Reporte/Ventas.rdlc");
+        //        //    //llena el recurso de dato primero consulta linq y despues pasa el parametro al datasource de report
+        //        //    datasource = new ReportDataSource("DataSet1", (from t1 in contex.TBL_FACTURA
+        //        //                                                   join t2 in contex.TBL_DETALLE_FACT on t1.ID_FACTURA equals t2.ID_FACTURA
+        //        //                                                   select new
+        //        //                                                   {
+        //        //                                                       ID_FACTURA = t1.ID_FACTURA,
+        //        //                                                       FECHA_FACTURA = t1.FECHA_FACTURA,
+        //        //                                                       CLIENTE_FACTURA = t1.CLIENTE_FACTURA,
+        //        //                                                       Producto = t2.TBL_PRODUCTO.NOMBRE_PRODUCTO,
+        //        //                                                       CANTIDAD_PRODUCTOS = t2.CANTIDAD_PRODUCTOS,
+        //        //                                                       PRECIO_UNIT = t2.PRECIO_UNIT,
+        //        //                                                       SUBTOTAL = t2.SUBTOTAL,
+        //        //                                                       TOTAL = 0,
+        //        //                                                       CANTIDAD_PAGO = 0,
+        //        //                                                       CAMBIO = 0
+        //        //                                                   }));
+        //        //    break;
+        //        case 3: //historico de compra
+        //            //carga directorio de reporte
+        //            ReportViewer1.LocalReport.ReportPath = Server.MapPath("~/Reporte/Compras.rdlc");
+        //            //llena el recurso de dato primero consulta linq y despues pasa el parametro al datasource de report
+        //            datasource = new ReportDataSource("DataSet1", (from t1 in contex.TBL_COMPRA
+        //                                                           join t2 in contex.TBL_DETALLE_COMPRA on t1.ID_COMPRA equals t2.ID_COMPRA
+        //                                                           select new
+        //                                                           {
+        //                                                               ID_COMPRA = t1.ID_COMPRA,
+        //                                                               FECHA_COMPRA = t1.FECHA_COMPRA,
+        //                                                               CANTIDAD_PRODUCTOS = t2.CANTIDAD_PRODUCTOS,
+        //                                                               PRECIO_COMPRA = t2.PRECIO_COMPRA,
+        //                                                               TOTAL = t2.SUBTOTAL,
+        //                                                               NOMBRE_PRODUCTO = t2.TBL_PRODUCTO.NOMBRE_PRODUCTO,
+        //                                                               UM_DESCRIPCION = t2.CAT_UNIDAD_MEDIDA.UM_DESCRIPCION,
+        //                                                               UNIDADES = t2.CAT_UNIDAD_MEDIDA.UNIDADES
+        //                                                           }));
+        //            break;
+        //        case 4: // exisitencias
+        //            //carga directorio de reporte
+        //            ReportViewer1.LocalReport.ReportPath = Server.MapPath("~/Reporte/ReporteRegistroCompra.rdlc");
+        //            //llena el recurso de dato primero consulta linq y despues pasa el parametro al datasource de report
+        //            datasource = new ReportDataSource("DataSet1", (from variableAlmacenado in contex.TBL_DETALLE_COMPRA
+        //                                                           join pro in contex.TBL_PRODUCTO on variableAlmacenado.ID_PRODUCTO equals pro.ID_PRODUCTO
+        //                                                           //join u in contex.CAT_UNIDADMEDIDA_ENVASE on variableAlmacenado.ID_UNIDAD_ENVASE equals u.ID_UNIDAD_ENVASE
+
+        //                                                           select new
+        //                                                           {
+
+        //                                                               ID_COMPRA = variableAlmacenado.ID_COMPRA,
+        //                                                               id_detalle_compra = variableAlmacenado.idDetalleCompra,
+        //                                                               ID_PRODUCTO = variableAlmacenado.ID_PRODUCTO,
+        //                                                               ID_MARCA = variableAlmacenado.TBL_PRODUCTO.ID_MARCA,
+        //                                                               Producto = variableAlmacenado.TBL_PRODUCTO.NOMBRE_PRODUCTO,
+        //                                                               NOMBRE_MARCA = variableAlmacenado.TBL_PRODUCTO.TblMarca.NOMBRE_MARCA,
+        //                                                               CANTIDAD_PRODUCTOS = variableAlmacenado.CANTIDAD_PRODUCTOS,
+        //                                                               PRECIO_COMPRA = variableAlmacenado.PRECIO_COMPRA,
+        //                                                               PRECIO_VENTA = variableAlmacenado.PRECIO_VENTA,
+        //                                                               TOTAL = variableAlmacenado.SUBTOTAL,
+        //                                                               ID_UNIDAD_MEDIDA = variableAlmacenado.ID_UNIDAD_MEDIDA,
+        //                                                               UM_DESCRIPCION = variableAlmacenado.CAT_UNIDAD_MEDIDA.UM_DESCRIPCION,
+        //                                                               UNIDADES = variableAlmacenado.CAT_UNIDAD_MEDIDA.UNIDADES,
+        //                                                               FECHA_COMPRA = variableAlmacenado.TBL_COMPRA.FECHA_COMPRA,
+
+        //                                                           }));
+        //            break;
+        //        default:
+        //            ReportViewer1.LocalReport.ReportPath = Server.MapPath("~/Reporte/Reportes.rdlc");
+        //            //llena el recurso de dato primero consulta linq y despues pasa el parametro al datasource de report
+        //            datasource = new ReportDataSource("DataSet1", (from t1 in contex.TBL_FACTURA select new { }));
+        //            break;
+        //    }
+
+        //    ReportViewer1.LocalReport.DataSources.Clear();
+        //    ReportViewer1.LocalReport.DataSources.Add(datasource);
+
+        //    ReportViewer1.LocalReport.Refresh();
 
 
         }
-        public void CargarReporte(int tipo)
-        {
+        //protected void btnFactura1_Click(object sender, EventArgs e)
+        //{
+        //    if (txtCod1.Text == "")
+        //    {
+        //        return;
+        //    }
+        //    int codFacC = int.Parse(txtCod1.Text);
 
-            //limpia report viewer
-            ReportViewer1.LocalReport.DataSources.Clear();
-
-            ReportViewer1.ProcessingMode = ProcessingMode.Local;
-            ReportDataSource datasource = new ReportDataSource();
-
-            switch (tipo)
-            {
-                //case 2: //historico de venta
-                //    //carga directorio de reporte
-                //    ReportViewer1.LocalReport.ReportPath = Server.MapPath("~/Reporte/Ventas.rdlc");
-                //    //llena el recurso de dato primero consulta linq y despues pasa el parametro al datasource de report
-                //    datasource = new ReportDataSource("DataSet1", (from t1 in contex.TBL_FACTURA
-                //                                                   join t2 in contex.TBL_DETALLE_FACT on t1.ID_FACTURA equals t2.ID_FACTURA
-                //                                                   select new
-                //                                                   {
-                //                                                       ID_FACTURA = t1.ID_FACTURA,
-                //                                                       FECHA_FACTURA = t1.FECHA_FACTURA,
-                //                                                       CLIENTE_FACTURA = t1.CLIENTE_FACTURA,
-                //                                                       Producto = t2.TBL_PRODUCTO.NOMBRE_PRODUCTO,
-                //                                                       CANTIDAD_PRODUCTOS = t2.CANTIDAD_PRODUCTOS,
-                //                                                       PRECIO_UNIT = t2.PRECIO_UNIT,
-                //                                                       SUBTOTAL = t2.SUBTOTAL,
-                //                                                       TOTAL = 0,
-                //                                                       CANTIDAD_PAGO = 0,
-                //                                                       CAMBIO = 0
-                //                                                   }));
-                //    break;
-                case 3: //historico de compra
-                    //carga directorio de reporte
-                    ReportViewer1.LocalReport.ReportPath = Server.MapPath("~/Reporte/Compras.rdlc");
-                    //llena el recurso de dato primero consulta linq y despues pasa el parametro al datasource de report
-                    datasource = new ReportDataSource("DataSet1", (from t1 in contex.TBL_COMPRA
-                                                                   join t2 in contex.TBL_DETALLE_COMPRA on t1.ID_COMPRA equals t2.ID_COMPRA
-                                                                   select new
-                                                                   {
-                                                                       ID_COMPRA = t1.ID_COMPRA,
-                                                                       FECHA_COMPRA = t1.FECHA_COMPRA,
-                                                                       CANTIDAD_PRODUCTOS = t2.CANTIDAD_PRODUCTOS,
-                                                                       PRECIO_COMPRA = t2.PRECIO_COMPRA,
-                                                                       TOTAL = t2.SUBTOTAL,
-                                                                       NOMBRE_PRODUCTO = t2.TBL_PRODUCTO.NOMBRE_PRODUCTO,
-                                                                       UM_DESCRIPCION = t2.CAT_UNIDAD_MEDIDA.UM_DESCRIPCION,
-                                                                       UNIDADES = t2.CAT_UNIDAD_MEDIDA.UNIDADES
-                                                                   }));
-                    break;
-                case 4: // exisitencias
-                    //carga directorio de reporte
-                    ReportViewer1.LocalReport.ReportPath = Server.MapPath("~/Reporte/ReporteRegistroCompra.rdlc");
-                    //llena el recurso de dato primero consulta linq y despues pasa el parametro al datasource de report
-                    datasource = new ReportDataSource("DataSet1", (from variableAlmacenado in contex.TBL_DETALLE_COMPRA
-                                                                   join pro in contex.TBL_PRODUCTO on variableAlmacenado.ID_PRODUCTO equals pro.ID_PRODUCTO
-                                                                   //join u in contex.CAT_UNIDADMEDIDA_ENVASE on variableAlmacenado.ID_UNIDAD_ENVASE equals u.ID_UNIDAD_ENVASE
-                                                                   
-                                                                   select new
-                                                                   {
-
-                                                                       ID_COMPRA = variableAlmacenado.ID_COMPRA,
-                                                                       ID_PRODUCTO = variableAlmacenado.ID_PRODUCTO,
-                                                                       ID_MARCA = variableAlmacenado.TBL_PRODUCTO.ID_MARCA,
-                                                                       Producto= variableAlmacenado.TBL_PRODUCTO.NOMBRE_PRODUCTO,
-                                                                       NOMBRE_MARCA = variableAlmacenado.TBL_PRODUCTO.TblMarca.NOMBRE_MARCA,
-                                                                       CANTIDAD_PRODUCTOS = variableAlmacenado.CANTIDAD_PRODUCTOS,
-                                                                       PRECIO_COMPRA = variableAlmacenado.PRECIO_COMPRA,
-                                                                       PRECIO_VENTA = variableAlmacenado.PRECIO_VENTA,
-                                                                       TOTAL = variableAlmacenado.SUBTOTAL,
-                                                                       ID_UNIDAD_MEDIDA = variableAlmacenado.ID_UNIDAD_MEDIDA,
-                                                                       UM_DESCRIPCION = variableAlmacenado.CAT_UNIDAD_MEDIDA.UM_DESCRIPCION,
-                                                                       UNIDADES = variableAlmacenado.CAT_UNIDAD_MEDIDA.UNIDADES,
-                                                                       FECHA_COMPRA = variableAlmacenado.TBL_COMPRA.FECHA_COMPRA,
-
-                                                                   }));
-                    break;
-                default:
-                    ReportViewer1.LocalReport.ReportPath = Server.MapPath("~/Reporte/Reportes.rdlc");
-                    //llena el recurso de dato primero consulta linq y despues pasa el parametro al datasource de report
-                    datasource = new ReportDataSource("DataSet1", (from t1 in contex.TBL_FACTURA select new { }));
-                    break;
-            }
-
-            ReportViewer1.LocalReport.DataSources.Clear();
-            ReportViewer1.LocalReport.DataSources.Add(datasource);
-
-            ReportViewer1.LocalReport.Refresh();
-
-
-        }
-        protected void btnFactura1_Click(object sender, EventArgs e)
-        {
-            if (txtCod1.Text == "")
-            {
-                return;
-            }
-            int codFacC = int.Parse(txtCod1.Text);
-
-            CargarReporteFactura1(codFacC);
-
-            //if (txtCod1.Text == "")
-            //{
-            //    return;
-            //}
-        }
+        //    CargarReporteFactura1(codFacC);
+        //}
         protected void btnCompra_Click(object sender, EventArgs e)
         {
-            CargarReporte(3);
+            Response.Write("<script>");
+            Response.Write("window.open('Reporte/ComprasAgru.aspx?')");
+            Response.Write("</script>");
         }
+
+        [WebMethod]
+        [ScriptMethod(ResponseFormat = ResponseFormat.Json)]
         protected void btnRegistroCompra_Click(object sender, EventArgs e)
         {
-            CargarReporte(4);
+
+               Response.Write("<script>");
+            Response.Write("window.open('Reporte/ReporteRegistroC.aspx?')");
+            Response.Write("</script>");
+           
+           
+
         }
 
 
@@ -219,7 +226,7 @@ namespace SistemaCONNY.Historico
             DB_MiscelaneaConnyEntities contex = new DB_MiscelaneaConnyEntities();
 
             var consulta = (from variableAlmacenado in contex.TBL_COMPRA
-                            join var in contex.TBL_DETALLE_COMPRA on variableAlmacenado.ID_COMPRA equals var.ID_COMPRA
+                         
                           
                             select new
 
@@ -247,6 +254,7 @@ namespace SistemaCONNY.Historico
                             select new 
                             {
                                 ID_COMPRA = variableAlmacenado.ID_COMPRA,
+                                id_detalle_Compra = variableAlmacenado.idDetalleCompra,
                                 ID_PRODUCTO = variableAlmacenado.ID_PRODUCTO,
                                 ID_MARCA = variableAlmacenado.TBL_PRODUCTO.ID_MARCA,
                                 NOMBRE_PRODUCTO = variableAlmacenado.TBL_PRODUCTO.NOMBRE_PRODUCTO,

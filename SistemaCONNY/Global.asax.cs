@@ -33,6 +33,7 @@ namespace SistemaCONNY
                 RouteTable.Routes.MapPageRoute("Existencia", "Existencia", "~/HistoricoYExistencia/Existencia.aspx");
                 RouteTable.Routes.MapPageRoute("Reportes", "Reportes", "~/Reporte/Reportes.aspx");
                 RouteTable.Routes.MapPageRoute("HistoricoVenta", "HistoricoVenta", "~/HistoricoYExistencia/HistoricoVenta.aspx");
+                RouteTable.Routes.MapPageRoute("Register", "Register", "~/Account/Register.aspx");
             }
             // Código que se ejecuta al iniciar la aplicación
             RouteConfig.RegisterRoutes(RouteTable.Routes);

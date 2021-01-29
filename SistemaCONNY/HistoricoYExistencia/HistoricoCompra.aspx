@@ -11,6 +11,12 @@
                 max-width: 1000px !important;
             }
         }
+        .btn-success {
+float: right;
+margin-right: 1.5%;
+}
+
+
     </style>
     <div class="row">
         <div class="col-sm-12 grid-margin stretch-card">
@@ -25,10 +31,10 @@
                             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Agregar </button>
                             <asp:Literal ID="Literal1" runat="server"></asp:Literal>
                         </div>----%>
-                        <div class=" justify-content-center">
+                      <%--  <div class=" justify-content-center">
                             <div class="center">
                                 <br />
-                                <div class="form-group">
+                               <div class="form-group">
                                     <div class="form-inline">
                                         <div class="form-group">
                                             <input type="text" hidden style="display: none" id="txtIdUnidadMedida" />
@@ -38,7 +44,7 @@
                                         </div>
                                         <button type="button" data-toggle="modal" data-target="#myModal2" id="btnAgregarArticulo3" class="btn btn-primary">...</button>
                                     </div>
-                                </div>
+                                </div>--%
 
                                 <asp:Button type="button" OnClick="btnFactura1_Click" ValidationGroup="valGuardar" ID="btnFactura" runat="server" Text="Factura" CssClass="btn btn-success" />
                                  <asp:TextBox type="text" Width="100px" Height="40" runat="server" class="form-control"
@@ -47,8 +53,8 @@
                             </div>
 
                         </div>
-                        <br />
-                        <div class="form-group">
+                        <br />--%>
+                       <%-- <div class="form-group">
                             <div class="form-inline">
                                 <div class="form-group">
                                     <input type="text" hidden style="display: none" id="txtIdProducto" />
@@ -58,28 +64,50 @@
                                 </div>
                                 <button type="button" data-toggle="modal" data-target="#myModal" id="btnAgregarArticulo" class="btn btn-primary">...</button>
                             </div>
-                        </div>
+                        </div>--%>
                     </div>
+                            <asp:Button type="button" OnClick="btnCompra_Click" ID="Button1" runat="server" Text="Factura" CssClass="btn btn-success" />
 
                     <div class="panel-body">
                         <div class="">
-                            <%-- <table id="gridData" class="table table-striped table-bordered" style="width: 100%">
+                           <table id="gridData" class="table table-striped table-bordered" style="width: 100%">
+
                                 <thead>
                                     <tr>
-                                      <th style="width: 15%">ID_Compra</th>
+                                      <th>ID_Compra</th>
                                        
                                         <th>FechaCompra</th>
-                                        <th style="width: 15%; text-align: center">Opciones</th>
+                                        <th  text-align: center">Opciones</th>
                                     </tr>
                                 </thead>
-                            </table>--%>
-                            <div style="height: 100%; width: 100%;" class="col-sm-5 w-100">
+                            </table>
+                           
+                        </div>
+                    </div>
+                            <asp:Button type="button"  OnClick="btnRegistroCompra_Click" ID="Button2" runat="server" Text="Facturar" CssClass="btn btn-success" />
 
-                                <rsweb:ReportViewer ID="ReportViewer1" Width="1125px" AsyncRendering="true" CssClass="justify-content-center"
-                                    DocumentMapWidth="100%" Height="500px" runat="server">
-                                </rsweb:ReportViewer>
+                      <div class="panel-body">
+                        <div class="">
+                           <table id="gridData1" class="table table-striped table-bordered" style="width: 100%">
 
-                            </div>
+                                <thead>
+                                    <tr>
+                                     <th>IdC</th>
+                                 <th>IdP</th>
+                                <th>IdM</th>
+                                 <th>IdU</th>
+                                <th>Producto</th>
+                                 <th>Marca</th>
+                                <th>Cantidad</th>
+                                 <th>Empaque</th>
+                                 <th>Unidades</th>
+                                <th>Precio Compra</th>
+                                 <th>Total</th>
+                                <th>Seleccionar</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                           
                         </div>
                     </div>
 
@@ -88,9 +116,17 @@
         </div>
 
     </div>
+
+    <%-- <div style="height: 100%; width: 100%;" class="col-sm-5 w-100">
+
+                                <rsweb:ReportViewer ID="ReportViewer1" Width="1125px" AsyncRendering="true" CssClass="justify-content-center"
+                                    DocumentMapWidth="100%" Height="500px" runat="server">
+                                </rsweb:ReportViewer>
+
+                            </div>--%>
     <%--modal--%>
 
-    <div class="modal fade mbModalunidad" id="myModal2" role="dialog" aria-hidden="true">
+<%--    <div class="modal fade mbModalunidad" id="myModal2" role="dialog" aria-hidden="true">
         <div class="modal-dialog" role="document">
 
             <div class="modal-content" style="width: 800px;">
@@ -102,7 +138,7 @@
                     <div class="center">
 
 
-                        <asp:Button type="button" OnClick="btnCompra_Click" ID="Button1" runat="server" Text="Factura" CssClass="btn btn-success" />
+                        
 
                     </div>
                 </div>
@@ -123,12 +159,12 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                     <%-- <button type="button" class="btn btn-primary"></button>--%>
-                </div>
+          <%--      </div>
             </div>
         </div>
-    </div>
+    </div>--%>
 
-    <div class="modal fade mbModal" id="myModal" role="dialog" aria-hidden="true">
+   <%-- <div class="modal fade mbModal" id="myModal" role="dialog" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content" style="width: 800px;">
                 <div class="modal-header">
@@ -139,7 +175,6 @@
                      <div class="center">
 
 
-                        <asp:Button type="button" OnClick="btnRegistroCompra_Click" ID="Button2" runat="server" Text="Factura" CssClass="btn btn-success" />
 
                     </div>
                 </div>
@@ -158,18 +193,18 @@
                                  <th>Unidades</th>
                                 <th>Precio Compra</th>
                                  <th>Total</th>
-                               <%-- <th>Seleccionar</th>--%>
+                                <th>Seleccionar</th>
                             </tr>
                         </thead>
                     </table>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>--%>
                     <%-- <button type="button" class="btn btn-primary"></button>--%>
-                </div>
+       <%--         </div>
             </div>
         </div>
-    </div>
+    </div>--%>
 
 
 </asp:Content>
@@ -225,7 +260,7 @@
                             //{ "data": 'ID_UNIDAD_MEDIDA' },
                             //{ "data": 'NOMBRE_PRODUCTO' },
                             //{ "data": 'NOMBRE_MARCA' },
-                            { "data": 'CANTIDAD_PRODUCTO' },
+                            //{ "data": 'CANTIDAD_PRODUCTO' },
                             //{ "data": 'UM_DESCRIPCION' },
                             //{ "data": 'UNIDADES' },
                             //{ "data": 'PRECIO_COMPRA' },
@@ -236,7 +271,7 @@
                         "columnDefs": [
 
                             {
-                                "targets": [2], render: function (data) {
+                                "targets": [1], render: function (data) {
                                     return moment(data).format('DD/MM/YYYY');
                                 }
                             },
@@ -245,7 +280,7 @@
                                 "targets": -1,
                                 "data": null,
                                 "className": "text-center",
-                                "defaultContent": "<a href='#' data-toggle='modal' data-target='#myModal' id='btnEditar'><i class='fas fa-edit'></i></a> | <a href='#' class='eliminar' id='btnEliminar'><i class='fas fa-trash'></i></a>"
+                                "defaultContent": "<a href='#' data-toggle='modal' data-target='#myModal' id='btnEditar'><i class='fas fa-edit'></i></a> | <a href='#' class='imprimir' id='btnImprimir'><i class='fas fa-print'></i></a>"
                             }
                         ],
                         "language": languaje
@@ -300,7 +335,7 @@
                                 "targets": -1,
                                 "data": null,
                                 "className": "text-center",
-                                "defaultContent": "<a href='#' class='seleccionar' id='btnseleccionar'><i class='fas fa-edit'></i></a>"
+                                "defaultContent": "<a href='#' class='seleccionar' id='btnseleccionar'><i class='fas fa-edit'></i></a> | <a href='#' class='imprimir' id='btnImprimir'><i class='fas fa-print'></i></a>"
                             }
                         ],
                         "language": languaje
@@ -332,7 +367,7 @@
                         "aaData": dataServer1,
                         "responsive": true,
                         "columns": [
-                            { "data": 'ID_COMPRA' },
+                            { "data": 'id_detalle_Compra' },
                             { "data": 'ID_PRODUCTO' },
                             { "data": 'ID_MARCA' },
                             { "data": 'ID_UNIDAD_MEDIDA' },
@@ -343,7 +378,7 @@
                             { "data": 'UNIDADES' },
                             { "data": 'PRECIO_COMPRA' },
                             { "data": 'TOTAL' },
-                            //{ "data": "opcion" }
+                            { "data": "opcion" }
                         ],
                         "columnDefs": [
                             {
@@ -356,12 +391,12 @@
                                 "visible": false,
                                 "searchable": false
                             },
-                            //{
-                            //    "targets": -1,
-                            //    "data": null,
-                            //    "className": "text-center",
-                            //    "defaultContent": "<a href='#' class='seleccionar' id='btnseleccionar'><i class='fas fa-edit'></i></a>"
-                            //}
+                            {
+                                "targets": -1,
+                                "data": null,
+                                "className": "text-center",
+                                "defaultContent": "<a href='#' class='seleccionar' id='btnseleccionar'><i class='fas fa-edit'></i></a> | <a href='#' class='imprimir' id='btnImprimir'><i class='fas fa-print'></i></a>"
+                            }
                         ],
                         "language": languaje
                     });
@@ -373,12 +408,69 @@
             //$('#mdSeleccionArticulo').modal('show');
         }
 
-
-
+        LoadProd2();
+        var dataServer2, tablePro2;
+        function LoadProd2() {
+            //e.preventDefault();
+            $.ajax({
+                type: "POST",
+                url: "<%= ResolveUrl("HistoricoCompra.aspx/CargarDatos1") %>",
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                success: function (response) {
+                    $.each(response, function (i, item) {
+                        dataServer2 = JSON.parse(item);
+                    });
+                    tablePro2 = $('#gridData1').DataTable({
+                        "dataType": "json",
+                        "destroy": true,
+                        "aaData": dataServer2,
+                        "responsive": true,
+                        "columns": [
+                            { "data": 'id_detalle_Compra' },
+                            { "data": 'ID_PRODUCTO' },
+                            { "data": 'ID_MARCA' },
+                            { "data": 'ID_UNIDAD_MEDIDA' },
+                            { "data": 'NOMBRE_PRODUCTO' },
+                            { "data": 'NOMBRE_MARCA' },
+                            { "data": 'CANTIDAD_PRODUCTO' },
+                            { "data": 'UM_DESCRIPCION' },
+                            { "data": 'UNIDADES' },
+                            { "data": 'PRECIO_COMPRA' },
+                            { "data": 'TOTAL' },
+                            { "data": "opcion" }
+                        ],
+                        "columnDefs": [
+                            {
+                                "targets": [0],
+                                "visible": true,
+                                "searchable": false
+                            },
+                            {
+                                "targets": [1,2,3],
+                                "visible": false,
+                                "searchable": false
+                            },
+                            {
+                                "targets": -1,
+                                "data": null,
+                                "className": "text-center",
+                                "defaultContent": "<a href='#' class='seleccionar' id='btnseleccionar'><i class='fas fa-edit'></i></a> | <a href='#' class='imprimir' id='btnImprimir'><i class='fas fa-print'></i></a>"
+                            }
+                        ],
+                        "language": languaje
+                    });
+                },
+                failure: function (response) {
+                   <%-- //$('#<%=Label1.ClientID%>').val("Error in calling Ajax:" + response.d);--%>
+                }
+            });
+            //$('#mdSeleccionArticulo').modal('show');
+        }
 
         $(document).ready(function () {
-            $('#modalunidad').on('click', 'tr', function () {
-                var p = tablePro3.row(this).data();
+         <%--   $('#modalunidad').on('click', '#btnSeleccionar', function () {
+                var p = tablePro3.row($(this).parents("tr")).data();
                 var idUnidadMedida = p.ID_Compra;
                 var PRE = p.ID_Compra;
                 var unidades = ' RegistroFactura '
@@ -388,19 +480,42 @@
                 $('#<%=txtCod1.ClientID%>').val(PRE);
 
                 $('#myModal2').modal('hide');
+            });--%>
+
+            $('#modalunidad').on('click', '#btnImprimir', function () {
+                var p = tablePro3.row($(this).parents("tr")).data();
+                var idCompra = p.ID_Compra;
+                window.open("Reporte/ReportPageCompra.aspx?val=" + idCompra);
             });
-
-            //$('#btnAgregarArticulo').on('click', function () {
-            //    console.log("dany dañoo el modal")
-            //    $('.mbModal').modal('show');
-            // });
-
         });
 
 
 
 
+     
+        $(document).ready(function () {
+           
 
+            $('#gridData').on('click', '#btnImprimir', function () {
+                var p =  tablePro.row($(this).parents("tr")).data();
+                var idCompra = p.ID_Compra;
+              window.open("Reporte/ReportPageCompra.aspx?val=" + idCompra);
+            });
+
+
+        });
+        
+        $(document).ready(function () {
+
+
+            $('#gridData1').on('click', '#btnImprimir', function () {
+                var p = tablePro2.row($(this).parents("tr")).data();
+                var idCompra = p.id_detalle_Compra;
+                window.open("Reporte/CompraInd.aspx?val=" + idCompra);
+            });
+
+
+        });
 
 
 

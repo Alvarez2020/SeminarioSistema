@@ -52,20 +52,20 @@ namespace CapaDatos
                             CANTIDAD_PRODUCTOS = item.CANTIDAD_PRODUCTOS,
                             PRECIO_UNIT = item.PRECIO_VENTA,
                             SUBTOTAL = item.SUBTOTAL,
-                            ID_UNIDAD_MEDIDA = (int)item.ID_UNIDAD_MEDIDA,
+                            //ID_UNIDAD_MEDIDA = (int)item.ID_UNIDAD_MEDIDA,
                            
                         };
                         //Paso 2 - guardar en  tabla
                         db.TBL_DETALLE_FACT.Add(tblDetalle);
                         db.SaveChanges();
 
-                        var unidad = db.CAT_UNIDAD_MEDIDA.FirstOrDefault(
-                            x => x.ID_UNIDAD_MEDIDA == item.ID_UNIDAD_MEDIDA);
-                        int? unidades = 0;
-                        if (unidad != null)
-                        {
-                            unidades = unidad.UNIDADES;
-                        }
+                        //var unidad = db.CAT_UNIDAD_MEDIDA.FirstOrDefault(
+                        //    x => x.ID_UNIDAD_MEDIDA == item.ID_UNIDAD_MEDIDA);
+                        //int? unidades = 0;
+                        //if (unidad != null)
+                        //{
+                        //    unidades = unidad.UNIDADES;
+                        //}
 
                         //proceso N° 3 -> Actualizar o declarar(Agregar) existencia
                         //Paso 1 - Filtrar
@@ -75,7 +75,7 @@ namespace CapaDatos
                         {                                                                                  // c  2 k  == 1250  /  c 2 k == 1300
                                                                                                            //Paso 1 - convertir valores de obj a tabla del modelo
                             busca.CANTIDAD_EXISTENCIA =
-                                busca.CANTIDAD_EXISTENCIA - (item.CANTIDAD_PRODUCTOS * unidades);
+                                (busca.CANTIDAD_EXISTENCIA - item.CANTIDAD_PRODUCTOS);
 
                         }
                       

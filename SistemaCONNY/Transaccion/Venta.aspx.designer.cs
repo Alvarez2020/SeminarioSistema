@@ -33,15 +33,6 @@ namespace SistemaCONNY.Transaccion
         protected global::System.Web.UI.WebControls.TextBox txtFecha;
 
         /// <summary>
-        /// Control txtCantidad.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCantidad;
-
-        /// <summary>
         /// Control txtProducto.
         /// </summary>
         /// <remarks>
@@ -51,15 +42,6 @@ namespace SistemaCONNY.Transaccion
         protected global::System.Web.UI.WebControls.TextBox txtProducto;
 
         /// <summary>
-        /// Control txtUmDescripcion.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUmDescripcion;
-
-        /// <summary>
         /// Control txtExistencia.
         /// </summary>
         /// <remarks>
@@ -67,6 +49,15 @@ namespace SistemaCONNY.Transaccion
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtExistencia;
+
+        /// <summary>
+        /// Control txtCantidad.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCantidad;
 
         /// <summary>
         /// Control txtPrecioVenta.

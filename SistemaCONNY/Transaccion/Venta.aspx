@@ -40,19 +40,7 @@
                                     <i class="fas fa-hand-holding-usd"></i>
                                     <asp:TextBox ID="txtFecha" style="width: 41%" runat="server" class="form-control" type="date" placeholder="00/00/0000"></asp:TextBox>
                                 </div>
-                                <div class="form-group">
-                                    <asp:Label Text="Ingrese Cantidad a Comprar" foreColor="#006600" runat="server" />
-                                    <i class="fas fa-hand-holding-usd"></i>
-                                    <asp:TextBox style="width: 41%" Height="2%" ID="txtCantidad" runat="server" class="form-control" type="number" min="1" placeholder="Cantidad"></asp:TextBox>
-                                    <label class="col-form-label text-danger no-visible" id="validCantidad">CantidadValida</label>
-
-                                </div>
-                                <a onclick="AgregarTempPro(this);" id="btnAgregar" class="btn btn-success" href="#">Agregar Producto <i class="fas fa-cart-plus"></i></a>
-                            </div>
-                            <%--Fin Primera columna--%>
-
-                            <div class=" col col-md-5 mx-6">
-                                <div class="form-group">
+                               <div class="form-group">
                                     <div class="form-inline">
 
                                         <input type="text" hidden style="display: none" id="txtIdProducto" />
@@ -63,8 +51,14 @@
                                         <button type="button" data-toggle="modal" data-target="#myModal" id="btnAgregarArticulo" class="btn btn-primary" style="height: 40px;">...</button>
                                     </div>
                                 </div>
+                                <a onclick="AgregarTempPro(this);" id="btnAgregar" class="btn btn-success" href="#">Agregar Producto <i class="fas fa-cart-plus"></i></a>
+                            </div>
+                            <%--Fin Primera columna--%>
 
-                                <div class="form-group">
+                            <div class=" col col-md-5 mx-6">
+                               
+                                
+                               <%-- <div class="form-group">
                                     <div class="form-inline">
                                         <div class="form-group">
                                             <input type="text" hidden style="display: none" id="txtIdUnidadMedida" />
@@ -74,10 +68,16 @@
                                         </div>
                                         <button type="button" data-toggle="modal" data-target="#myModal2" id="btnAgregarArticulo3" class="btn btn-primary" style="height: 40px;">...</button>
                                     </div>
-                                </div>
+                                </div>--%>
                                 <div class="form-group">
                                     <asp:Label Text="Existencia" foreColor="#006600" runat="server" />
                                     <asp:TextBox ID="txtExistencia" style="width: 41%"  runat="server" class="form-control" type="number" placeholder="C$" disabled="disabled"></asp:TextBox>
+                                </div>
+                                  <div class="form-group">
+                                    <asp:Label Text="Ingrese Cantidad a Comprar" foreColor="#006600" runat="server" />
+                                    <i class="fas fa-hand-holding-usd"></i>
+                                    <asp:TextBox style="width: 41%" Height="2%" ID="txtCantidad" runat="server" class="form-control" type="number" min="1" placeholder="Cantidad"></asp:TextBox>
+                                    <label class="col-form-label text-danger no-visible" id="validCantidad">CantidadValida</label>
                                 </div>
                                 <div class="form-group">
                                     <asp:Label Text="Precio Venta" foreColor="#006600" runat="server" />
@@ -150,7 +150,7 @@
 
 
     <%-- modal seleccionar articulos --%>
-    <div class="modal fade mbModalunidad" id="myModal2" role="dialog" aria-hidden="true">
+  <%--  <div class="modal fade mbModalunidad" id="myModal2" role="dialog" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -174,10 +174,10 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
                     <%-- <button type="button" class="btn btn-primary"></button>--%>
-                </div>
+       <%--         </div>
             </div>
         </div>
-    </div>
+    </div>--%>
 
     <%-- modal seleccionar articulos --%>
     <div class="modal fade mbModal" id="myModal" role="dialog" aria-hidden="true">
@@ -278,7 +278,7 @@
             //$('#mdSeleccionArticulo').modal('show');
         }
 
-        Loadunidad();
+       <%-- Loadunidad();
         var dataServer3, tablePro3;
         function Loadunidad() {
             //e.preventDefault();
@@ -320,10 +320,10 @@
                 },
                 failure: function (response) {
                    <%-- //$('#<%=Label1.ClientID%>').val("Error in calling Ajax:" + response.d);--%>
-                }
-            });
-            //$('#mdSeleccionArticulo').modal('show');
-        }
+        //        }
+        //    });
+        //    //$('#mdSeleccionArticulo').modal('show');
+        //}
 
 
         function AgregarTempPro() {
@@ -353,8 +353,8 @@
                 NOMBRE_PRODUCTO: $('#<%=txtProducto.ClientID%>').val(),
                 CANTIDAD_EXISTENCIA: $('#<%=txtExistencia.ClientID %>').val(),
                 CLIENTE_FACTURA: $('#<%=txtCliente.ClientID%>').val(),
-                ID_UNIDAD_MEDIDA: parseInt($('#txtIdUnidadMedida').val()),
-                UM_DESCRIPCION: $('#<%=txtUmDescripcion.ClientID%>').val(),
+               <%-- ID_UNIDAD_MEDIDA: parseInt($('#txtIdUnidadMedida').val()),
+                UM_DESCRIPCION: $('#<%=txtUmDescripcion.ClientID%>').val(),--%>
                 CANTIDAD_PRODUCTOS: $('#<%=txtCantidad.ClientID %>').val(),
                 CANTIDAD_PAGO: $('#<%=txtCantidadPago.ClientID %>').val(),
                 FECHA_FACTURA: $('#<%=txtFecha.ClientID %>').val(),
@@ -587,7 +587,7 @@
 
         });
 
-        $(document).ready(function () {
+       <%-- $(document).ready(function () {
             $('#modalunidad').on('click', 'tr', function () {
                 var p = tablePro3.row(this).data();
                 var idUnidadMedida = p.IdUnidadMedida;
@@ -600,7 +600,7 @@
             });
 
           
-        });
+        });--%>
         quitarClases();
         document.getElementById("Venta").classList.add("active-page");
         document.getElementById("nav-venta").classList.add("active-page");

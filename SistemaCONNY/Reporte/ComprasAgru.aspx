@@ -1,5 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="ReportPage.aspx.cs" Inherits="SistemaCONNY.Reporte.ReportPage" %>
-
+﻿<%@ Page Language="C#"  AutoEventWireup="true" CodeBehind="ComprasAgru.aspx.cs" Inherits="SistemaCONNY.Reporte.ComprasAgru" %>
 <%@ Register Assembly="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91"
     Namespace="Microsoft.Reporting.WebForms" TagPrefix="rsweb" %>
 <!DOCTYPE html>
@@ -25,4 +24,3 @@
     </form>
 </body>
 </html>
-

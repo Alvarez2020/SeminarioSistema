@@ -38,9 +38,10 @@ namespace SistemaCONNY.Account
                 //string callbackUrl = IdentityHelper.GetUserConfirmationRedirectUrl(code, user.Id, Request);
                 //manager.SendEmail(user.Id, "Confirmar cuenta", "Para confirmar la cuenta, haga clic <a href=\"" + callbackUrl + "\">aquí</a>.");
                 //VarUserManagertoRol.AddToRole(user.Id, "Admin");
-                manager.AddToRole(user.Id, "Admin");
+                manager.AddToRole(user.Id, "Caja");
                 signInManager.SignIn( user, isPersistent: false, rememberBrowser: false);
                 IdentityHelper.RedirectToReturnUrl(Request.QueryString["ReturnUrl"], Response);
+
             }
             else 
             {

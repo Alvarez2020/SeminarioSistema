@@ -51,10 +51,10 @@ namespace SistemaCONNY.Transaccion
         {
             decimal total = 0;
 
-            NegocioCatUnidadMedida metodosNegocio = new NegocioCatUnidadMedida();
-            int? cod = temp.ID_UNIDAD_MEDIDA;
-            var datos = metodosNegocio.metodoSeleccion1(cod);
-            temp.SUBTOTAL = (decimal)((temp.CANTIDAD_PRODUCTOS * datos.Unidades) * temp.PRECIO_VENTA);
+            //NegocioCatUnidadMedida metodosNegocio = new NegocioCatUnidadMedida();
+            //int? cod = temp.ID_UNIDAD_MEDIDA;
+            //var datos = metodosNegocio.metodoSeleccion1(cod);
+            temp.SUBTOTAL = (decimal)(temp.CANTIDAD_PRODUCTOS * temp.PRECIO_VENTA);
             ListaDetalle.Add(new ObjetoVenta
             {
                 ID = Guid.NewGuid(),
@@ -62,8 +62,8 @@ namespace SistemaCONNY.Transaccion
                 CLIENTE_FACTURA = temp.CLIENTE_FACTURA,
                 NOMBRE_PRODUCTO = temp.NOMBRE_PRODUCTO,
                 NOMBRE_MARCA = temp.NOMBRE_MARCA,
-                ID_UNIDAD_MEDIDA = temp.ID_UNIDAD_MEDIDA,
-                UM_DESCRIPCION = temp.UM_DESCRIPCION,
+                //ID_UNIDAD_MEDIDA = temp.ID_UNIDAD_MEDIDA,
+                //UM_DESCRIPCION = temp.UM_DESCRIPCION,
                 CANTIDAD_PRODUCTOS = temp.CANTIDAD_PRODUCTOS,
                 CANTIDAD_PAGO = temp.CANTIDAD_PAGO,
                 PRECIO_VENTA = temp.PRECIO_VENTA,

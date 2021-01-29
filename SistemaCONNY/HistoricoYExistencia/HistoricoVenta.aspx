@@ -9,6 +9,10 @@
                 max-width: 1000px !important;
             }
         }
+                .btn-success {
+float: right;
+margin-right: 0%;
+}
     </style>
 
 
@@ -28,7 +32,7 @@
                         <div class=" justify-content-center">
                             <div class="center">
                                 <br />
-                                <div class="form-group">
+                               <%-- <div class="form-group">
                                     <div class="form-inline">
                                         <div class="form-group">
                                             <input type="text" hidden style="display: none" id="txtIdUnidadMedida" />
@@ -38,18 +42,18 @@
                                         </div>
                                         <button type="button" data-toggle="modal" data-target="#myModal2" id="btnAgregarArticulo3" class="btn btn-primary">...</button>
                                     </div>
-                                </div>
-                                <div class="center">
+                                </div>--%>
+                              <%--  <div class="center">
                                     <asp:Button type="button" OnClick="btnFactura1_Click" ValidationGroup="valGuardar" ID="btnFactura" runat="server" Text="Factura" CssClass="btn btn-success" />
                                     <asp:TextBox type="text" Width="100px" Height="40" runat="server" class="form-control"
                                         ID="txtCod1" placeholder="№FACTURA"> </asp:TextBox>
                                     <asp:RequiredFieldValidator ForeColor="red" ValidationGroup="valGuardar" ControlToValidate="txtCod1" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Campo es necesario" />
-                                </div>
+                                </div>--%>
 
                             </div>
                         </div>
                         <br />
-                        <div class="form-group">
+                     <%--   <div class="form-group">
                             <div class="form-inline">
                                 <div class="form-group">
                                     <input type="text" hidden style="display: none" id="txtIdProducto" />
@@ -59,28 +63,55 @@
                                 </div>
                                 <button type="button" data-toggle="modal" data-target="#myModal" id="btnAgregarArticulo" class="btn btn-primary">...</button>
                             </div>
-                        </div>
+                        </div>--%>
                     </div>
 
                     <div class="panel-body">
                         <div class="">
-                            <%-- <table id="gridData" class="table table-striped table-bordered" style="width: 100%">
+
+                        <asp:Button type="button" OnClick="btnCompra_Click" ID="Button1" runat="server" Text="Factura" CssClass="btn btn-success" />
+                            <br>
+                            
+                             <table id="gridData" class="table table-striped table-bordered" style="width: 100%">
                                 <thead>
                                     <tr>
-                                      <th style="width: 15%">ID_Compra</th>
+                                      <th style="width: 15%">ID_FACTURA</th>
                                        
-                                        <th>FechaCompra</th>
+                                        <th>FechaFactura</th>
                                         <th style="width: 15%; text-align: center">Opciones</th>
                                     </tr>
                                 </thead>
-                            </table>--%>
-                            <div style="height: 100%; width: 100%;" class="col-sm-5 w-100">
+                            </table>
+                        <asp:Button type="button" OnClick="btnRegistroCompra_Click" ID="Button2" runat="server" Text="Factura" CssClass="btn btn-success" />
+
+                            <table id="gridData1" class="table table-striped table-bordered" style="width: 100%">
+                                  <br>
+                                <thead>
+                                    <tr>
+                                        <th>IdC</th>
+                                <th>IdP</th>
+                                <th>IdM</th>
+                                <th>Producto</th>
+                                <th>Marca</th>
+                                <th>contenido</th>
+                                <th>Cantidad</th>
+                                <th>Precio</th>
+                                <th>sub</th>
+                                <th>total</th>
+                                <th>cantidadPago</th>
+                                <th>cambio</th>
+                                <th>Fecha</th>
+                                        <th>Seleccionar</th>
+                                    </tr>
+                                </thead>
+                            </table>
+                            <%--<div style="height: 100%; width: 100%;" class="col-sm-5 w-100">
 
                                 <rsweb:ReportViewer ID="ReportViewer1" Width="1125px" AsyncRendering="true" CssClass="justify-content-center"
                                     DocumentMapWidth="100%" Height="500px" runat="server">
                                 </rsweb:ReportViewer>
 
-                            </div>
+                            </div>--%>
                         </div>
                     </div>
 
@@ -91,7 +122,7 @@
     </div>
     <%--modal--%>
 
-    <div class="modal fade mbModalunidad" id="myModal2" role="dialog" aria-hidden="true">
+<%--    <div class="modal fade mbModalunidad" id="myModal2" role="dialog" aria-hidden="true">
         <div class="modal-dialog" role="document">
 
             <div class="modal-content" style="width: 800px;">
@@ -99,11 +130,10 @@
                     <h5 class="modal-title" id="unidad">Seleccionar Producto</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <%--<span aria-hidden="true">&times;</span>--%>
-                    </button>
+                    <%--</button>
                     <div class="center">
 
 
-                        <asp:Button type="button" OnClick="btnCompra_Click" ID="Button1" runat="server" Text="Factura" CssClass="btn btn-success" />
 
                     </div>
                 </div>
@@ -122,14 +152,14 @@
                     </table>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>--%>
                     <%-- <button type="button" class="btn btn-primary"></button>--%>
-                </div>
+           <%--     </div>
             </div>
         </div>
-    </div>
+    </div>--%>
 
-    <div class="modal fade mbModal" id="myModal" role="dialog" aria-hidden="true">
+   <%-- <div class="modal fade mbModal" id="myModal" role="dialog" aria-hidden="true">
         <div class="modal-dialog modal-lg" role="document">
 
 
@@ -138,11 +168,10 @@
                     <h5 class="modal-title" id="proveedor">Seleccionar Producto</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <%--    <span aria-hidden="true">&times;</span>--%>
-                    </button>
+                   <%-- </button>
                     <div class="center">
 
 
-                        <asp:Button type="button" OnClick="btnRegistroCompra_Click" ID="Button2" runat="server" Text="Factura" CssClass="btn btn-success" />
 
                     </div>
                 </div>
@@ -164,17 +193,17 @@
                                 <th>cambio</th>
                                 <th>Fecha</th>
                                 <%--  <th>Seleccionar</th>--%>
-                            </tr>
+                   <%--         </tr>
                         </thead>
                     </table>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>--%>
                     <%-- <button type="button" class="btn btn-primary"></button>--%>
-                </div>
+             <%--   </div>
             </div>
         </div>
-    </div>
+    </div>--%>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolderScript" runat="server">
@@ -229,7 +258,7 @@
                             //{ "data": 'ID_UNIDAD_MEDIDA' },
                             //{ "data": 'NOMBRE_PRODUCTO' },
                             //{ "data": 'NOMBRE_MARCA' },
-                            { "data": 'CANTIDAD_PRODUCTO' },
+                            //{ "data": 'CANTIDAD_PRODUCTO' },
                             //{ "data": 'UM_DESCRIPCION' },
                             //{ "data": 'UNIDADES' },
                             //{ "data": 'PRECIO_COMPRA' },
@@ -240,7 +269,7 @@
                         "columnDefs": [
 
                             {
-                                "targets": [2], render: function (data) {
+                                "targets": [1], render: function (data) {
                                     return moment(data).format('DD/MM/YYYY');
                                 }
                             },
@@ -249,7 +278,7 @@
                                 "targets": -1,
                                 "data": null,
                                 "className": "text-center",
-                                "defaultContent": "<a href='#' data-toggle='modal' data-target='#myModal' id='btnEditar'><i class='fas fa-edit'></i></a> | <a href='#' class='eliminar' id='btnEliminar'><i class='fas fa-trash'></i></a>"
+                                "defaultContent": "<a href='#' data-toggle='modal' data-target='#myModal' id='btnEditar'><i class='fas fa-edit'></i></a> | <a href='#' class='imprimir' id='btnImprimir'><i class='fas fa-print'></i></a>"
                             }
                         ],
                         "language": languaje
@@ -261,7 +290,7 @@
             });
             //$('#mdSeleccionArticulo').modal('show');
         }
-        Loadunidad();
+ <%--       Loadunidad();
         var dataServer3, tablePro3;
         function Loadunidad() {
             //e.preventDefault();
@@ -312,10 +341,10 @@
                 },
                 failure: function (response) {
                    <%-- //$('#<%=Label1.ClientID%>').val("Error in calling Ajax:" + response.d);--%>
-                }
-            });
-            //$('#mdSeleccionArticulo').modal('show');
-        }
+        //        }
+        //    });
+        //    //$('#mdSeleccionArticulo').modal('show');
+        //}--%>
 
         LoadProd();
         var dataServer1, tablePro1;
@@ -330,13 +359,13 @@
                     $.each(response, function (i, item) {
                         dataServer1 = JSON.parse(item);
                     });
-                    tablePro1 = $('#modalproducto').DataTable({
+                    tablePro1 = $('#gridData1').DataTable({
                         "dataType": "json",
                         "destroy": true,
                         "aaData": dataServer1,
                         "responsive": true,
                         "columns": [
-                            { "data": 'ID_FACTURA' },
+                            { "data": 'id_detalle_factura' },
                             { "data": 'ID_EXISTENCIA' },
                             { "data": 'ID_MARCA' },
                             { "data": 'NOMBRE_PRODUCTO' },
@@ -351,7 +380,7 @@
                             { "data": 'FECHA_FACTURA' },
 
 
-                            //{ "data": "opcion" }
+                            { "data": "opcion" }
                         ],
                         "columnDefs": [
                             {
@@ -369,12 +398,12 @@
                                     return moment(data).format('DD/MM/YYYY');
                                 }
                             },
-                            //{
-                            //    "targets": -1,
-                            //    "data": null,
-                            //    "className": "text-center",
-                            //    "defaultContent": "<a href='#' class='seleccionar' id='btnseleccionar'><i class='fas fa-edit'></i></a>"
-                            //}
+                            {
+                                "targets": -1,
+                                "data": null,
+                                "className": "text-center",
+                                "defaultContent": "<a href='#' class='seleccionar' id='btnseleccionar'><i class='fas fa-edit'></i></a> | <a href='#' class='imprimir' id='btnImprimir'><i class='fas fa-print'></i></a>"
+                            }
                         ],
                         "language": languaje
                     });
@@ -387,9 +416,31 @@
         }
 
 
+        $(document).ready(function () {
 
+
+            $('#gridData').on('click', '#btnImprimir', function () {
+                var p = tablePro.row($(this).parents("tr")).data();
+                var idCompra = p.ID_FACTURA;
+                window.open("Reporte/ReportPage.aspx?val=" + idCompra);
+            });
+
+
+        });
 
         $(document).ready(function () {
+
+
+            $('#gridData1').on('click', '#btnImprimir', function () {
+                var p = tablePro1.row($(this).parents("tr")).data();
+                var idCompra = p.id_detalle_factura;
+                window.open("Reporte/VentaInd.aspx?val=" + idCompra);
+            });
+
+
+        });
+
+      <%--  $(document).ready(function () {
             $('#modalunidad').on('click', 'tr', function () {
                 var p = tablePro3.row(this).data();
                 var idUnidadMedida = p.ID_FACTURA;
@@ -408,7 +459,7 @@
             //    $('.mbModal').modal('show');
             // });
 
-        });
+        });--%>
 
 
         quitarClases();

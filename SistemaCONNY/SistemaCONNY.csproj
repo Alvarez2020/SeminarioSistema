@@ -2106,6 +2106,7 @@
     <Content Include="PlantillaStyle\iconfont\material-icons.css" />
     <Content Include="PlantillaStyle\iconfont\MaterialIcons-Regular.svg" />
     <Content Include="PlantillaStyle\icons\materialdesignicons.min.css" />
+    <Content Include="PlantillaStyle\img\ConnyLogo1.png" />
     <Content Include="PlantillaStyle\img\face5.jpg" />
     <Content Include="PlantillaStyle\img\favicon.png" />
     <Content Include="PlantillaStyle\img\imgs1.jpg" />
@@ -2124,11 +2125,17 @@
     <Content Include="PlantillaStyle\js\template.js" />
     <Content Include="PlantillaStyle\js\todolist.js" />
     <Content Include="PlantillaStyle\js\vendor.bundle.base.js" />
+    <Content Include="Reporte\CompraInd.aspx" />
+    <Content Include="Reporte\ComprasAgru.aspx" />
     <Content Include="Reporte\Master.aspx" />
+    <Content Include="Reporte\ReporteRegistroC.aspx" />
+    <Content Include="Reporte\ReporteRegistroV.aspx" />
     <Content Include="Reporte\Reportes.aspx" />
     <Content Include="Reporte\ReportPage.aspx" />
     <Content Include="Reporte\ReportPageCompra.aspx" />
     <Content Include="Reporte\ReportView.aspx" />
+    <Content Include="Reporte\VentaInd.aspx" />
+    <Content Include="Reporte\VentasAgru.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
@@ -2448,12 +2455,40 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="Reporte\CompraInd.aspx.cs">
+      <DependentUpon>CompraInd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporte\CompraInd.aspx.designer.cs">
+      <DependentUpon>CompraInd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\ComprasAgru.aspx.cs">
+      <DependentUpon>ComprasAgru.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporte\ComprasAgru.aspx.designer.cs">
+      <DependentUpon>ComprasAgru.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Reporte\Master.aspx.cs">
       <DependentUpon>Master.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Reporte\Master.aspx.designer.cs">
       <DependentUpon>Master.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\ReporteRegistroC.aspx.cs">
+      <DependentUpon>ReporteRegistroC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporte\ReporteRegistroC.aspx.designer.cs">
+      <DependentUpon>ReporteRegistroC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\ReporteRegistroV.aspx.cs">
+      <DependentUpon>ReporteRegistroV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporte\ReporteRegistroV.aspx.designer.cs">
+      <DependentUpon>ReporteRegistroV.aspx</DependentUpon>
     </Compile>
     <Compile Include="Reporte\Reportes.aspx.cs">
       <DependentUpon>Reportes.aspx</DependentUpon>
@@ -2482,6 +2517,20 @@
     </Compile>
     <Compile Include="Reporte\ReportView.aspx.designer.cs">
       <DependentUpon>ReportView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\VentaInd.aspx.cs">
+      <DependentUpon>VentaInd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporte\VentaInd.aspx.designer.cs">
+      <DependentUpon>VentaInd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Reporte\VentasAgru.aspx.cs">
+      <DependentUpon>VentasAgru.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Reporte\VentasAgru.aspx.designer.cs">
+      <DependentUpon>VentasAgru.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -2549,6 +2598,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reporte\CompraIndi.rdlc" />
     <EmbeddedResource Include="Reporte\Compras.rdlc" />
     <EmbeddedResource Include="Reporte\Existencia.rdlc" />
     <EmbeddedResource Include="Reporte\Factura.rdlc" />
@@ -2562,6 +2612,7 @@
     <EmbeddedResource Include="Reporte\Reportes.rdlc" />
     <EmbeddedResource Include="Reporte\TicketCompra.rdlc" />
     <EmbeddedResource Include="Reporte\TicketVenta.rdlc" />
+    <EmbeddedResource Include="Reporte\VentaInd.rdlc" />
     <EmbeddedResource Include="Reporte\Ventas.rdlc" />
   </ItemGroup>
   <ItemGroup>

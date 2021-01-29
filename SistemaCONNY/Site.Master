@@ -31,7 +31,7 @@
     <link rel="stylesheet" type="text/css" href="~/PlantillaNueva/datatable/css/dataTables.bootstrap.min.css"/>
      <link rel="stylesheet" href="~/PlantillaNueva/sweetalert.css">
 
-    
+ 
 
 </head>
 <body>
@@ -131,20 +131,34 @@
                                 <span class="user-name"><%: Context.User.Identity.GetUserName()  %></span>
                                 <span class="avatar"><%: Context.User.Identity.GetUserName()  %><span class="status busy"></span></span>
                             </a>
+                       
                             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userSettings">
                                 <div class="header-profile-actions">
                                     <div class="header-user-profile">
                                         <div class="header-user">
-                                            <img src="img/user11.png" alt="Miscelanea Conny" />
+                                            <img src="PlantillaStyle/img/ConnyLogo1.png" alt="Miscelanea Conny" />
                                         </div>
                                         <h5><%: Context.User.Identity.GetUserName()  %></h5>
-                                        <p>Admin</p>
+                                       
                                     </div>
-                                    <a href="../Account/Register.aspx"><i class="icon-user1"></i> Registrar Usuario</a>
+                                         <asp:LoginView ID="LoginView2" runat="server">
+                       <RoleGroups>
+                           <asp:RoleGroup Roles="Admin">
+                               <ContentTemplate>
+                                    <a href="Register"><i class="icon-user1"></i> Registrar Usuario</a>
+                                           
+                  </ContentTemplate>
+                           </asp:RoleGroup>
+                       </RoleGroups>
+                    </asp:LoginView>
+                                    
                                     <a href="../Account/Manage.aspx"><i class="icon-settings1"></i> Configuracion</a>
-                                      <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Cerrar Sesion" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                     
+                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Cerrar Sesion" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                  </div>
                                 </div>
-                            </div>
+                  
+
                         </li>
                     </ul>
                     <!-- Header actions end -->
@@ -183,7 +197,7 @@
                                <ContentTemplate>
                                    <li class="nav-item dropdown">
                                         <a class="nav-link dropdown-toggle" href="#" id="nav-mant" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="far fa-credit-card nav-icon"></i></a>
+                                            <i class="far fa-credit-card nav-icon"></i>Mantenimiento Catalago</a>
                                         <ul class="dropdown-menu" aria-labelledby="nav-mant">
                                             <li>
                                                 <a class="dropdown-item" Id="marca" href="Marca"><i class="fas fa-check-square"></i>Marca</a>

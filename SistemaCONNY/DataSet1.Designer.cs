@@ -377,6 +377,8 @@ namespace SistemaCONNY {
             
             private global::System.Data.DataColumn columnFECHA_VENCIMIENTO;
             
+            private global::System.Data.DataColumn columnid_detalle_factura;
+            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public tblFacturaDataTable() {
@@ -524,6 +526,14 @@ namespace SistemaCONNY {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn id_detalle_facturaColumn {
+                get {
+                    return this.columnid_detalle_factura;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -559,7 +569,7 @@ namespace SistemaCONNY {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tblFacturaRow AddtblFacturaRow(string ID_FACTURA, System.DateTime FECHA_FACTURA, string CLIENTE_FACTURA, string ID_PRODUCTO, int CANTIDAD_PRODUCTOS, double PRECIO_UNIT, double SUBTOTAL, string Producto, string CAMBIO, string TOTAL, string CANTIDAD_PAGO, string DESCRIPCION_ENVASE_UNIDAD, string NOMBRE_MARCA, string FECHA_VENCIMIENTO) {
+            public tblFacturaRow AddtblFacturaRow(string ID_FACTURA, System.DateTime FECHA_FACTURA, string CLIENTE_FACTURA, string ID_PRODUCTO, int CANTIDAD_PRODUCTOS, double PRECIO_UNIT, double SUBTOTAL, string Producto, string CAMBIO, string TOTAL, string CANTIDAD_PAGO, string DESCRIPCION_ENVASE_UNIDAD, string NOMBRE_MARCA, string FECHA_VENCIMIENTO, string id_detalle_factura) {
                 tblFacturaRow rowtblFacturaRow = ((tblFacturaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         ID_FACTURA,
@@ -575,7 +585,8 @@ namespace SistemaCONNY {
                         CANTIDAD_PAGO,
                         DESCRIPCION_ENVASE_UNIDAD,
                         NOMBRE_MARCA,
-                        FECHA_VENCIMIENTO};
+                        FECHA_VENCIMIENTO,
+                        id_detalle_factura};
                 rowtblFacturaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowtblFacturaRow);
                 return rowtblFacturaRow;
@@ -612,6 +623,7 @@ namespace SistemaCONNY {
                 this.columnDESCRIPCION_ENVASE_UNIDAD = base.Columns["DESCRIPCION_ENVASE_UNIDAD"];
                 this.columnNOMBRE_MARCA = base.Columns["NOMBRE_MARCA"];
                 this.columnFECHA_VENCIMIENTO = base.Columns["FECHA_VENCIMIENTO"];
+                this.columnid_detalle_factura = base.Columns["id_detalle_factura"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -645,6 +657,8 @@ namespace SistemaCONNY {
                 base.Columns.Add(this.columnNOMBRE_MARCA);
                 this.columnFECHA_VENCIMIENTO = new global::System.Data.DataColumn("FECHA_VENCIMIENTO", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnFECHA_VENCIMIENTO);
+                this.columnid_detalle_factura = new global::System.Data.DataColumn("id_detalle_factura", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_detalle_factura);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1165,6 +1179,8 @@ namespace SistemaCONNY {
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
         public partial class tblComprasDataTable : global::System.Data.TypedTableBase<tblComprasRow> {
             
+            private global::System.Data.DataColumn columnid_detalle_compra;
+            
             private global::System.Data.DataColumn columnID_COMPRA;
             
             private global::System.Data.DataColumn columnProducto;
@@ -1226,6 +1242,14 @@ namespace SistemaCONNY {
             protected tblComprasDataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn id_detalle_compraColumn {
+                get {
+                    return this.columnid_detalle_compra;
+                }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1385,9 +1409,26 @@ namespace SistemaCONNY {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public tblComprasRow AddtblComprasRow(string ID_COMPRA, string Producto, string FECHA_COMPRA, int CANTIDAD_PRODUCTOS, decimal PRECIO_COMPRA, decimal TOTAL, string DESCRIPCION_ENVASE_UNIDAD, string UM_DESCRIPCION, string UNIDADES, string PRECIO_VENTA, string NOMBRE_MARCA, string FECHA_ELABORACION, string TOTALF, string CAMBIO, string CANTIDAD_PAGO) {
+            public tblComprasRow AddtblComprasRow(
+                        string id_detalle_compra, 
+                        string ID_COMPRA, 
+                        string Producto, 
+                        string FECHA_COMPRA, 
+                        int CANTIDAD_PRODUCTOS, 
+                        decimal PRECIO_COMPRA, 
+                        decimal TOTAL, 
+                        string DESCRIPCION_ENVASE_UNIDAD, 
+                        string UM_DESCRIPCION, 
+                        string UNIDADES, 
+                        string PRECIO_VENTA, 
+                        string NOMBRE_MARCA, 
+                        string FECHA_ELABORACION, 
+                        string TOTALF, 
+                        string CAMBIO, 
+                        string CANTIDAD_PAGO) {
                 tblComprasRow rowtblComprasRow = ((tblComprasRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
+                        id_detalle_compra,
                         ID_COMPRA,
                         Producto,
                         FECHA_COMPRA,
@@ -1425,6 +1466,7 @@ namespace SistemaCONNY {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             internal void InitVars() {
+                this.columnid_detalle_compra = base.Columns["id_detalle_compra"];
                 this.columnID_COMPRA = base.Columns["ID_COMPRA"];
                 this.columnProducto = base.Columns["Producto"];
                 this.columnFECHA_COMPRA = base.Columns["FECHA_COMPRA"];
@@ -1445,6 +1487,8 @@ namespace SistemaCONNY {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             private void InitClass() {
+                this.columnid_detalle_compra = new global::System.Data.DataColumn("id_detalle_compra", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnid_detalle_compra);
                 this.columnID_COMPRA = new global::System.Data.DataColumn("ID_COMPRA", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnID_COMPRA);
                 this.columnProducto = new global::System.Data.DataColumn("Producto", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1842,6 +1886,22 @@ namespace SistemaCONNY {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string id_detalle_factura {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblFactura.id_detalle_facturaColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_detalle_factura\' de la tabla \'tblFactura\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblFactura.id_detalle_facturaColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsID_FACTURANull() {
                 return this.IsNull(this.tabletblFactura.ID_FACTURAColumn);
             }
@@ -2006,6 +2066,18 @@ namespace SistemaCONNY {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetFECHA_VENCIMIENTONull() {
                 this[this.tabletblFactura.FECHA_VENCIMIENTOColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isid_detalle_facturaNull() {
+                return this.IsNull(this.tabletblFactura.id_detalle_facturaColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setid_detalle_facturaNull() {
+                this[this.tabletblFactura.id_detalle_facturaColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -2353,6 +2425,22 @@ namespace SistemaCONNY {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string id_detalle_compra {
+                get {
+                    try {
+                        return ((string)(this[this.tabletblCompras.id_detalle_compraColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_detalle_compra\' de la tabla \'tblCompras\' es DBNull.", e);
+                    }
+                }
+                set {
+                    this[this.tabletblCompras.id_detalle_compraColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public string ID_COMPRA {
                 get {
                     try {
@@ -2590,6 +2678,18 @@ namespace SistemaCONNY {
                 set {
                     this[this.tabletblCompras.CANTIDAD_PAGOColumn] = value;
                 }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool Isid_detalle_compraNull() {
+                return this.IsNull(this.tabletblCompras.id_detalle_compraColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void Setid_detalle_compraNull() {
+                this[this.tabletblCompras.id_detalle_compraColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

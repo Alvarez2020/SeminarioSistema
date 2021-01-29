@@ -347,21 +347,21 @@
               <TablixCells>
                 <TablixCell>
                   <CellContents>
-                    <Textbox Name="ID_COMPRA">
+                    <Textbox Name="id_detalle_compra">
                       <CanGrow>true</CanGrow>
                       <KeepTogether>true</KeepTogether>
                       <Paragraphs>
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>=Fields!ID_COMPRA.Value</Value>
+                              <Value>=Fields!id_detalle_compra.Value</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
                           <Style />
                         </Paragraph>
                       </Paragraphs>
-                      <rd:DefaultName>ID_COMPRA</rd:DefaultName>
+                      <rd:DefaultName>id_detalle_compra</rd:DefaultName>
                       <Style>
                         <Border>
                           <Color>LightGrey</Color>
@@ -373,6 +373,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -433,7 +434,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -717,6 +717,10 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
+        <Field Name="id_detalle_compra">
+          <DataField>id_detalle_compra</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="ID_COMPRA">
           <DataField>ID_COMPRA</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -761,10 +765,26 @@
           <DataField>NOMBRE_MARCA</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="FECHA_ELABORACION">
+          <DataField>FECHA_ELABORACION</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TOTALF">
+          <DataField>TOTALF</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CAMBIO">
+          <DataField>CAMBIO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CANTIDAD_PAGO">
+          <DataField>CANTIDAD_PAGO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet1</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\DELL\Videos\SistemaConny\SistemaCONNY\DataSet1.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\DELL\Desktop\Sistema Conny\SistemaCONNY\DataSet1.xsd</rd:SchemaPath>
         <rd:TableName>tblCompras</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />

@@ -9,15 +9,17 @@ using System.Web.UI.WebControls;
 
 namespace SistemaCONNY.Reporte
 {
-    public partial class ReportPageCompra : System.Web.UI.Page
+    public partial class ComprasAgru : System.Web.UI.Page
     {
         DB_MiscelaneaConnyEntities contex = new DB_MiscelaneaConnyEntities();
+
         protected void Page_Load(object sender, EventArgs e)
         {
+
             if (!IsPostBack)
             {
-                int id = int.Parse(Request.Params["val"]);
-                CargarReporteFactura(id);
+
+                CargarReporteFactura(60);
             }
 
         }
@@ -32,28 +34,22 @@ namespace SistemaCONNY.Reporte
                 ReportDataSource datasource = new ReportDataSource();
 
                 //carga directorio de reporte
-                ReportViewer1.LocalReport.ReportPath = Server.MapPath("~/Reporte/TicketCompra.rdlc");
+             
+                    //carga directorio de reporte
+                ReportViewer1.LocalReport.ReportPath = Server.MapPath("~/Reporte/Compras.rdlc");
                 //llena el recurso de dato primero consulta linq y despues pasa el parametro al datasource de report
                 datasource = new ReportDataSource("DataSet1", (from t1 in contex.TBL_COMPRA
                                                                join t2 in contex.TBL_DETALLE_COMPRA on t1.ID_COMPRA equals t2.ID_COMPRA
-                                                               where t1.ID_COMPRA == codFac
                                                                select new
                                                                {
                                                                    ID_COMPRA = t1.ID_COMPRA,
-                                                                   id_detalle_compra = t2.idDetalleCompra,
                                                                    FECHA_COMPRA = t1.FECHA_COMPRA,
-                                                                   NOMBRE_MARCA = t2.TBL_PRODUCTO.TblMarca.NOMBRE_MARCA,
-                                                                   Producto = t2.TBL_PRODUCTO.NOMBRE_PRODUCTO,
                                                                    CANTIDAD_PRODUCTOS = t2.CANTIDAD_PRODUCTOS,
-                                                                   PRECIO_VENTA = t2.PRECIO_VENTA,
                                                                    PRECIO_COMPRA = t2.PRECIO_COMPRA,
-                                                                   TOTALF = t1.TOTAL,
-                                                                   CANTIDAD_PAGO = t1.CANTIDAD_PAGO,
-                                                                   CAMBIO = t1.CAMBIO,
                                                                    TOTAL = t2.SUBTOTAL,
+                                                                   NOMBRE_PRODUCTO = t2.TBL_PRODUCTO.NOMBRE_PRODUCTO,
                                                                    UM_DESCRIPCION = t2.CAT_UNIDAD_MEDIDA.UM_DESCRIPCION,
-                                                                   UNIDADES = t2.CAT_UNIDAD_MEDIDA.UNIDADES,
-                                                                   DESCRIPCION_ENVASE_UNIDAD = t2.CAT_UNIDADMEDIDA_ENVASE.DESCRIPCION_ENVASE_UNIDAD
+                                                                   UNIDADES = t2.CAT_UNIDAD_MEDIDA.UNIDADES
                                                                }));
 
                 ReportViewer1.LocalReport.DataSources.Add(datasource);

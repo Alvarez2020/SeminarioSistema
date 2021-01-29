@@ -71,7 +71,7 @@
         <TablixBody>
           <TablixColumns>
             <TablixColumn>
-              <Width>0.74083cm</Width>
+              <Width>2.6362cm</Width>
             </TablixColumn>
             <TablixColumn>
               <Width>2.5cm</Width>
@@ -438,6 +438,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -745,7 +746,7 @@
         <Top>4.07141cm</Top>
         <Left>1.29328cm</Left>
         <Height>1.2cm</Height>
-        <Width>23.65572cm</Width>
+        <Width>25.55109cm</Width>
         <ZIndex>2</ZIndex>
         <Style>
           <Border>
@@ -785,6 +786,10 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
+        <Field Name="id_detalle_compra">
+          <DataField>id_detalle_compra</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="ID_COMPRA">
           <DataField>ID_COMPRA</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -825,10 +830,30 @@
           <DataField>PRECIO_VENTA</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="NOMBRE_MARCA">
+          <DataField>NOMBRE_MARCA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FECHA_ELABORACION">
+          <DataField>FECHA_ELABORACION</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="TOTALF">
+          <DataField>TOTALF</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CAMBIO">
+          <DataField>CAMBIO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="CANTIDAD_PAGO">
+          <DataField>CANTIDAD_PAGO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet1</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\DELL\Videos\SistemaConny\SistemaCONNY\DataSet1.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\DELL\Desktop\Sistema Conny\SistemaCONNY\DataSet1.xsd</rd:SchemaPath>
         <rd:TableName>tblCompras</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
