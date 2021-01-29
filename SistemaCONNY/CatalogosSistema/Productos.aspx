@@ -174,11 +174,11 @@
                         "columnDefs": [
                             {
                                 "targets": [0],
-                                "visible": true,
+                                "visible": false,
                                 "searchable": false
                             },
                             {
-                                "targets": [1,2,3],
+                                "targets": [1,2,3,7],
                                 "visible": false,
                                 "searchable": false
                             },
