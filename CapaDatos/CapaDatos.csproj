@@ -234,13 +234,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="aspnet-SistemaConnyLogin-20210103075854.mdf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="aspnet-SistemaConnyLogin-20210103075854_log.ldf">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>aspnet-SistemaConnyLogin-20210103075854.mdf</DependentUpon>
-    </Content>
     <Content Include="ModeloEntity\ModelBaseDato.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>ModelBaseDato.edmx</DependentUpon>

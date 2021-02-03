@@ -195,10 +195,6 @@
     <Content Include="Account\VerifyPhoneNumber.aspx" />
     <Content Include="Admin\CrearRoles.aspx" />
     <Content Include="Admin\Register.aspx" />
-    <Content Include="App_Data\aspnet-SistemaConnyLogin-20210103075854.mdf" />
-    <Content Include="App_Data\aspnet-SistemaConnyLogin-20210103075854_log.ldf">
-      <DependentUpon>aspnet-SistemaConnyLogin-20210103075854.mdf</DependentUpon>
-    </Content>
     <Content Include="CatalogosSistema\Bodega.aspx" />
     <Content Include="CatalogosSistema\Ciudad.aspx" />
     <Content Include="CatalogosSistema\Departamento.aspx" />
@@ -2571,6 +2567,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="App_Data\" />
     <Folder Include="App_LocalResources\" />
     <Folder Include="Informes\" />
     <Folder Include="PlantillaNueva\img\" />

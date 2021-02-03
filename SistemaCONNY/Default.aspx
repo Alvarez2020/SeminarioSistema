@@ -10,8 +10,8 @@
             </div>
         </div>
     </div> 
-    <iframe width="1290" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=bacd8eb4-ecca-4fde-8613-7776270ed488&autoAuth=true&ctid=e47646fe-da27-4518-8436-5f8b158ba127&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWNlbnRyYWwtdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D" frameborder="0" allowFullScreen="true"></iframe>
-          <%--  <div id="carouselControls" class="carousel slide mt-3 carousel-fade" data-ride="carousel">
+   <iframe width="1290" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=7af1dcf3-1e83-4c96-883a-c0f69963fb64&autoAuth=true&ctid=e47646fe-da27-4518-8436-5f8b158ba127&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWNlbnRyYWwtdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D" frameborder="0" allowFullScreen="true"></iframe>
+       <%--  <div id="carouselControls" class="carousel slide mt-3 carousel-fade" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="PlantillaStyle/img/imgs1.jpg" class="d-block w-100" alt="Primer Slide">

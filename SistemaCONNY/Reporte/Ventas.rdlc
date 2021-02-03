@@ -246,7 +246,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value />
+                              <Value>=Sum(Fields!SUBTOTAL.Value)</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -265,6 +265,7 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
+                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -701,10 +702,26 @@
           <DataField>CANTIDAD_PAGO</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="DESCRIPCION_ENVASE_UNIDAD">
+          <DataField>DESCRIPCION_ENVASE_UNIDAD</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="NOMBRE_MARCA">
+          <DataField>NOMBRE_MARCA</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="FECHA_VENCIMIENTO">
+          <DataField>FECHA_VENCIMIENTO</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="id_detalle_factura">
+          <DataField>id_detalle_factura</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet1</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\RA\Downloads\DeybinDanny\SistemaCONNY\DataSet1.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\DELL\Desktop\Sistema Conny\SistemaCONNY\DataSet1.xsd</rd:SchemaPath>
         <rd:TableName>tblFactura</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />
