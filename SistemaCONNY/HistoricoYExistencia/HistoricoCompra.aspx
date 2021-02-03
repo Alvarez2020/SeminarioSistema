@@ -66,6 +66,7 @@ margin-right: 1.5%;
                             </div>
                         </div>--%>
                     </div>
+                    <h4>Factura</h4>
                             <asp:Button type="button" OnClick="btnCompra_Click" ID="Button1" runat="server" Text="Factura" CssClass="btn btn-success" />
 
                     <div class="panel-body">
@@ -84,6 +85,7 @@ margin-right: 1.5%;
                            
                         </div>
                     </div>
+                     <h4>Registro Compra</h4>
                             <asp:Button type="button"  OnClick="btnRegistroCompra_Click" ID="Button2" runat="server" Text="Facturar" CssClass="btn btn-success" />
 
                       <div class="panel-body">

@@ -317,7 +317,7 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>ID COMPRA</Value>
+                            <Value>Nº/FACT</Value>
                             <Style />
                           </TextRun>
                         </TextRuns>
@@ -381,7 +381,6 @@
                       <PaddingBottom>2pt</PaddingBottom>
                     </Style>
                   </Textbox>
-                  <rd:Selected>true</rd:Selected>
                 </CellContents>
               </TablixHeader>
               <TablixMembers>
@@ -426,7 +425,7 @@
         <DataSetName>DataSet1</DataSetName>
         <Top>0.635cm</Top>
         <Left>2.11349cm</Left>
-        <Height>2.7175cm</Height>
+        <Height>2.71751cm</Height>
         <Width>16.81467cm</Width>
         <Style>
           <Border>

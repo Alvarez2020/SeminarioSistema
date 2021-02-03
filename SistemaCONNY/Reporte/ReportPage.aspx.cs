@@ -37,6 +37,7 @@ namespace SistemaCONNY.Reporte
                 //llena el recurso de dato primero consulta linq y despues pasa el parametro al datasource de report
                 datasource = new ReportDataSource("DataSet1", (from t1 in contex.TBL_FACTURA
                                                                join t2 in contex.TBL_DETALLE_FACT on t1.ID_FACTURA equals t2.ID_FACTURA
+                                                              
                                                                where t1.ID_FACTURA == codFac
                                                                select new
                                                                {

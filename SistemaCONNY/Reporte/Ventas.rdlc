@@ -265,7 +265,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
               </TablixCells>
@@ -450,7 +449,7 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>ID FACTURA</Value>
+                            <Value>Nº/FACT</Value>
                             <Style />
                           </TextRun>
                         </TextRuns>

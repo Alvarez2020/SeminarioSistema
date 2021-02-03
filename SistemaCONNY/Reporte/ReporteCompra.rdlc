@@ -114,7 +114,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ID COMPRA</Value>
+                              <Value>Nº/FACT</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
@@ -438,7 +438,6 @@
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>

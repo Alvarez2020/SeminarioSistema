@@ -187,7 +187,7 @@
                       <Paragraph>
                         <TextRuns>
                           <TextRun>
-                            <Value>Predeterminado</Value>
+                            <Value>=First(Fields!CLIENTE_FACTURA.Value, "DataSet1")</Value>
                             <Style />
                           </TextRun>
                         </TextRuns>

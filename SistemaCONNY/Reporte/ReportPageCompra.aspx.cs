@@ -36,6 +36,7 @@ namespace SistemaCONNY.Reporte
                 //llena el recurso de dato primero consulta linq y despues pasa el parametro al datasource de report
                 datasource = new ReportDataSource("DataSet1", (from t1 in contex.TBL_COMPRA
                                                                join t2 in contex.TBL_DETALLE_COMPRA on t1.ID_COMPRA equals t2.ID_COMPRA
+                                                              
                                                                where t1.ID_COMPRA == codFac
                                                                select new
                                                                {
@@ -48,6 +49,8 @@ namespace SistemaCONNY.Reporte
                                                                    PRECIO_VENTA = t2.PRECIO_VENTA,
                                                                    PRECIO_COMPRA = t2.PRECIO_COMPRA,
                                                                    TOTALF = t1.TOTAL,
+                                                                   
+
                                                                    CANTIDAD_PAGO = t1.CANTIDAD_PAGO,
                                                                    CAMBIO = t1.CAMBIO,
                                                                    TOTAL = t2.SUBTOTAL,

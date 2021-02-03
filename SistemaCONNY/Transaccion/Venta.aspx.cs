@@ -100,6 +100,7 @@ namespace SistemaCONNY.Transaccion
         public void FinalizarTransaccion()
         {
             ObjetoVenta variable = new ObjetoVenta();
+            variable.CLIENTE_FACTURA = Convert.ToString(txtCliente.Text);
             variable.FECHA_FACTURA = Convert.ToDateTime(DateTime.Now.ToShortDateString());
             variable.CANTIDAD_PAGO = Convert.ToDecimal(txtCantidadPago.Text);
             variable.TOTAL = Convert.ToDecimal(txtTotal.Text);
@@ -108,18 +109,10 @@ namespace SistemaCONNY.Transaccion
             var result = metodoNeogico.FinalizaTransaccion(variable, ListaDetalle);
             Application["CodFac"] = result;
             Response.Write("<script>");
-            Response.Write("window.open('Reporte/ReportPage.aspx?val=" + result + "')");
+            Response.Write("window.open('Reporte/ReportPage.aspx?val=" + result + "')"); 
             Response.Write("</script>");
-            //Response.Redirect("~/Reporte/Reportes.aspx");
-            //if (result != 0)
-            //{
-
-            //    //mesanje satisfactorio
-            //}
-            //else
-            //{
-            //    //mensnaje error
-            //}
+   
+           
         }
 
         public void limpiar(Control control)

@@ -206,10 +206,10 @@
                                                 <a class="dropdown-item" Id="TipoProducto" href="Tipo_Producto"><i class="fas fa-box-open"></i>Tipo Producto</a>
                                             </li>
                                             <li>
-                                                <a class="dropdown-item" Id="UnidadMedida" href="Unidad_Medida"><i class="fas fa-balance-scale-right"></i>Unidad de Medida</a>
+                                                <a class="dropdown-item" Id="UnidadMedida" href="Unidad_Medida"><i class="fas fa-balance-scale-right"></i>Unidad Compra</a>
                                             </li>
                                              <li>
-                                                <a class="dropdown-item" Id="UnidadEnvase" href="UnidadEnvase"><i class="fas fa-balance-scale-right"></i>UnidadEnvase</a>
+                                                <a class="dropdown-item" Id="UnidadEnvase" href="UnidadEnvase"><i class="fas fa-balance-scale-right"></i>Unidad Envase</a>
                                             </li>
                                             <li>
                                                 <a class="dropdown-item" Id="Pais" href="Pais"><i class="far fa-flag"></i>Pais</a>
@@ -250,7 +250,7 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="nav-venta">
                             <li>
-                                <a class="dropdown-item" Id="HistoricoVenta" href="HistoricoVenta"><i class="fas fa-history"></i>Historico Venta</a>
+                                <a class="dropdown-item" Id="HistoricoVenta" href="HistoricoVenta"><i class="fas fa-history"></i>Reporte Venta</a>
                             </li>
                             <li>
                                 <a class="dropdown-item" Id="Venta"  href="Venta"><i class="fas fa-money-check-alt"></i>Vender</a>
@@ -268,7 +268,7 @@
                                 <a class="dropdown-item" Id="Compra" href="Compra"><i class="fas fa-shopping-bag"></i>Compra</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" Id="HistoricoCompra" href="HistoricoCompra"><i class="fas fa-history"></i>HistoricoCompra</a>
+                                <a class="dropdown-item" Id="HistoricoCompra" href="HistoricoCompra"><i class="fas fa-history"></i>Reporte Compra</a>
                             </li>
                              <li>
                                 <a class="dropdown-item" Id="Bodega"  href="Bodega" ><i class="fab fa-linode"></i>Bodega</a>

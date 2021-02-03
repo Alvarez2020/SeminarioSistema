@@ -19,8 +19,6 @@
                     <div class="panel panel-light">
                         <div class="panel-heading">
                             <%--<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Agregar </button>--%>
-
-
                             <div class="row">
                                 <div class="col col-md-4">
                                       <h3>Realice una Compra <i class="fas fa-cart-arrow-down"></i></h3>
@@ -81,7 +79,7 @@
                                     <div class="form-group">
                                         <div class="input-group"> 
                                             <input type="text" hidden style="display: none" id="txtIdUnidadMedida" />
-                                            <asp:Label Text="Seleccione Unidad-Medida"  foreColor="#006600" runat="server" />
+                                            <asp:Label Text="Seleccione Unidad-Compra"  foreColor="#006600" runat="server" />
                                             <i class="fas fa-hand-holding-usd"></i>
                                             <asp:TextBox type="text" Width="70%" Height="40" runat="server" class="form-control"
                                                 disabled="disabled" ID="txtUmDescripcion" placeholder="Unidad/Medida" aria-describedby="btnAgregarArticulo3">
@@ -93,7 +91,7 @@
                                     <div class="form-group">
                                         <div class="input-group">
                                             <input type="text" hidden style="display: none" id="txtIdUnidadEnvase" />
-                                              <asp:Label Text="Seleccione Unidad-Envase"  foreColor="#006600" runat="server" />
+                                              <asp:Label Text="Seleccione Contenido-Envase"  foreColor="#006600" runat="server" />
                                             <i class="fas fa-hand-holding-usd"></i>
                                             <asp:TextBox type="text" Width="70%" Height="40" runat="server" class="form-control"
                                                 disabled="disabled" ID="txtDescripcionUnidadEnvase" placeholder="Unidad/Envase" aria-describedby="btnAgregarArticulo4">
@@ -142,18 +140,20 @@
                                     <table id="gridData" class="table table-striped table-bordered" style="width: 100%">
                                         <thead>
                                             <tr>
-                                                <th style="width: 5%">Id</th>
+                                                <th>Id</th>
                                                 <th>idProducto</th>
+                                                 <th>idProducto</th>
                                                 <th>Producto / Marca</th>
                                                 <th>idProveedor</th>
                                                 <th>Proveedor / Encargado</th>
                                                 <th>Cantidad</th>
+                                                <th>Unidades</th>
                                                 <th>FechaElaboracion</th>
                                                 <th>FechaVencimiento</th>
                                                 <th>Precio/Unit</th>
                                                 <th>PrecioVenta</th>
                                                 <th>Importe</th>
-                                                <th style="width: 5%; text-align: center">opciones</th>
+                                                <th text-align: center">opciones</th>
                                             </tr>
                                         </thead>
 
@@ -671,12 +671,14 @@
                         "aaData": dataServer,
                         "responsive": true,
                         "columns": [
-                            { "data": 'ID' },
+                            { "data": 'ID' }, 
                             { "data": 'ID_PRODUCTO' },
+                            { "data": 'ID_UNIDAD_MEDIDA' },
                             { "data": 'NOMBRE_PRODUCTO' },
                             { "data": 'ID_PROVEEDOR' },
                             { "data": 'NOMBRE_PROVEEDOR' },
                             { "data": 'CANTIDAD_PRODUCTOS' },
+                            { "data": 'UM_DESCRIPCION' },
                             { "data": 'FECHA_ELABORACION_PRODUCTO' },
                             { "data": 'FECHA_VENCIMIENTO_PRODUCTO' },
                             { "data": 'PRECIO_COMPRA' },
@@ -692,12 +694,12 @@
                                 "searchable": false
                             },
                             {
-                                "targets": [1, 3],
+                                "targets": [1,,2, 4,5],
                                 "visible": false,
                                 "searchable": false
                             },
                             {
-                                "targets": [6], render: function (data) {
+                                "targets": [8], render: function (data) {
                                     return moment(data).format('DD/MM/YYYY');
                                 }
                             },

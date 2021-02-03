@@ -40,10 +40,10 @@
               </Paragraph>
             </Paragraphs>
             <rd:DefaultName>Textbox1</rd:DefaultName>
-            <Top>0.21993cm</Top>
-            <Left>8.12316cm</Left>
+            <Top>0.25521cm</Top>
+            <Left>7.20827cm</Left>
             <Height>1.94056cm</Height>
-            <Width>5.17229cm</Width>
+            <Width>7.2625cm</Width>
             <Style>
               <Border>
                 <Style>None</Style>
@@ -104,66 +104,6 @@
                 <Height>0.6cm</Height>
                 <Width>1.79413cm</Width>
                 <ZIndex>1</ZIndex>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
-                  <PaddingRight>2pt</PaddingRight>
-                  <PaddingTop>2pt</PaddingTop>
-                  <PaddingBottom>2pt</PaddingBottom>
-                </Style>
-              </Textbox>
-              <Textbox Name="Textbox9">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>Cliente:</Value>
-                        <Style />
-                      </TextRun>
-                    </TextRuns>
-                    <Style />
-                  </Paragraph>
-                </Paragraphs>
-                <rd:DefaultName>Textbox9</rd:DefaultName>
-                <Top>0.07496cm</Top>
-                <Left>9.64865cm</Left>
-                <Height>0.6cm</Height>
-                <Width>2.5cm</Width>
-                <ZIndex>2</ZIndex>
-                <Style>
-                  <Border>
-                    <Style>None</Style>
-                  </Border>
-                  <PaddingLeft>2pt</PaddingLeft>
-                  <PaddingRight>2pt</PaddingRight>
-                  <PaddingTop>2pt</PaddingTop>
-                  <PaddingBottom>2pt</PaddingBottom>
-                </Style>
-              </Textbox>
-              <Textbox Name="Textbox10">
-                <CanGrow>true</CanGrow>
-                <KeepTogether>true</KeepTogether>
-                <Paragraphs>
-                  <Paragraph>
-                    <TextRuns>
-                      <TextRun>
-                        <Value>Predeterminado</Value>
-                        <Style />
-                      </TextRun>
-                    </TextRuns>
-                    <Style />
-                  </Paragraph>
-                </Paragraphs>
-                <rd:DefaultName>Textbox9</rd:DefaultName>
-                <Top>0.07056cm</Top>
-                <Left>11.80566cm</Left>
-                <Height>0.6cm</Height>
-                <Width>2.84396cm</Width>
-                <ZIndex>3</ZIndex>
                 <Style>
                   <Border>
                     <Style>None</Style>
@@ -311,7 +251,7 @@
             <Top>3.15947cm</Top>
             <Left>0.58755cm</Left>
             <Height>0.85962cm</Height>
-            <Width>20.46524cm</Width>
+            <Width>20.10866cm</Width>
             <ZIndex>2</ZIndex>
             <Style>
               <Border>
@@ -385,7 +325,7 @@
                               <rd:DefaultName>CANTIDAD_PRODUCTOS</rd:DefaultName>
                               <Style>
                                 <Border>
-                                  <Style>None</Style>
+                                  <Style>Solid</Style>
                                 </Border>
                                 <PaddingLeft>2pt</PaddingLeft>
                                 <PaddingRight>2pt</PaddingRight>
@@ -1377,7 +1317,7 @@
         </ReportItems>
         <KeepTogether>true</KeepTogether>
         <Height>11.61231cm</Height>
-        <Width>21.4892cm</Width>
+        <Width>21.40982cm</Width>
         <Style>
           <Border>
             <Style>None</Style>
@@ -1416,6 +1356,10 @@
         <CommandText>/* Local Query */</CommandText>
       </Query>
       <Fields>
+        <Field Name="id_detalle_compra">
+          <DataField>id_detalle_compra</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
         <Field Name="ID_COMPRA">
           <DataField>ID_COMPRA</DataField>
           <rd:TypeName>System.String</rd:TypeName>
@@ -1476,10 +1420,14 @@
           <DataField>CANTIDAD_PAGO</DataField>
           <rd:TypeName>System.String</rd:TypeName>
         </Field>
+        <Field Name="Proveedor">
+          <DataField>Proveedor</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
       </Fields>
       <rd:DataSetInfo>
         <rd:DataSetName>DataSet1</rd:DataSetName>
-        <rd:SchemaPath>C:\Users\DELL\Desktop\SistemaConny\SistemaCONNY\DataSet1.xsd</rd:SchemaPath>
+        <rd:SchemaPath>C:\Users\DELL\Desktop\Sistema Conny\SistemaCONNY\DataSet1.xsd</rd:SchemaPath>
         <rd:TableName>tblCompras</rd:TableName>
         <rd:TableAdapterFillMethod />
         <rd:TableAdapterGetDataMethod />

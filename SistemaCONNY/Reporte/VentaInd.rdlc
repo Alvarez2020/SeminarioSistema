@@ -101,7 +101,7 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>ID COMPRA</Value>
+                              <Value>Nº/FACT</Value>
                               <Style />
                             </TextRun>
                           </TextRuns>
