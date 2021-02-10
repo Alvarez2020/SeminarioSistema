@@ -5,12 +5,12 @@
         <div class="container-fluid">
             <div class="row gutter">
                 <div class="col-md-8 col-sm-6 col-xs-12">
-                    <h1 class="page-title">MISCELANEA CONNY 1.0</h1>
+                    <h1 class="page-title">MISCELANEA CONNY</h1>
                 </div>
             </div>
         </div>
     </div> 
-   <iframe width="1290" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=7af1dcf3-1e83-4c96-883a-c0f69963fb64&autoAuth=true&ctid=e47646fe-da27-4518-8436-5f8b158ba127&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWNlbnRyYWwtdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D" frameborder="0" allowFullScreen="true"></iframe>
+    <iframe width="1290" height="541.25" src="https://app.powerbi.com/reportEmbed?reportId=fe1b59a4-32eb-41c5-8465-e8e0c080c6d1&autoAuth=true&ctid=e47646fe-da27-4518-8436-5f8b158ba127&config=eyJjbHVzdGVyVXJsIjoiaHR0cHM6Ly93YWJpLXNvdXRoLWNlbnRyYWwtdXMtcmVkaXJlY3QuYW5hbHlzaXMud2luZG93cy5uZXQvIn0%3D" frameborder="0" allowFullScreen="true"></iframe>
        <%--  <div id="carouselControls" class="carousel slide mt-3 carousel-fade" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">

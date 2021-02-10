@@ -58,11 +58,11 @@
         //    $("#myModal").modal("hide");
         //}
         var languaje = {
-            "info": "Registro _START_ a _END_ de _TOTAL_ registros",
-            "infoEmpty": "Registro 0 a 0 de 0 registros",
+            "info": "Productos _START_ a _END_ de _TOTAL_ Productos",
+            "infoEmpty": "Productos 0 a 0 de 0 Productos",
             "zeroRecords": "No se encontro coincidencias",
-            "infoFiltered": "(filtrado de _MAX_ registros en total)",
-            "emptyTable": "No hay registros buscar..",
+            "infoFiltered": "(filtrado de _MAX_ Productos en total)",
+            "emptyTable": "No hay Productos buscar..",
             "lengthMenu": '_MENU_ ',
             "search": 'Buscar:',
             //"loadingRecords": "Buscando...",
