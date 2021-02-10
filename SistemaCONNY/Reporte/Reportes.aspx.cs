@@ -182,15 +182,15 @@ namespace SistemaCONNY.Reporte
             CargarReporte(4);
         }
 
-        protected void btnFactura_Click(object sender, EventArgs e)
-        {
-            if (txtCod.Text == "")
-            {
-                return;
-            }
-            int codFac = int.Parse(txtCod.Text);
+        //protected void btnFactura_Click(object sender, EventArgs e)
+        //{
+        //    if (txtCod.Text == "")
+        //    {
+        //        return;
+        //    }
+        //    int codFac = int.Parse(txtCod.Text);
 
-            CargarReporteFactura(codFac);
-        }
+        //    CargarReporteFactura(codFac);
+        //}
     }
 }
