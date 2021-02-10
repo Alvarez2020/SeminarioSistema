@@ -112,8 +112,14 @@
                                     <Paragraph>
                                       <TextRuns>
                                         <TextRun>
-                                          <Value>  Cantidad</Value>
+                                          <Value xml:space="preserve">  </Value>
                                           <Style />
+                                        </TextRun>
+                                        <TextRun>
+                                          <Value>Cantidad</Value>
+                                          <Style>
+                                            <Color>White</Color>
+                                          </Style>
                                         </TextRun>
                                       </TextRuns>
                                       <Style />
@@ -202,7 +208,7 @@
                     <TablixBody>
                       <TablixColumns>
                         <TablixColumn>
-                          <Width>2.2666cm</Width>
+                          <Width>2.7252cm</Width>
                         </TablixColumn>
                       </TablixColumns>
                       <TablixRows>
@@ -219,7 +225,9 @@
                                       <TextRuns>
                                         <TextRun>
                                           <Value>Producto</Value>
-                                          <Style />
+                                          <Style>
+                                            <Color>White</Color>
+                                          </Style>
                                         </TextRun>
                                       </TextRuns>
                                       <Style />
@@ -297,7 +305,7 @@
                     <Top>5.68215cm</Top>
                     <Left>1.92737cm</Left>
                     <Height>1.0148cm</Height>
-                    <Width>2.2666cm</Width>
+                    <Width>2.7252cm</Width>
                     <ZIndex>1</ZIndex>
                     <Style>
                       <Border>
@@ -325,8 +333,10 @@
                                     <Paragraph>
                                       <TextRuns>
                                         <TextRun>
-                                          <Value>Conetnido</Value>
-                                          <Style />
+                                          <Value>Contenido</Value>
+                                          <Style>
+                                            <Color>White</Color>
+                                          </Style>
                                         </TextRun>
                                       </TextRuns>
                                       <Style />
@@ -401,8 +411,8 @@
                       </TablixMembers>
                     </TablixRowHierarchy>
                     <DataSetName>DataSet1</DataSetName>
-                    <Top>5.68215cm</Top>
-                    <Left>6.33191cm</Left>
+                    <Top>5.64688cm</Top>
+                    <Left>6.82579cm</Left>
                     <Height>1.0148cm</Height>
                     <Width>3.92008cm</Width>
                     <ZIndex>2</ZIndex>
@@ -433,7 +443,9 @@
                                       <TextRuns>
                                         <TextRun>
                                           <Value>Marca</Value>
-                                          <Style />
+                                          <Style>
+                                            <Color>White</Color>
+                                          </Style>
                                         </TextRun>
                                       </TextRuns>
                                       <Style />
@@ -508,8 +520,8 @@
                       </TablixMembers>
                     </TablixRowHierarchy>
                     <DataSetName>DataSet1</DataSetName>
-                    <Top>5.68215cm</Top>
-                    <Left>4.19397cm</Left>
+                    <Top>5.64688cm</Top>
+                    <Left>4.65257cm</Left>
                     <Height>1.0148cm</Height>
                     <Width>2.13794cm</Width>
                     <ZIndex>3</ZIndex>
@@ -540,7 +552,9 @@
                                       <TextRuns>
                                         <TextRun>
                                           <Value>Precio unit</Value>
-                                          <Style />
+                                          <Style>
+                                            <Color>White</Color>
+                                          </Style>
                                         </TextRun>
                                       </TextRuns>
                                       <Style />
@@ -616,7 +630,7 @@
                     </TablixRowHierarchy>
                     <DataSetName>DataSet1</DataSetName>
                     <Top>5.68215cm</Top>
-                    <Left>13.74906cm</Left>
+                    <Left>14.24294cm</Left>
                     <Height>1.0148cm</Height>
                     <Width>2.24423cm</Width>
                     <ZIndex>4</ZIndex>
@@ -647,7 +661,9 @@
                                       <TextRuns>
                                         <TextRun>
                                           <Value>Vencimiento</Value>
-                                          <Style />
+                                          <Style>
+                                            <Color>White</Color>
+                                          </Style>
                                         </TextRun>
                                       </TextRuns>
                                       <Style />
@@ -722,8 +738,8 @@
                       </TablixMembers>
                     </TablixRowHierarchy>
                     <DataSetName>DataSet1</DataSetName>
-                    <Top>5.68215cm</Top>
-                    <Left>10.25199cm</Left>
+                    <Top>5.64688cm</Top>
+                    <Left>10.74587cm</Left>
                     <Height>1.0148cm</Height>
                     <Width>3.49707cm</Width>
                     <ZIndex>5</ZIndex>
@@ -766,7 +782,9 @@
                                       <TextRuns>
                                         <TextRun>
                                           <Value>Subtotal</Value>
-                                          <Style />
+                                          <Style>
+                                            <Color>White</Color>
+                                          </Style>
                                         </TextRun>
                                       </TextRuns>
                                       <Style />
@@ -842,7 +860,7 @@
                     </TablixRowHierarchy>
                     <DataSetName>DataSet1</DataSetName>
                     <Top>5.68215cm</Top>
-                    <Left>15.70224cm</Left>
+                    <Left>16.52245cm</Left>
                     <Height>1.0148cm</Height>
                     <Width>2.5cm</Width>
                     <ZIndex>7</ZIndex>
@@ -1103,7 +1121,7 @@
                     </TablixRowHierarchy>
                     <DataSetName>DataSet1</DataSetName>
                     <Top>7.19494cm</Top>
-                    <Left>13.20224cm</Left>
+                    <Left>13.98717cm</Left>
                     <Height>1.77354cm</Height>
                     <Width>5cm</Width>
                     <ZIndex>8</ZIndex>
@@ -1151,7 +1169,9 @@
                         <TextRuns>
                           <TextRun>
                             <Value>Detalle Venta</Value>
-                            <Style />
+                            <Style>
+                              <Color>White</Color>
+                            </Style>
                           </TextRun>
                         </TextRuns>
                         <Style>
@@ -1163,7 +1183,7 @@
                     <Top>4.9766cm</Top>
                     <Left>0.11529cm</Left>
                     <Height>0.635cm</Height>
-                    <Width>18.41057cm</Width>
+                    <Width>19.17786cm</Width>
                     <ZIndex>10</ZIndex>
                     <Style>
                       <Border>
@@ -1190,7 +1210,9 @@
                                     <TextRuns>
                                       <TextRun>
                                         <Value>Detalles</Value>
-                                        <Style />
+                                        <Style>
+                                          <Color>White</Color>
+                                        </Style>
                                       </TextRun>
                                     </TextRuns>
                                     <Style />
@@ -1387,7 +1409,9 @@
                                         <TextRuns>
                                           <TextRun>
                                             <Value>Generales</Value>
-                                            <Style />
+                                            <Style>
+                                              <Color>White</Color>
+                                            </Style>
                                           </TextRun>
                                         </TextRuns>
                                         <Style>
@@ -1408,7 +1432,6 @@
                                       <PaddingBottom>2pt</PaddingBottom>
                                     </Style>
                                   </Textbox>
-                                  <rd:Selected>true</rd:Selected>
                                 </CellContents>
                               </TablixHeader>
                               <TablixMembers>
@@ -1754,7 +1777,7 @@
                     <Source>Embedded</Source>
                     <Value>MiscelaneaConny</Value>
                     <Sizing>Fit</Sizing>
-                    <Left>14.68468cm</Left>
+                    <Left>15.45197cm</Left>
                     <Height>2.9926cm</Height>
                     <Width>3.84118cm</Width>
                     <ZIndex>13</ZIndex>
@@ -1769,12 +1792,12 @@
                 <Top>0.22931cm</Top>
                 <Left>0.74466cm</Left>
                 <Height>10.72215cm</Height>
-                <Width>18.52586cm</Width>
+                <Width>19.29315cm</Width>
                 <Style>
                   <Border>
                     <Style>Dashed</Style>
                   </Border>
-                  <BackgroundColor>LightGrey</BackgroundColor>
+                  <BackgroundColor>White</BackgroundColor>
                 </Style>
               </Rectangle>
             </ReportItems>

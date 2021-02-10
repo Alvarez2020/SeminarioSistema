@@ -15,13 +15,13 @@
 
         <div>
             <div class="row center justify-content-center">
-                <div style="height: 100%; width: 100%;" class="col-sm-8">
+                <div style="height: 100%; width: 100%;" class="col-sm-12">
 
                     <%--<rsweb:reportviewer id="ReportViewer1" width="825px" asyncrendering="true" cssclass="justify-content-center"
                         documentmapwidth="100%" height="500px" runat="server">
                         <rsweb:ReportViewer runat="server"></rsweb:ReportViewer>--%>
                     <%--<rsweb:ReportViewer ID="ReportViewer1" runat="server"></rsweb:ReportViewer>--%>
-                    <rsweb:ReportViewer ID="ReportViewer1" runat="server" Height="500px" Width="825px" CssClass="justify-content-center" DocumentMapWidth="100%"></rsweb:ReportViewer>
+                    <rsweb:ReportViewer ID="ReportViewer1" runat="server" Height="500px" Width="925px" CssClass="justify-content-center" DocumentMapWidth="100%"></rsweb:ReportViewer>
                 </div>
             </div>
         </div>
