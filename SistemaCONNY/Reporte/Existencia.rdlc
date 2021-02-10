@@ -43,8 +43,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>NOMBRE PRODUCTO</Value>
-                              <Style />
+                              <Value>Nombre Producto</Value>
+                              <Style>
+                                <Color>White</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -56,6 +58,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>#10723f</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -74,7 +77,9 @@
                           <TextRuns>
                             <TextRun>
                               <Value>Descripcion Producto</Value>
-                              <Style />
+                              <Style>
+                                <Color>White</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -86,6 +91,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>#10723f</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -103,8 +109,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>NOMBRE MARCA</Value>
-                              <Style />
+                              <Value>Marca</Value>
+                              <Style>
+                                <Color>White</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -116,6 +124,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>#10723f</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -133,8 +142,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>PRECIO</Value>
-                              <Style />
+                              <Value>Precio</Value>
+                              <Style>
+                                <Color>White</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -146,6 +157,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>#10723f</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -163,8 +175,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>DESCRIPCION ENVASE UNIDAD</Value>
-                              <Style />
+                              <Value>Contenido</Value>
+                              <Style>
+                                <Color>White</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -176,6 +190,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>#10723f</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -193,8 +208,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>FECHA ELABORACION PRODUCTO</Value>
-                              <Style />
+                              <Value>Fecha Elaboracion</Value>
+                              <Style>
+                                <Color>White</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -206,6 +223,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>#10723f</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -223,8 +241,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>FECHA VENCIMIENTO PRODUCTO</Value>
-                              <Style />
+                              <Value>Vencimiento Producto</Value>
+                              <Style>
+                                <Color>White</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -236,6 +256,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>#10723f</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -253,8 +274,10 @@
                         <Paragraph>
                           <TextRuns>
                             <TextRun>
-                              <Value>CANTIDAD EXISTENCIA</Value>
-                              <Style />
+                              <Value>Cantidad Existencia</Value>
+                              <Style>
+                                <Color>White</Color>
+                              </Style>
                             </TextRun>
                           </TextRuns>
                           <Style />
@@ -266,6 +289,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>#10723f</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -423,13 +447,13 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>White</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
                         <PaddingBottom>2pt</PaddingBottom>
                       </Style>
                     </Textbox>
-                    <rd:Selected>true</rd:Selected>
                   </CellContents>
                 </TablixCell>
                 <TablixCell>
@@ -514,6 +538,7 @@
                           <Color>LightGrey</Color>
                           <Style>Solid</Style>
                         </Border>
+                        <BackgroundColor>Yellow</BackgroundColor>
                         <PaddingLeft>2pt</PaddingLeft>
                         <PaddingRight>2pt</PaddingRight>
                         <PaddingTop>2pt</PaddingTop>
@@ -549,8 +574,7 @@
           </TablixMembers>
         </TablixRowHierarchy>
         <DataSetName>DataSet1</DataSetName>
-        <Top>0.50917in</Top>
-        <Left>0.125in</Left>
+        <Top>0.06944in</Top>
         <Height>0.96876in</Height>
         <Width>10.41668in</Width>
         <Style>
@@ -586,6 +610,7 @@
                   <Style>
                     <FontSize>12pt</FontSize>
                     <FontWeight>Bold</FontWeight>
+                    <Color>White</Color>
                   </Style>
                 </TextRun>
               </TextRuns>
@@ -595,7 +620,7 @@
             </Paragraph>
           </Paragraphs>
           <rd:DefaultName>Textbox17</rd:DefaultName>
-          <Top>0.3425in</Top>
+          <Top>0.69444in</Top>
           <Left>1.76958in</Left>
           <Height>0.29167in</Height>
           <Width>5.4375in</Width>
@@ -603,6 +628,7 @@
             <Border>
               <Style>None</Style>
             </Border>
+            <BackgroundColor>#10723f</BackgroundColor>
             <PaddingLeft>2pt</PaddingLeft>
             <PaddingRight>2pt</PaddingRight>
             <PaddingTop>2pt</PaddingTop>

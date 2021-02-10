@@ -17,7 +17,7 @@
         </div>
         <div style="height: 100%; width: 100%;" class="col-sm-8">
  
-                <rsweb:ReportViewer ID="ReportViewer1" Width="825px" AsyncRendering="true" CssClass="justify-content-center" 
+                <rsweb:ReportViewer ID="ReportViewer1" Width="1000px" AsyncRendering="true" CssClass="justify-content-center" 
                     DocumentMapWidth="100%" Height="500px" runat="server">
                    
                 </rsweb:ReportViewer>
