@@ -10,8 +10,10 @@
                 <asp:Button type="button" OnClick="btnVenta_Click" ID="btnVenta" runat="server" Text="Historico venta" CssClass="btn btn-primary" />
                  <asp:Button type="button" OnClick="btnCompra_Click" ID="btnCompra" runat="server" Text="Historico Compra"  CssClass="btn btn-secondary"/>
                  <asp:Button type="button" OnClick="btnExis_Click" ID="btnExis" runat="server" Text="Existencia"  CssClass="btn btn-success"/>
-                            <asp:Button type="button" OnClick="btnFactura_Click" ID="btnFactura" runat="server" Text="Factura"  CssClass="btn btn-success"/>
+                       <%--     <asp:Button type="button" ValidationGroup="valGuardar" OnClick="btnFactura_Click" ID="btnFactura" runat="server" Text="Factura"  CssClass="btn btn-success"/>
                 <asp:TextBox ID="txtCod" runat="server"></asp:TextBox>
+                            <asp:RequiredFieldValidator ForeColor="red" ValidationGroup="valGuardar" ControlToValidate="txtCod" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Campo es necesario" />--%>
+
                 </div>
             <br />
         </div>

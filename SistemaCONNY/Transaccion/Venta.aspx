@@ -389,6 +389,7 @@
                     $('#<%=txtProducto.ClientID%>').val('');
                     $('#<%=txtExistencia.ClientID%>').val('');
                     $('#<%=txtPrecioVenta.ClientID%>').val('');
+                    $('#<%=txtCantidad.ClientID%>').val('');
                 },
                 failure: function (response) {
                     console.log('Sucedio un error = ' + response);

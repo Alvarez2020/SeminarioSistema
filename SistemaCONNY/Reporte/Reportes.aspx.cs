@@ -57,7 +57,7 @@ namespace SistemaCONNY.Reporte
             ReportDataSource datasource = new ReportDataSource();
 
             //carga directorio de reporte
-            ReportViewer1.LocalReport.ReportPath = Server.MapPath("~/Reporte/Factura.rdlc");
+            ReportViewer1.LocalReport.ReportPath = Server.MapPath("~/Reporte/TicketVenta.rdlc");
             //llena el recurso de dato primero consulta linq y despues pasa el parametro al datasource de report
              datasource = new ReportDataSource("DataSet1", (from t1 in contex.TBL_FACTURA
                                                                             join t2 in contex.TBL_DETALLE_FACT on t1.ID_FACTURA equals t2.ID_FACTURA
@@ -184,6 +184,10 @@ namespace SistemaCONNY.Reporte
 
         protected void btnFactura_Click(object sender, EventArgs e)
         {
+            if (txtCod.Text == "")
+            {
+                return;
+            }
             int codFac = int.Parse(txtCod.Text);
 
             CargarReporteFactura(codFac);

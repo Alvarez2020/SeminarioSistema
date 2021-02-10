@@ -64,7 +64,20 @@ margin-right: 0%;
                                 <button type="button" data-toggle="modal" data-target="#myModal" id="btnAgregarArticulo" class="btn btn-primary">...</button>
                             </div>
                         </div>--%>
-                    </div>
+                    </div>       
+                             <h3>Factura</h3>
+                        <asp:Button type="button" OnClick="btnCompra_Click" ID="Button1" runat="server" Text="Factura" CssClass="btn btn-success" />
+                           
+                             <table id="gridData" class="table table-striped table-bordered" style="width: 100%">
+                                <thead>
+                                    <tr>
+                                      <th style="width: 15%">Nº/FACT</th>
+                                       
+                                        <th>FechaFactura</th>
+                                        <th style="width: 15%; text-align: center">Opciones</th>
+                                    </tr>
+                                </thead>
+                            </table>
                       <h3>Registro Venta</h3>
                         <asp:Button type="button" OnClick="btnRegistroCompra_Click" ID="Button2" runat="server" Text="Factura" CssClass="btn btn-success" />
 
@@ -89,20 +102,7 @@ margin-right: 0%;
                                     </tr>
                                 </thead>
                             </table>
-                          <h3>Factura</h3>
-                        <asp:Button type="button" OnClick="btnCompra_Click" ID="Button1" runat="server" Text="Factura" CssClass="btn btn-success" />
-                            <br>
-                            
-                             <table id="gridData" class="table table-striped table-bordered" style="width: 100%">
-                                <thead>
-                                    <tr>
-                                      <th style="width: 15%">Nº/FACT</th>
-                                       
-                                        <th>FechaFactura</th>
-                                        <th style="width: 15%; text-align: center">Opciones</th>
-                                    </tr>
-                                </thead>
-                            </table>
+                         
                                 
                             <%--<div style="height: 100%; width: 100%;" class="col-sm-5 w-100">
 
