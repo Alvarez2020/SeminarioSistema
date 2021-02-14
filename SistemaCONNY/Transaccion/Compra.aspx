@@ -160,7 +160,7 @@
                                     </table>
                                     <div class="form-group">
                                         <asp:Label Text="total " foreColor="#006600" runat="server" />
-                                        <asp:TextBox ID="txtTotal" width="15%" runat="server" class="form-control" type="number" placeholder="C$"></asp:TextBox>
+                                        <asp:TextBox ID="txtTotal" width="15%" runat="server"  class="form-control" type="number" placeholder="C$"></asp:TextBox>
                                     </div>
                                     <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                                         <ContentTemplate>

@@ -76,7 +76,7 @@
                                   <div class="form-group">
                                     <asp:Label Text="Ingrese Cantidad a Comprar" foreColor="#006600" runat="server" />
                                     <i class="fas fa-hand-holding-usd"></i>
-                                    <asp:TextBox style="width: 41%" Height="2%" ID="txtCantidad" runat="server" class="form-control" type="number" min="1" placeholder="Cantidad"></asp:TextBox>
+                                    <asp:TextBox style="width: 41%" ID="txtCantidad" runat="server" class="form-control" type="number" min="1" placeholder="Cantidad"></asp:TextBox>
                                     <label class="col-form-label text-danger no-visible" id="validCantidad">CantidadValida</label>
                                 </div>
                                 <div class="form-group">
@@ -120,19 +120,19 @@
                                 </table>
                                 <div class="form-group">
                                     <asp:Label Text="Total" foreColor="#006600" runat="server" />
-                                    <asp:TextBox   foreColor="#006600" style="width: 15%" Height="2%" ID="txtTotal" runat="server" class="form-control" type="number" placeholder="C$" ></asp:TextBox>
+                                    <asp:TextBox foreColor="#006600" style="width: 15%"  ID="txtTotal" runat="server" class="form-control" type="number" placeholder="C$" ></asp:TextBox>
                                 </div>
                                 <asp:UpdatePanel ID="UpdatePanel1" runat="server">
                                     <ContentTemplate>
                                         <div class="form-group">
                                             <asp:Label Text="Cantidad Pago" foreColor="#006600" runat="server" />
-                                            <asp:TextBox  style="width: 15%" Height="2%" ID="txtCantidadPago" OnTextChanged="txtCantidadPago_TextChanged" AutoPostBack="true" runat="server" class="form-control txtCantidadPago" type="number" placeholder="C$"></asp:TextBox>
+                                            <asp:TextBox  style="width: 15%"  ID="txtCantidadPago" AutoPostBack="true" runat="server" class="form-control txtCantidadPago" type="number" placeholder="C$"></asp:TextBox>
                                     <asp:RequiredFieldValidator ForeColor="red" ValidationGroup="valGuardar" ControlToValidate="txtCantidadPago" ID="RequiredFieldValidator1" runat="server" ErrorMessage="Campo es necesario" />
                                         
-                                        </div>
+                                        </div>-
                                         <div class="form-group">
                                             <asp:Label Text="Cambio" foreColor="#006600" runat="server" />
-                                            <asp:TextBox  style="width: 15%" Height="2%" ID="txtCambio" runat="server" class="form-control" type="text" placeholder="Cambio"></asp:TextBox>
+                                            <asp:TextBox  style="width: 15%" ID="txtCambio" runat="server" class="form-control" type="text" placeholder="Cambio"></asp:TextBox>
                                         </div>
                                     </ContentTemplate>
                                 </asp:UpdatePanel>
