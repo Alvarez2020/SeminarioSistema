@@ -15,10 +15,10 @@
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
     <%-- 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
---%>
+    --%>
     <!-- plugins:css -->
-     <link rel="stylesheet" href="~/fontawesome/css/all.min.css">
-    
+    <link rel="stylesheet" href="~/fontawesome/css/all.min.css">
+
     <link rel="stylesheet" href="~/PlantillaNueva/css/bootstrap.min.css">
 
     <!-- Icomoon Font Icons css -->
@@ -28,11 +28,11 @@
     <link rel="stylesheet" href="~/PlantillaNueva/css/main.css">
     <link rel="stylesheet" href="~/PlantillaNueva/css/toastr.css">
 
-    <link rel="stylesheet" type="text/css" href="~/PlantillaNueva/datatable/css/dataTables.bootstrap.min.css"/>
-     <link rel="stylesheet" href="~/PlantillaNueva/sweetalert.css">
+    <link rel="stylesheet" type="text/css" href="~/PlantillaNueva/datatable/css/dataTables.bootstrap.min.css" />
+    <link rel="stylesheet" href="~/PlantillaNueva/sweetalert.css">
 
- 
-
+    <link href="~/PlantillaNueva/datatable/css/jquery.dataTables.css" rel="stylesheet" />
+    <link href="~/PlantillaNueva/datatable/css/jquery.dataTables.min.css" rel="stylesheet" />
 </head>
 <body>
 
@@ -42,7 +42,7 @@
                 <%--To learn more about bundling scripts in ScriptManager see https://go.microsoft.com/fwlink/?LinkID=301884 --%>
                 <%--Framework Scripts--%>
                 <asp:ScriptReference Name="MsAjaxBundle" />
-               
+
                 <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
                 <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
                 <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
@@ -56,259 +56,259 @@
             </Scripts>
         </asp:ScriptManager>
 
-        
-                        
-         <!-- Header start -->
-    <header class="header">
-        <div class="container-fluid">
 
-            <!-- Row start -->
-            <div class="row gutters">
-                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
-                    <a href="Inicio" class="logo">Sistema Conny</a>
-                </div>
-                <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
 
-                    <!-- Header actions start -->
-                    <ul class="header-actions">
-                        <%--<li class="dropdown d-none d-sm-block">
+        <!-- Header start -->
+        <header class="header">
+            <div class="container-fluid">
+
+                <!-- Row start -->
+                <div class="row gutters">
+                    <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4 col-4">
+                        <a href="Inicio" class="logo">Sistema Conny</a>
+                    </div>
+                    <div class="col-xl-8 col-lg-8 col-md-8 col-sm-8 col-8">
+
+                        <!-- Header actions start -->
+                        <ul class="header-actions">
+                            <%--<li class="dropdown d-none d-sm-block">
                             <a href="Inicio" class="contact">
                                 <%--<i class="icon-phone"></i> 012 345 6789
                             </a>
                         </li>--%>
-                        <li class="dropdown d-none d-sm-block">
-                            <a href="#" id="notifications" data-toggle="dropdown" aria-haspopup="true">
-                                <i class="icon-bell"></i>
-                                <span class="count-label"></span>
-                            </a>
-                            <div class="dropdown-menu lrg" aria-labelledby="notifications">
-                                <div class="dropdown-menu-header">
-                                    <h5>Notifications</h5>
-                                    <p class="m-0 sub-title">You have 5 unread notifications</p>
-                                </div>
-                                <ul class="header-notifications">
-                                    <li>
-                                        <a href="#" class="clearfix">
-                                            <div class="avatar">
-                                                <img src="img/user24.png" alt="avatar" />
-                                                <span class="notify-iocn icon-drafts text-danger"></span>
-                                            </div>
-                                            <div class="details">
-                                                <h6>Dr. Clive</h6>
-                                                <p>Appointed as a new President 2019-2020</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="clearfix">
-                                            <div class="avatar">
-                                                <img src="img/user21.png" alt="avatar" />
-                                                <span class="notify-iocn icon-layers text-info"></span>
-                                            </div>
-                                            <div class="details">
-                                                <h6>Dr. G. Levsmia</h6>
-                                                <p>Will be on leave on October 2nd week.</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="#" class="clearfix">
-                                            <div class="avatar">
-                                                <img src="img/user19.png" alt="avatar" />
-                                                <span class="notify-iocn icon-person_add text-success"></span>
-                                            </div>
-                                            <div class="details">
-                                                <h6>Dr. George S</h6>
-                                                <p>Sent new applointments list</p>
-                                            </div>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
-                        <li class="dropdown">
-                            <a href="#" id="userSettings" class="user-settings" data-toggle="dropdown" aria-haspopup="true">
-                                <span class="user-name"><%: Context.User.Identity.GetUserName()  %></span>
-                                <span class="avatar"><%: Context.User.Identity.GetUserName()  %><span class="status busy"></span></span>
-                            </a>
-                       
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userSettings">
-                                <div class="header-profile-actions">
-                                    <div class="header-user-profile">
-                                        <div class="header-user">
-                                            <img src="PlantillaStyle/img/ConnyLogo1.png" alt="Miscelanea Conny" />
-                                        </div>
-                                        <h5><%: Context.User.Identity.GetUserName()  %></h5>
-                                       
+                            <li class="dropdown d-none d-sm-block">
+                                <a href="#" id="notifications" data-toggle="dropdown" aria-haspopup="true">
+                                    <i class="icon-bell"></i>
+                                    <span class="count-label"></span>
+                                </a>
+                                <div class="dropdown-menu lrg" aria-labelledby="notifications">
+                                    <div class="dropdown-menu-header">
+                                        <h5>Notifications</h5>
+                                        <p class="m-0 sub-title">You have 5 unread notifications</p>
                                     </div>
-                                         <asp:LoginView ID="LoginView2" runat="server">
-                       <RoleGroups>
-                           <asp:RoleGroup Roles="Admin">
-                               <ContentTemplate>
-                                    <a href="Register"><i class="icon-user1"></i> Registrar Usuario</a>
-                                           
-                  </ContentTemplate>
-                           </asp:RoleGroup>
-                       </RoleGroups>
-                    </asp:LoginView>
-                                    
-                                    <a href="../Account/Manage.aspx"><i class="icon-settings1"></i> Configuracion</a>
-                                     
-                                    <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Cerrar Sesion" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
-                                  </div>
+                                    <ul class="header-notifications">
+                                        <li>
+                                            <a href="#" class="clearfix">
+                                                <div class="avatar">
+                                                    <img src="img/user24.png" alt="avatar" />
+                                                    <span class="notify-iocn icon-drafts text-danger"></span>
+                                                </div>
+                                                <div class="details">
+                                                    <h6>Dr. Clive</h6>
+                                                    <p>Appointed as a new President 2019-2020</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="clearfix">
+                                                <div class="avatar">
+                                                    <img src="img/user21.png" alt="avatar" />
+                                                    <span class="notify-iocn icon-layers text-info"></span>
+                                                </div>
+                                                <div class="details">
+                                                    <h6>Dr. G. Levsmia</h6>
+                                                    <p>Will be on leave on October 2nd week.</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#" class="clearfix">
+                                                <div class="avatar">
+                                                    <img src="img/user19.png" alt="avatar" />
+                                                    <span class="notify-iocn icon-person_add text-success"></span>
+                                                </div>
+                                                <div class="details">
+                                                    <h6>Dr. George S</h6>
+                                                    <p>Sent new applointments list</p>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
-                  
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" id="userSettings" class="user-settings" data-toggle="dropdown" aria-haspopup="true">
+                                    <span class="user-name"><%: Context.User.Identity.GetUserName()  %></span>
+                                    <span class="avatar"><%: Context.User.Identity.GetUserName()  %><span class="status busy"></span></span>
+                                </a>
 
-                        </li>
-                    </ul>
-                    <!-- Header actions end -->
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userSettings">
+                                    <div class="header-profile-actions">
+                                        <div class="header-user-profile">
+                                            <div class="header-user">
+                                                <img src="PlantillaStyle/img/ConnyLogo1.png" alt="Miscelanea Conny" />
+                                            </div>
+                                            <h5><%: Context.User.Identity.GetUserName()  %></h5>
 
+                                        </div>
+                                        <asp:LoginView ID="LoginView2" runat="server">
+                                            <RoleGroups>
+                                                <asp:RoleGroup Roles="Admin">
+                                                    <ContentTemplate>
+                                                        <a href="Register"><i class="icon-user1"></i>Registrar Usuario</a>
+
+                                                    </ContentTemplate>
+                                                </asp:RoleGroup>
+                                            </RoleGroups>
+                                        </asp:LoginView>
+
+                                        <a href="../Account/Manage.aspx"><i class="icon-settings1"></i>Configuracion</a>
+
+                                        <asp:LoginStatus runat="server" LogoutAction="Redirect" LogoutText="Cerrar Sesion" LogoutPageUrl="~/" OnLoggingOut="Unnamed_LoggingOut" />
+                                    </div>
+                                </div>
+
+
+                            </li>
+                        </ul>
+                        <!-- Header actions end -->
+
+                    </div>
                 </div>
+                <!-- Row end -->
+
             </div>
-            <!-- Row end -->
+        </header>
+        <!-- Header end -->
 
-        </div>
-    </header>
-    <!-- Header end -->
-
-         <div class="container-fluid">
+        <div class="container-fluid">
 
 
-        <!-- Navigation start -->
-        <nav class="navbar navbar-expand-lg custom-navbar">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#royalHospitalsNavbar" aria-controls="royalHospitalsNavbar" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon">
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                </span>
-            </button>
-            <div class="collapse navbar-collapse" id="royalHospitalsNavbar">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active-page" href="Inicio">
-                            <i class="fab fa-windows nav-icon"></i>
-                            Inicio
-                        </a>
-                    </li>
-                    <asp:LoginView ID="LoginView1" runat="server">
-                       <RoleGroups>
-                           <asp:RoleGroup Roles="Admin">
-                               <ContentTemplate>
-                                   <li class="nav-item dropdown">
-                                        <a class="nav-link dropdown-toggle" href="#" id="nav-mant" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="far fa-credit-card nav-icon"></i>Mantenimiento Catalago</a>
-                                        <ul class="dropdown-menu" aria-labelledby="nav-mant">
-                                            <li>
-                                                <a class="dropdown-item" Id="marca" href="Marca"><i class="fas fa-check-square"></i>Marca</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" Id="TipoProducto" href="Tipo_Producto"><i class="fas fa-box-open"></i>Tipo Producto</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" Id="UnidadMedida" href="Unidad_Medida"><i class="fas fa-balance-scale-right"></i>Unidad Compra</a>
-                                            </li>
-                                             <li>
-                                                <a class="dropdown-item" Id="UnidadEnvase" href="UnidadEnvase"><i class="fas fa-balance-scale-right"></i>Unidad Envase</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" Id="Pais" href="Pais"><i class="far fa-flag"></i>Pais</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" Id="Ciudad" href="Ciudad"><i class="fas fa-city"></i>Ciudad</a>
-                                            </li>
-                                            <li>
-                                                <a class="dropdown-item" Id="Departamento" href="Departamento"><i class="fas fa-building"></i>Departamento</a>
-                                            </li>
-                             
-                                        </ul>
-                                    </li>
-                               </ContentTemplate>
-                           </asp:RoleGroup>
-                       </RoleGroups>
-                    </asp:LoginView>
-                    
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="nav-inv" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                 <i class="fas fa-book nav-icon"></i>
-                            Inventario
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="nav-inv">
-                            <li>
-                                <a class="dropdown-item" id="Existencia" href="Existencia"><i class="fas fa-database"></i>Existencia</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" Id="Productos" href="Productos"><i class="fab fa-product-hunt"></i>Producto</a>
-                            </li>
-                             
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="nav-venta" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="far fa-file-alt nav-icon"></i>
-                            Facturación
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="nav-venta">
-                            <li>
-                                <a class="dropdown-item" Id="HistoricoVenta" href="HistoricoVenta"><i class="fas fa-history"></i>Reporte Venta</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" Id="Venta"  href="Venta"><i class="fas fa-money-check-alt"></i>Vender</a>
-                            </li>
-                             
-                        </ul>
-                    </li>
-                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="nav-compra" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="far fa-money-bill-alt nav-icon"></i>
-                            Compra
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="nav-compra">
-                            <li>
-                                <a class="dropdown-item" Id="Compra" href="Compra"><i class="fas fa-shopping-bag"></i>Compra</a>
-                            </li>
-                            <li>
-                                <a class="dropdown-item" Id="HistoricoCompra" href="HistoricoCompra"><i class="fas fa-history"></i>Reporte Compra</a>
-                            </li>
-                             <li>
-                                <a class="dropdown-item" Id="Bodega"  href="Bodega" ><i class="fab fa-linode"></i>Bodega</a>
-                            </li>
-                             <li>
-                                <a class="dropdown-item" id="Proveedor" href="Proveedor"><i class="fas fa-people-carry"></i>Proveedor</a>
-                            </li>
-                             
-                        </ul>
-                    </li>
-                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="nav-Reportes" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <i class="far fa-money-bill-alt nav-icon"></i>
-                            Reportes
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="nav-Reportes">
-                               <li>
-                            <a class="dropdown-item" id="Reportes" href="Reportes"><i class="fas fa-people-carry"></i>Reportes</a>
+            <!-- Navigation start -->
+            <nav class="navbar navbar-expand-lg custom-navbar">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#royalHospitalsNavbar" aria-controls="royalHospitalsNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </span>
+                </button>
+                <div class="collapse navbar-collapse" id="royalHospitalsNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active-page" href="Inicio">
+                                <i class="fab fa-windows nav-icon"></i>
+                                Inicio
+                            </a>
+                        </li>
+                        <asp:LoginView ID="LoginView1" runat="server">
+                            <RoleGroups>
+                                <asp:RoleGroup Roles="Admin">
+                                    <ContentTemplate>
+                                        <li class="nav-item dropdown">
+                                            <a class="nav-link dropdown-toggle" href="#" id="nav-mant" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                <i class="far fa-credit-card nav-icon"></i>Mantenimiento Catalago</a>
+                                            <ul class="dropdown-menu" aria-labelledby="nav-mant">
+                                                <li>
+                                                    <a class="dropdown-item" id="marca" href="Marca"><i class="fas fa-check-square"></i>Marca</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" id="TipoProducto" href="Tipo_Producto"><i class="fas fa-box-open"></i>Tipo Producto</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" id="UnidadMedida" href="Unidad_Medida"><i class="fas fa-balance-scale-right"></i>Unidad Compra</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" id="UnidadEnvase" href="UnidadEnvase"><i class="fas fa-balance-scale-right"></i>Unidad Envase</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" id="Pais" href="Pais"><i class="far fa-flag"></i>Pais</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" id="Ciudad" href="Ciudad"><i class="fas fa-city"></i>Ciudad</a>
+                                                </li>
+                                                <li>
+                                                    <a class="dropdown-item" id="Departamento" href="Departamento"><i class="fas fa-building"></i>Departamento</a>
+                                                </li>
+
+                                            </ul>
+                                        </li>
+                                    </ContentTemplate>
+                                </asp:RoleGroup>
+                            </RoleGroups>
+                        </asp:LoginView>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="nav-inv" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-book nav-icon"></i>
+                                Inventario
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="nav-inv">
+                                <li>
+                                    <a class="dropdown-item" id="Existencia" href="Existencia"><i class="fas fa-database"></i>Existencia</a>
                                 </li>
-                             </ul>
-                    </li>
+                                <li>
+                                    <a class="dropdown-item" id="Productos" href="Productos"><i class="fab fa-product-hunt"></i>Producto</a>
+                                </li>
 
-                 
-                    
-                     
-                    
-                </ul>
-            </div>
-        </nav>
-        <!-- Navigation end -->
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="nav-venta" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="far fa-file-alt nav-icon"></i>
+                                Facturación
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="nav-venta">
+                                <li>
+                                    <a class="dropdown-item" id="HistoricoVenta" href="HistoricoVenta"><i class="fas fa-history"></i>Reporte Venta</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" id="Venta" href="Venta"><i class="fas fa-money-check-alt"></i>Vender</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="nav-compra" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="far fa-money-bill-alt nav-icon"></i>
+                                Compra
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="nav-compra">
+                                <li>
+                                    <a class="dropdown-item" id="Compra" href="Compra"><i class="fas fa-shopping-bag"></i>Compra</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" id="HistoricoCompra" href="HistoricoCompra"><i class="fas fa-history"></i>Reporte Compra</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" id="Bodega" href="Bodega"><i class="fab fa-linode"></i>Bodega</a>
+                                </li>
+                                <li>
+                                    <a class="dropdown-item" id="Proveedor" href="Proveedor"><i class="fas fa-people-carry"></i>Proveedor</a>
+                                </li>
+
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="nav-Reportes" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="far fa-money-bill-alt nav-icon"></i>
+                                Reportes
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="nav-Reportes">
+                                <li>
+                                    <a class="dropdown-item" id="Reportes" href="Reportes"><i class="fas fa-people-carry"></i>Reportes</a>
+                                </li>
+                            </ul>
+                        </li>
 
 
-        <!-- *************
+
+
+
+                    </ul>
+                </div>
+            </nav>
+            <!-- Navigation end -->
+
+
+            <!-- *************
 				************ Main container start *************
 			************* -->
-        <div class="main-container">
+            <div class="main-container">
 
 
-            <!-- Page header start -->
-           <%-- <div class="page-header">
+                <!-- Page header start -->
+                <%-- <div class="page-header">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item active">Hospital Dashboard</li>
                 </ol>
@@ -316,28 +316,28 @@
                     <img src="img/award.svg" alt="Award"> Best Hospital
                 </div>
             </div>--%>
-            <!-- Page header end -->
+                <!-- Page header end -->
 
 
-            <!-- Content wrapper start -->
-            <div class="content-wrapper">
-                 <!-- Apartir de aca es el contenido de  las paginas anidadas -->
-                        <asp:ContentPlaceHolder ID="MainContent" runat="server">
-                        </asp:ContentPlaceHolder>
-                        <!-- Fin contenido de las paginas anidadas -->
-                    
-             </div>
-            <!-- Content wrapper end -->
+                <!-- Content wrapper start -->
+                <div class="content-wrapper">
+                    <!-- Apartir de aca es el contenido de  las paginas anidadas -->
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                    </asp:ContentPlaceHolder>
+                    <!-- Fin contenido de las paginas anidadas -->
+
+                </div>
+                <!-- Content wrapper end -->
 
 
-        </div>
-        <!-- *************
+            </div>
+            <!-- *************
 				************ Main container end *************
 			************* -->
 
-        <footer class="main-footer">© Royal Hospitals 2019</footer>
+            <footer class="main-footer">© Royal Hospitals 2019</footer>
 
-    </div>
+        </div>
 
 
 
@@ -353,7 +353,7 @@
 
     <script src="../PlantillaNueva/js/moment.js"></script>
 
-     <script src="../PlantillaNueva/sweetalert.min.js"></script>
+    <script src="../PlantillaNueva/sweetalert.min.js"></script>
     <!-- *************
 			************ Vendor Js Files *************
 		************* -->
@@ -374,11 +374,11 @@
     <script src="../PlantillaNueva/js/toastr.min.js"></script>
     <!-- End custom js for this page-->
     <script type="text/javascript" src="../PlantillaNueva/datatable/js/jquery.dataTables.js"></script>
-        <script src="js/MenuActiveBT.js"></script>
+    <script src="js/MenuActiveBT.js"></script>
+    <script src="../PlantillaNueva/datatable/js/jquery.dataTables.min.js"></script>
+    <asp:ContentPlaceHolder ID="ContentPlaceHolderScript" runat="server">
+    </asp:ContentPlaceHolder>
 
-     <asp:ContentPlaceHolder ID="ContentPlaceHolderScript" runat="server">
-                        </asp:ContentPlaceHolder>
 
-   
 </body>
 </html>

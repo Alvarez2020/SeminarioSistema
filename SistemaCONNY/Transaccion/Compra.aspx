@@ -339,7 +339,7 @@
                         "columnDefs": [
                             {
                                 "targets": [0],
-                                "visible": true,
+                                "visible": false,
                                 "searchable": false
                             },
                             {
@@ -571,6 +571,11 @@
             }
             if ($('#<%=txtFechaVencimiento.ClientID %>').val() == "") {
                 swal("Advertencia!", "Seleccione una fecha", "warning")
+                return;
+            }
+            var ID_UNIDAD_ENVASE = parseInt($('#txtIdUnidadEnvase').val());
+            if ($('#txtIdUnidadEnvase').val() == "") {
+                swal("Advertencia!", "Seleccione Contenido", "warning")
                 return;
             }
             var data = {
@@ -824,7 +829,7 @@
             $('#modalunidad').on('click', 'tr', function () {
                 var p = tablePro3.row(this).data();
                 var idUnidadMedida = p.IdUnidadMedida;
-                var unidades = 'UmDescripcion:' + p.UmDescripcion + '  /  ' + 'Unidades:' + p.Unidades;
+                var unidades = 'Contenido:' + p.UmDescripcion + '  /  ' + 'UND:' + p.Unidades;
 
                 $('#txtIdUnidadMedida').val(idUnidadMedida);
                 $('#<%=txtUmDescripcion.ClientID%>').val(unidades);

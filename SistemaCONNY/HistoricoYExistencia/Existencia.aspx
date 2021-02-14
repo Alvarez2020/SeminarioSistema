@@ -75,7 +75,7 @@
             }
         };
 
-        LoadTemp();
+        //LoadTemp();
         var dataServer, tablePro;
         function LoadTemp() {
             //e.preventDefault();
